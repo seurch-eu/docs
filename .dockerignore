@@ -1,0 +1,10 @@
+# Build artifacts (regenerated inside the image)
+/public/
+/resources/
+
+# Local tooling / editor cruft
+.hugo_build.lock
+.DS_Store
+
+# CI / deploy config not needed inside the build context
+/.github/

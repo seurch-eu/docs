@@ -1,0 +1,51 @@
+# Kamal deployment — https://kamal-deploy.org
+#
+# Deploys the rendered documentation as a static-site container (Hugo build →
+# nginx) to a VPS, with automatic HTTPS (Let's Encrypt) via kamal-proxy. The
+# site is stateless: no database, no accessories, no app secrets, just the
+# container behind the proxy.
+#
+# Before the first deploy, replace every REPLACE_* placeholder below and set
+# KAMAL_REGISTRY_PASSWORD in Bitwarden Secrets Manager (see .kamal/secrets).
+#
+# First deploy:   kamal setup
+# Subsequent:     kamal deploy
+
+service: searpa-docs
+
+# Image repository (without the registry host, which is set under `registry`).
+# Combined with the Scaleway registry below it resolves to
+# rg.fr-par.scw.cloud/searpa-eu/search-project/docs.
+image: search-project/docs
+
+# The VPS to deploy to. Can be the same host that runs the main app (the docs
+# container is tiny and listens only behind the proxy).
+servers:
+  web:
+    - REPLACE_VPS_IP
+
+# kamal-proxy terminates TLS, gets a Let's Encrypt cert for `host`, and does
+# zero-downtime cutovers gated on the /up health check.
+proxy:
+  ssl: true
+  host: docs.searpa.io          # the public domain (must resolve to the VPS)
+  app_port: 80                  # nginx listens here (see Dockerfile + deploy/nginx.conf)
+  healthcheck:
+    path: /up                   # served by deploy/nginx.conf
+    interval: 3
+
+# Where to push/pull the built image — Scaleway Container Registry. The username
+# is the literal "nologin"; KAMAL_REGISTRY_PASSWORD (from Bitwarden) is a
+# Scaleway API secret key with registry read/write access.
+registry:
+  server: rg.fr-par.scw.cloud/searpa-eu
+  username: nologin
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+# Most VPSes are x86_64; build for that even when deploying from an arm64 Mac.
+# BASE_URL must match the public host so Hugo emits absolute URLs correctly.
+builder:
+  arch: amd64
+  args:
+    BASE_URL: https://docs.searpa.io/

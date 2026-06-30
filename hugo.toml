@@ -7,6 +7,10 @@ theme = "hugo-book"
 # build the sidebar from every top-level section (User guide, Self-hosting, API).
 disableKinds = ["taxonomy", "term"]
 
+# Per-page git metadata, drives the "Edit this page" / "last modified" footer
+# links below. Gracefully no-ops where no git history is present.
+enableGitInfo = true
+
 [params]
   # Auto follows the visitor's system light/dark preference.
   BookTheme = "auto"
@@ -18,6 +22,10 @@ disableKinds = ["taxonomy", "term"]
   BookSearch = true
   # Show a short "last edited" line; sourced from the git commit date.
   BookDates = true
+  # Footer "Edit this page" link → the source file on GitHub.
+  BookEditLink = "https://github.com/search-project/docs/edit/main/{{ .Path }}"
+  # Footer "last modified" date → the commit on GitHub (needs enableGitInfo).
+  BookLastChangeLink = "https://github.com/search-project/docs/commit/{{ .GitInfo.Hash }}"
 
 [markup]
   [markup.goldmark.renderer]

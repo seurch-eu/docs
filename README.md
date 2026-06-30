@@ -40,7 +40,14 @@ hugo --gc --minify   # output written to ./public
 │   ├── user-guide/        # User guide
 │   ├── self-hosting/      # Self-hosting guide
 │   └── api/               # API guide
-└── themes/hugo-book/      # vendored theme (MIT, see its LICENSE)
+├── assets/_custom.scss    # Searpa theme overlay (slate + indigo, light/dark)
+├── layouts/               # theme overrides (sidebar "Links" section)
+├── themes/hugo-book/      # vendored theme (MIT, see its LICENSE)
+├── Dockerfile             # Hugo build → nginx (used by Kamal)
+├── deploy/nginx.conf      # static-file server config
+├── config/deploy.yml      # Kamal deployment config
+├── .kamal/secrets         # registry secret (fetched from Bitwarden)
+└── .github/workflows/     # pages.yml (GitHub Pages alternative)
 ```
 
 ## Editing
@@ -55,5 +62,32 @@ hugo --gc --minify   # output written to ./public
 
 ## Deployment
 
-A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site and
-publishes it to GitHub Pages on every push to the default branch.
+The site is static, so it can be served anywhere. Two paths are provided:
+
+### Kamal (production)
+
+The docs are deployed the same way as the main Searpa app, with
+[Kamal](https://kamal-deploy.org): a multi-stage `Dockerfile` builds the site
+with Hugo and serves the result with nginx, and kamal-proxy terminates TLS
+(Let's Encrypt) in front of it.
+
+```bash
+kamal setup     # first deploy (provisions the proxy + boots the container)
+kamal deploy    # subsequent deploys
+```
+
+- `config/deploy.yml` — servers, registry, proxy host and health check.
+- `deploy/nginx.conf` — the static-file server (health endpoint at `/up`).
+- `.kamal/secrets` — fetches the registry password from Bitwarden Secrets
+  Manager (no secret values are stored in the repo).
+
+Before the first deploy, replace the `REPLACE_*` placeholders in
+`config/deploy.yml` and point the `host` domain's DNS at the VPS. To autodeploy
+from CI, run `kamal deploy` from a workflow with `BWS_ACCESS_TOKEN` and an SSH
+key, exactly as the main app does.
+
+### GitHub Pages (zero-infra alternative)
+
+`.github/workflows/pages.yml` builds the site and publishes it to GitHub Pages
+on every push to the default branch. Enable Pages (Settings → Pages → "GitHub
+Actions") to use it; no server required.
