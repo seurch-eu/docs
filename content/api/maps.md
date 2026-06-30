@@ -24,7 +24,7 @@ GET /api/v1/maps/?q=<place>&limit=<n>&lang=<code>
 
 ```bash
 curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
-  "https://searpa.io/api/v1/maps/?q=Eiffel+Tower&limit=1"
+  "https://search.example.com/api/v1/maps/?q=Eiffel+Tower&limit=1"
 ```
 
 ```json

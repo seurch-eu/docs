@@ -22,7 +22,7 @@ conversion, weather, currency, world clock, hashes, QR, "what's my IP", …), or
 
 ```bash
 curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
-  "https://searpa.io/api/v1/instant/?q=100+usd+to+eur"
+  "https://search.example.com/api/v1/instant/?q=100+usd+to+eur"
 ```
 
 ```json

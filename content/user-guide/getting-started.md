@@ -7,12 +7,15 @@ weight: 1
 
 ## Sign in
 
-Searpa requires an account, there is no anonymous search and no public
-registration. On the hosted service this keeps the alpha invite-only; on a
-self-hosted instance the administrator creates accounts.
+Searpa requires an account, there is no anonymous **search**. The account
+itself, though, can be **anonymous**: only a username and password are needed,
+**no email or personal details are required** (an email is optional, and only
+for password reset, see [Your account]({{< relref "account" >}})). On the hosted
+service, accounts are invite-only during the alpha; on a self-hosted instance
+the administrator creates them.
 
 1. Go to your Searpa instance (the hosted service is at
-   [searpa.io](https://searpa.io/)).
+   [searpa.eu](https://searpa.eu/)).
 2. Click **Sign in** and enter your username and password.
 3. You land on the search home page.
 

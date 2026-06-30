@@ -7,8 +7,12 @@ weight: 6
 
 **Bangs** are `!shortcuts` you type in the search box to send a query straight to
 another site or to a different Searpa tab. Searpa understands the widely-used
-[DuckDuckGo-style bang vocabulary](https://duckduckgo.com/bangs), thousands of
-sites, plus a few of its own.
+DuckDuckGo-style bang vocabulary, thousands of sites, plus a few of its own.
+
+The bang definitions come from [Kagi's open-source bangs
+repository](https://github.com/kagisearch/bangs), the same community-maintained
+`!bang` list Kagi publishes. Self-hosters refresh it with `make bangs`, see
+[Maintenance]({{< relref "/self-hosting/maintenance#bang-definitions" >}}).
 
 A bang can sit anywhere in the query, the rest of the text is the search terms.
 

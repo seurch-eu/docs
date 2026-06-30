@@ -9,11 +9,17 @@ Every API request must carry a valid **API key**. Keys are issued per user; a
 request without one gets `401`, and a request with a bad or revoked one is
 rejected.
 
+> [!IMPORTANT]
+> The API is a [self-hosted]({{< relref "/self-hosting" >}}) feature, so keys are
+> issued on **your own instance**, not on the hosted searpa.eu service.
+
 ## Getting a key
+
+On your instance:
 
 - **In the web UI:** **Settings → API keys**, create a key (optionally name it).
   The full key is shown **once**, copy it immediately.
-- **From the command line** (self-hosters / admins):
+- **From the command line** (admins):
   `python manage.py create_api_key <username> --name "my script"`, see
   [Issuing API keys]({{< relref "/self-hosting/api-keys" >}}).
 
@@ -33,7 +39,7 @@ Send the key in the `Authorization` header. `Api-Key` is the documented scheme;
 
 ```bash
 curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
-  "https://searpa.io/api/v1/web/?q=climate"
+  "https://search.example.com/api/v1/web/?q=climate"
 ```
 
 An `X-Api-Key` header is also accepted, handy where you can't set
@@ -41,7 +47,7 @@ An `X-Api-Key` header is also accepted, handy where you can't set
 
 ```bash
 curl -H "X-Api-Key: searpa_sk_<prefix>.<secret>" \
-  "https://searpa.io/api/v1/web/?q=climate"
+  "https://search.example.com/api/v1/web/?q=climate"
 ```
 
 ### Python
@@ -49,7 +55,7 @@ curl -H "X-Api-Key: searpa_sk_<prefix>.<secret>" \
 ```python
 import requests
 
-BASE = "https://searpa.io/api/v1"
+BASE = "https://search.example.com/api/v1"
 HEADERS = {"Authorization": "Api-Key searpa_sk_<prefix>.<secret>"}
 
 r = requests.get(f"{BASE}/web/", params={"q": "climate", "lang": "en"}, headers=HEADERS)
@@ -64,7 +70,7 @@ see its metadata (this endpoint does **not** count toward your usage):
 
 ```bash
 curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
-  "https://searpa.io/api/v1/key/"
+  "https://search.example.com/api/v1/key/"
 ```
 
 ```json

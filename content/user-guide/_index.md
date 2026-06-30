@@ -7,7 +7,7 @@ bookCollapseSection: true
 # User guide
 
 This guide is for people **using** Searpa, on the hosted service at
-[searpa.io](https://searpa.io/) or on any instance someone runs for you.
+[searpa.eu](https://searpa.eu/) or on any instance someone runs for you.
 
 Searpa is a metasearch engine: you type one query and it blends results from
 several independent sources into a single clean page. There is nothing to
@@ -29,4 +29,4 @@ install, it works in any modern browser, and it does not track you.
 
 > [!NOTE]
 > The hosted service is currently **invite-only**. If you don't have an account
-> yet, request access from the [searpa.io](https://searpa.io/) home page.
+> yet, request access from the [searpa.eu](https://searpa.eu/) home page.
