@@ -13,21 +13,21 @@ is open source, so anyone can audit how it works or run their own copy.
 
 These docs cover three audiences:
 
-### 👤 [User guide]({{< relref "/user-guide" >}})
+### [User guide]({{< relref "/user-guide" >}})
 
 Everything you need to get the most out of Searpa: searching the web, the
 Images / News / Videos / Maps / Translate tabs, instant answers, knowledge
 cards, bangs and per-account settings.
 → Start with [Getting started]({{< relref "/user-guide/getting-started" >}}).
 
-### 🛠️ [Self-hosting guide]({{< relref "/self-hosting" >}})
+### [Self-hosting guide]({{< relref "/self-hosting" >}})
 
 Run your own Searpa instance. Requirements, a Docker quick start, every
 configuration option, wiring up search providers, creating users and issuing
 API keys, plus production and maintenance notes.
 → Start with [Quick start]({{< relref "/self-hosting/quick-start" >}}).
 
-### 🧑‍💻 [API guide]({{< relref "/api" >}})
+### [API guide]({{< relref "/api" >}})
 
 Use every Searpa search feature programmatically over a JSON API:
 authentication, rate limits and a reference for each endpoint, with copy-paste

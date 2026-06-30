@@ -236,6 +236,53 @@ body {
 }
 
 // ---------------------------------------------------------------------------
+// Sidebar "Links" section (layouts/_partials/docs/inject/menu-after.html)
+// ---------------------------------------------------------------------------
+.book-menu .book-links {
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+
+  .book-links-title {
+    display: block;
+    margin: 0 0.55rem 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sp-ink-muted);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 0.45rem;
+    padding: 0.28rem 0.55rem;
+    color: inherit;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &::after {
+      content: "↗";
+      margin-inline-start: auto;
+      font-size: 0.8em;
+      color: var(--sp-ink-muted);
+    }
+    &:hover {
+      color: var(--sp-brand);
+      background: var(--gray-100);
+      &::after { color: var(--sp-brand); }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Misc polish
 // ---------------------------------------------------------------------------
 ::selection {

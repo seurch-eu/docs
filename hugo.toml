@@ -28,9 +28,10 @@ disableKinds = ["taxonomy", "term"]
     style = "github"
     tabWidth = 2
 
-[menu]
-  # A couple of quick links pinned beneath the search box.
-  [[menu.before]]
-    name = "Searpa"
-    url = "https://searpa.io/"
-    weight = 1
+[params.links]
+  # External links rendered as a "Links" section at the foot of the sidebar
+  # (see layouts/_partials/docs/inject/menu-after.html).
+  site = "https://searpa.io/"
+  status = "https://searpa.io/status"
+  engine_repo = "https://github.com/search-project/search"
+  docs_repo = "https://github.com/search-project/docs"

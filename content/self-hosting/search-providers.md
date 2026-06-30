@@ -11,6 +11,10 @@ affected tab or card simply doesn't show, rather than displaying an error.
 
 All upstream calls happen **server-side**; keys are never exposed to the browser.
 
+This page is the **overview** of which key enables what. For step-by-step signup
+instructions for each provider, see
+[Getting API keys]({{< relref "provider-keys" >}}).
+
 ## The baseline: Brave
 
 | Variable | Get a key |

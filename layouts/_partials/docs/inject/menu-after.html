@@ -1,0 +1,21 @@
+{{/* Searpa "Links" section, rendered at the foot of the sidebar menu.
+     URLs come from [params.links] in hugo.toml. */}}
+{{ with .Site.Params.links }}
+<div class="book-links">
+  <span class="book-links-title">Links</span>
+  <ul>
+    {{ with .site }}
+    <li><a href="{{ . }}" target="_blank" rel="noopener">Searpa app</a></li>
+    {{ end }}
+    {{ with .status }}
+    <li><a href="{{ . }}" target="_blank" rel="noopener">Provider status</a></li>
+    {{ end }}
+    {{ with .engine_repo }}
+    <li><a href="{{ . }}" target="_blank" rel="noopener">Search engine source</a></li>
+    {{ end }}
+    {{ with .docs_repo }}
+    <li><a href="{{ . }}" target="_blank" rel="noopener">Documentation source</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

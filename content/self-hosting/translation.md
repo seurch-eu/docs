@@ -1,6 +1,6 @@
 ---
 title: Translation
-weight: 5
+weight: 6
 ---
 
 # Translation (LibreTranslate)

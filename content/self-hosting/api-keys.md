@@ -1,6 +1,6 @@
 ---
 title: API keys
-weight: 7
+weight: 8
 ---
 
 # API keys

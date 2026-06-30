@@ -23,6 +23,7 @@ container plus a database.
 | [Quick start]({{< relref "quick-start" >}}) | Get an instance running with Docker |
 | [Configuration]({{< relref "configuration" >}}) | Every environment variable |
 | [Search providers]({{< relref "search-providers" >}}) | API keys that light up engines, tabs and cards |
+| [Getting API keys]({{< relref "provider-keys" >}}) | Step-by-step signup for each provider |
 | [Translation]({{< relref "translation" >}}) | Wiring up LibreTranslate for the Translate tab |
 | [Users & access]({{< relref "users" >}}) | Creating accounts, email, password reset |
 | [API keys]({{< relref "api-keys" >}}) | Issuing and revoking API keys for users |
