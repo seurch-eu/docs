@@ -14,14 +14,20 @@ the website, so both always return the same results.
 The API is built with [Django REST Framework](https://www.django-rest-framework.org/)
 and mounted under **`/api/v1/`**.
 
+> [!IMPORTANT]
+> The public API is a **self-hosted** feature. It ships with the open-source
+> engine and is available on any instance you [run yourself]({{< relref "/self-hosting" >}}).
+> The hosted service at [searpa.eu](https://searpa.eu/) does **not** expose it,
+> so to use the API, run your own instance and create a key there.
+
 ## Base URL
 
 ```
-https://searpa.io/api/v1/
+https://search.example.com/api/v1/
 ```
 
-Replace the host with your own instance if you self-host. All examples below use
-the hosted host; swap it for yours.
+The examples below use `search.example.com` as a stand-in, replace it with your
+own instance's host.
 
 ## At a glance
 
@@ -36,7 +42,7 @@ the hosted host; swap it for yours.
 
 ```bash
 curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
-  "https://searpa.io/api/v1/web/?q=climate&lang=en"
+  "https://search.example.com/api/v1/web/?q=climate&lang=en"
 ```
 
 ## In this guide

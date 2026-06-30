@@ -9,7 +9,7 @@ FROM debian:bookworm-slim AS build
 # Keep in sync with the theme's minimum (extended build required for SCSS) and
 # with .github/workflows/. Override at build time with --build-arg if needed.
 ARG HUGO_VERSION=0.163.3
-ARG BASE_URL=https://docs.searpa.io/
+ARG BASE_URL=https://docs.searpa.eu/
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends curl ca-certificates \

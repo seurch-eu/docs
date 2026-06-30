@@ -19,7 +19,7 @@ GET /api/v1/suggest/?q=...
 
 ```bash
 curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
-  "https://searpa.io/api/v1/suggest/?q=clim"
+  "https://search.example.com/api/v1/suggest/?q=clim"
 ```
 
 ```json
@@ -94,18 +94,18 @@ GET /api/v1/
 
 ```json
 {
-  "web_search": "https://searpa.io/api/v1/web/",
-  "image_search": "https://searpa.io/api/v1/images/",
-  "similar_image_search": "https://searpa.io/api/v1/images/similar/",
-  "news_search": "https://searpa.io/api/v1/news/",
-  "video_search": "https://searpa.io/api/v1/videos/",
-  "maps": "https://searpa.io/api/v1/maps/",
-  "translate": "https://searpa.io/api/v1/translate/",
-  "translate_languages": "https://searpa.io/api/v1/translate/languages/",
-  "instant": "https://searpa.io/api/v1/instant/",
-  "cards": "https://searpa.io/api/v1/cards/",
-  "suggest": "https://searpa.io/api/v1/suggest/",
-  "status": "https://searpa.io/api/v1/status/",
-  "key": "https://searpa.io/api/v1/key/"
+  "web_search": "https://search.example.com/api/v1/web/",
+  "image_search": "https://search.example.com/api/v1/images/",
+  "similar_image_search": "https://search.example.com/api/v1/images/similar/",
+  "news_search": "https://search.example.com/api/v1/news/",
+  "video_search": "https://search.example.com/api/v1/videos/",
+  "maps": "https://search.example.com/api/v1/maps/",
+  "translate": "https://search.example.com/api/v1/translate/",
+  "translate_languages": "https://search.example.com/api/v1/translate/languages/",
+  "instant": "https://search.example.com/api/v1/instant/",
+  "cards": "https://search.example.com/api/v1/cards/",
+  "suggest": "https://search.example.com/api/v1/suggest/",
+  "status": "https://search.example.com/api/v1/status/",
+  "key": "https://search.example.com/api/v1/key/"
 }
 ```

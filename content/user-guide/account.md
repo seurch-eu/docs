@@ -11,10 +11,14 @@ Searpa is login-only, every search happens under your account, and there is no
 public sign-up form. On the hosted service, accounts are invite-only during the
 alpha; on a self-hosted instance the administrator creates accounts.
 
+Your account can be **anonymous**: it needs only a username and password, with
+**no email or other personal details**. There is no anonymous *search* (you're
+always signed in), but the account behind it need not identify you.
+
 ## Optional email
 
-Adding an email address to your account is **optional**. Its only purpose is
-**password reset**:
+Adding an email address to your account is **optional**, an account works fully
+without one. Its only purpose is **password reset**:
 
 - **With an email on file**, you can use **Forgot password?** to receive a reset
   link.
@@ -32,7 +36,9 @@ contact their administrator.
 
 ## API keys
 
-If you want to use Searpa programmatically, create an **API key** under
+The programmatic [API]({{< relref "/api" >}}) is a **self-hosted** feature, it is
+not available on the hosted searpa.eu service. On an instance you
+[run yourself]({{< relref "/self-hosting" >}}), create an **API key** under
 **Settings → API keys**:
 
 - Click to create a key, optionally giving it a name.

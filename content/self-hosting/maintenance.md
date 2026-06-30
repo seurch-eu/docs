@@ -37,7 +37,8 @@ underlying `manage.py` commands above.
 ### Bang definitions
 
 The [bangs]({{< relref "/user-guide/bangs" >}}) database (the thousands of
-`!shortcuts`) is downloaded with:
+`!shortcuts`) is downloaded from [Kagi's open-source bangs
+repository](https://github.com/kagisearch/bangs) with:
 
 ```bash
 python manage.py fetch_bangs        # or: make bangs

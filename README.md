@@ -1,6 +1,6 @@
 # Searpa documentation
 
-Public documentation for [Searpa](https://searpa.io/), the privacy-first
+Public documentation for [Searpa](https://searpa.eu/), the privacy-first
 metasearch engine. Built with [Hugo](https://gohugo.io/) and the
 [hugo-book](https://github.com/alex-shpak/hugo-book) theme.
 
