@@ -1,0 +1,77 @@
+---
+title: Configuration
+weight: 3
+---
+
+# Configuration
+
+Searpa est entièrement configuré via des **variables d'environnement** (en production) ou un fichier `.env` (en développement). Le dépôt inclut un fichier `.env.example` documentant chaque variable ; cette page en est la référence.
+
+## Noyau
+
+| Variable | Rôle | Notes |
+|----------|------|-------|
+| `SECRET_KEY` | Clé secrète Django | **Requise en production.** Longue et aléatoire. |
+| `DEBUG` | Mode débogage | Maintenez **`False`** (la valeur par défaut) en production. |
+| `ALLOWED_HOSTS` | Noms d'hôtes séparés par des virgules que l'application servira | ex. `search.example.com`. |
+| `DATABASE_URL` | URL de connexion PostgreSQL | ex. `postgres://utilisateur:mdp@hôte:5432/searpa`. |
+| `LOG_LEVEL` | Verbosité des logs | `DEBUG` / `INFO` / `WARNING` / `ERROR` (par défaut `INFO`). |
+
+## Fournisseurs de recherche
+
+Ces clés déterminent quels moteurs, onglets de médias et fiches de connaissance sont disponibles. Un fournisseur sans clé est simplement masqué (pas affiché comme cassé). Détails complets dans [Fournisseurs de recherche]({{< relref "search-providers" >}}).
+
+| Variable | Active |
+|----------|--------|
+| `BRAVE_API_KEY` | Web, Images, Actualités et Vidéos via Brave (la base). |
+| `BRAVE_SUGGEST_API_KEY` | Suggestions de complétion automatique (un abonnement Brave séparé). |
+| `MOJEEK_API_KEY` | Le moteur web Mojeek. |
+| `MARGINALIA_API_KEY` | Le moteur web Marginalia (`public` fonctionne d'emblée). |
+| `TMDB_API_KEY` | La fiche de connaissance film / série. |
+| `TRIPADVISOR_API_KEY` | La fiche de connaissance lieux. |
+| `STACKEXCHANGE_API_KEY` | Un quota Stack Exchange plus élevé pour la fiche Q&A (optionnel). |
+| `PIXABAY_API_KEY` | Images Pixabay mélangées dans l'onglet Images. |
+| `WORLDNEWS_API_KEY` | Articles de l'API World News mélangés dans l'onglet Actualités. |
+
+## Traduction
+
+| Variable | Rôle |
+|----------|------|
+| `LIBRETRANSLATE_URL` | URL de votre instance LibreTranslate. **Non défini désactive entièrement l'onglet Traduction.** |
+| `LIBRETRANSLATE_API_KEY` | Uniquement si votre LibreTranslate nécessite une clé (`LT_API_KEYS=true`). |
+| `LIBRETRANSLATE_ORIGIN_COUNTRY` | Code pays à deux lettres pour le drapeau affiché à côté de « Traduction » dans Paramètres (par défaut `fr`). |
+
+Voir [Traduction]({{< relref "translation" >}}).
+
+## Limites de débit de l'API publique
+
+Appliquées par clé API (taux de limitation Django REST Framework, `<nombre>/<période>`, où la période est `second` / `minute` / `hour` / `day`). Les deux limites s'appliquent ensemble. Voir la page [Limites de débit de l'API]({{< relref "/fr/api/rate-limits" >}}).
+
+| Variable | Rôle | Par défaut |
+|----------|------|------------|
+| `API_THROTTLE_BURST` | Plafond à court terme, protège les fournisseurs amont d'un client incontrôlé | `60/min` |
+| `API_THROTTLE_SUSTAINED` | Plafond de volume quotidien | `5000/day` |
+
+## E-mail (réinitialisation du mot de passe)
+
+Utilisé uniquement pour envoyer des messages de réinitialisation de mot de passe, voir [Utilisateurs et accès]({{< relref "users" >}}).
+
+| Variable | Rôle |
+|----------|------|
+| `EMAIL_BACKEND` | Backend e-mail Django (SMTP, console, …). |
+| `EMAIL_HOST` / `EMAIL_PORT` | Serveur SMTP. |
+| `EMAIL_USE_TLS` | `True` / `False`. |
+| `EMAIL_HOST_USER` / `EMAIL_HOST_PASSWORD` | Identifiants SMTP. |
+| `DEFAULT_FROM_EMAIL` | L'adresse « De » sur les e-mails sortants. |
+
+Pour un test rapide sans vrai serveur SMTP, définissez `EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend` pour afficher les e-mails dans le log du conteneur.
+
+## Liens de pied de page
+
+Le pied de page n'inclut **aucune** politique de confidentialité, conditions d'utilisation ou mentions légales par défaut ; ce contenu est spécifique à l'opérateur de l'instance et à votre juridiction. Ajoutez les vôtres sous forme de paires `Libellé=URL` séparées par des virgules :
+
+```
+FOOTER_LINKS=Confidentialité=https://example.com/privacy,Mentions légales=https://example.com/legal
+```
+
+Laissez `FOOTER_LINKS` non défini pour n'afficher aucun lien supplémentaire en pied de page.

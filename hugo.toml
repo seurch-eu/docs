@@ -1,5 +1,5 @@
 baseURL = "https://docs.searpa.eu/"
-locale = "en"
+defaultContentLanguage = "en"
 title = "Searpa Docs"
 theme = "hugo-book"
 
@@ -10,6 +10,19 @@ disableKinds = ["taxonomy", "term"]
 # Per-page git metadata, drives the "Edit this page" / "last modified" footer
 # links below. Gracefully no-ops where no git history is present.
 enableGitInfo = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  [languages.fr]
+    languageName = "Français"
+    weight = 2
+    title = "Documentation Searpa"
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 3
+    title = "Searpa Dokumentation"
 
 [params]
   # Auto follows the visitor's system light/dark preference.
