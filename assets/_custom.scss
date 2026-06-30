@@ -1,0 +1,256 @@
+/*
+  Searpa documentation theme overlay.
+
+  Restyles the hugo-book theme to match the Searpa app's design system:
+  a calm slate canvas with a single indigo brand voice, the system-ui type
+  family, hairline borders and soft rounded geometry, first-class light/dark.
+  Built on the open core's committed tokens (slate neutrals + indigo brand).
+
+  The theme imports this file *before* it applies its theme mixin at :root,
+  so redefining theme-light / theme-dark here is what actually drives the
+  palette (the @include accent(...) mixin comes from _defaults.scss).
+*/
+
+// ---------------------------------------------------------------------------
+// Palette — light (true-white canvas, indigo brand)
+// ---------------------------------------------------------------------------
+@mixin theme-light {
+  --sp-brand: #4f46e5;
+  --sp-brand-2: #8b5cf6;
+  --sp-brand-soft: #eef2ff;
+  --sp-surface: #ffffff;
+  --sp-elevated: #f8fafc;
+  --sp-edge: #e2e8f0;
+  --sp-ink: #1e293b;
+  --sp-ink-muted: #64748b;
+
+  --body-background: #ffffff;
+  --body-background-tint: none;
+  --body-font-color: #1e293b;
+
+  --color-link: #4f46e5;
+  --color-visited-link: #4f46e5;
+
+  --icon-filter: none;
+
+  --gray-100: #f8fafc; // elevated surface: code, table header/stripes
+  --gray-200: #e2e8f0; // edge: hairline borders & dividers
+  --gray-500: #64748b; // muted ink
+
+  --border-radius: 0.5rem;
+
+  @include accent("default", #64748b, 0.10);
+  @include accent("note", #4f46e5, 0.10);
+  @include accent("tip", #16a34a, 0.10);
+  @include accent("important", #8b5cf6, 0.12);
+  @include accent("warning", #f59e0b, 0.14);
+  @include accent("caution", #dc2626, 0.10);
+  // {{< hint >}} fallbacks
+  @include accent("info", #4f46e5, 0.10);
+  @include accent("success", #16a34a, 0.10);
+  @include accent("danger", #dc2626, 0.10);
+}
+
+// ---------------------------------------------------------------------------
+// Palette — dark (slate canvas; depth from borders, brand lifts to #818cf8)
+// ---------------------------------------------------------------------------
+@mixin theme-dark {
+  --sp-brand: #818cf8;
+  --sp-brand-2: #a78bfa;
+  --sp-brand-soft: #1e1b4b;
+  --sp-surface: #0f172a;
+  --sp-elevated: #1e293b;
+  --sp-edge: #334155;
+  --sp-ink: #e2e8f0;
+  --sp-ink-muted: #94a3b8;
+
+  --body-background: #0f172a;
+  --body-background-tint: none;
+  --body-font-color: #e2e8f0;
+
+  --color-link: #818cf8;
+  --color-visited-link: #a78bfa;
+
+  --icon-filter: brightness(0) invert(0.92);
+
+  --gray-100: #1e293b;
+  --gray-200: #334155;
+  --gray-500: #94a3b8;
+
+  --border-radius: 0.5rem;
+
+  @include accent("default", #94a3b8, 0.16);
+  @include accent("note", #818cf8, 0.18);
+  @include accent("tip", #4ade80, 0.16);
+  @include accent("important", #a78bfa, 0.18);
+  @include accent("warning", #fbbf24, 0.18);
+  @include accent("caution", #f87171, 0.18);
+  @include accent("info", #818cf8, 0.18);
+  @include accent("success", #4ade80, 0.16);
+  @include accent("danger", #f87171, 0.18);
+}
+
+// ---------------------------------------------------------------------------
+// Type — one system-ui family, carried by weight and scale
+// ---------------------------------------------------------------------------
+$sp-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+  Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+$sp-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+  "Liberation Mono", monospace;
+
+body {
+  font-family: $sp-sans;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.markdown {
+  h1, h2, h3, h4, h5 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--sp-ink);
+  }
+  h1 { letter-spacing: -0.03em; line-height: 1.1; }
+  h2 {
+    margin-top: 2.2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+}
+
+// ---------------------------------------------------------------------------
+// Brand wordmark — the one place gradient text is allowed
+// ---------------------------------------------------------------------------
+.book-brand {
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+
+  a { gap: 0.4rem; }
+
+  span {
+    background: linear-gradient(135deg, var(--sp-brand), var(--sp-brand-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Sidebar menu — soft indigo pill on the active page, gentle hover
+// ---------------------------------------------------------------------------
+.book-menu {
+  .book-menu-content { padding-top: 1.25rem; }
+
+  a {
+    border-radius: 0.45rem;
+    padding: 0.28rem 0.55rem;
+    margin: 0.05rem 0;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  a:hover {
+    color: var(--sp-brand);
+    background: var(--gray-100);
+  }
+  a.active {
+    color: var(--sp-brand);
+    background: var(--sp-brand-soft);
+    font-weight: 600;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Search box — rounded field with an indigo focus ring
+// ---------------------------------------------------------------------------
+.book-search {
+  border: 0;
+  background: transparent;
+  padding: 0;
+
+  input {
+    border: 1px solid var(--gray-200);
+    background: var(--gray-100);
+    border-radius: 0.6rem;
+    padding: 0.45rem 0.7rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:focus {
+      outline: none;
+      border-color: var(--sp-brand);
+      box-shadow: 0 0 0 3px var(--color-accent-note-tint);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Code & tables — hairline, rounded, elevated
+// ---------------------------------------------------------------------------
+.markdown {
+  code, pre, kbd { font-family: $sp-mono; }
+
+  code { border-radius: 0.35rem; }
+
+  pre {
+    border-radius: 0.65rem;
+    padding: 0.9rem 1rem;
+    line-height: 1.55;
+  }
+
+  table {
+    border: 1px solid var(--gray-200);
+    border-radius: 0.65rem;
+
+    thead th {
+      background: var(--gray-100);
+      font-weight: 700;
+      color: var(--sp-ink);
+      border-bottom: 2px solid var(--gray-200);
+    }
+  }
+
+  kbd {
+    padding: 0.1em 0.4em;
+    border: 1px solid var(--gray-200);
+    border-bottom-width: 2px;
+    border-radius: 0.35rem;
+    background: var(--gray-100);
+    font-size: 0.85em;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Callouts — modern rounded cards with a coloured accent edge
+// ---------------------------------------------------------------------------
+.markdown .book-hint {
+  border-inline-start-width: 4px;
+  border-radius: 0.65rem;
+  padding: 0.9rem 1.05rem;
+  margin: 1.25rem 0;
+}
+
+// ---------------------------------------------------------------------------
+// Misc polish
+// ---------------------------------------------------------------------------
+::selection {
+  background: var(--color-accent-note-tint);
+}
+
+.book-toc {
+  .book-toc-content a.active,
+  nav :target {
+    color: var(--sp-brand);
+  }
+}
+
+// Footer prev/next page links pick up the brand
+.book-page a.flex,
+.book-posts a {
+  color: var(--color-link);
+}
