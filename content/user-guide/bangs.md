@@ -1,0 +1,55 @@
+---
+title: Bangs
+weight: 6
+---
+
+# Bangs
+
+**Bangs** are `!shortcuts` you type in the search box to send a query straight to
+another site or to a different Searpa tab. Searpa understands the widely-used
+[DuckDuckGo-style bang vocabulary](https://duckduckgo.com/bangs), thousands of
+sites, plus a few of its own.
+
+A bang can sit anywhere in the query, the rest of the text is the search terms.
+
+## Site bangs
+
+Prefix a query with a site's bang to search that site directly:
+
+| You type | Goes to |
+|----------|---------|
+| `!w einstein` | Wikipedia article search for "einstein" |
+| `!gh hugo` | GitHub search for "hugo" |
+| `!yt lofi` | YouTube search for "lofi" |
+| `!a headphones` | Amazon search |
+
+There are thousands of these. If a bang isn't recognised, Searpa just treats it
+as part of your normal query.
+
+## Tab bangs
+
+A handful of bangs jump to one of Searpa's own [tabs]({{< relref "search-tabs" >}})
+instead of leaving the site:
+
+| Bang(s) | Tab |
+|---------|-----|
+| `!web` | Web |
+| `!images`, `!i` | Images |
+| `!news`, `!n` | News |
+| `!videos`, `!v` | Videos |
+| `!maps`, `!m` | Maps |
+| `!translate` | Translate |
+
+For example, `!i golden retriever` runs an image search without touching the
+tabs by hand.
+
+## The "lucky" bang
+
+A bare `!` on its own (for example `! best espresso machine`) is the **lucky**
+bang, it takes you to the top result for your query.
+
+## Custom bangs
+
+You can define your **own** bangs under **Settings → Bangs**. Give each one a
+trigger and a URL template, and it works just like the built-in ones. Custom
+bangs are stored against your account, so they follow you across devices.

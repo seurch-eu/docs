@@ -1,0 +1,36 @@
+baseURL = "https://docs.searpa.io/"
+locale = "en"
+title = "Searpa Docs"
+theme = "hugo-book"
+
+# Book theme expects the table of contents under one section; "*" tells it to
+# build the sidebar from every top-level section (User guide, Self-hosting, API).
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  # Auto follows the visitor's system light/dark preference.
+  BookTheme = "auto"
+  # Render the page table of contents in the right column.
+  BookToC = true
+  # Build the left menu from the content tree (all root sections).
+  BookSection = "*"
+  # Client-side search across all pages.
+  BookSearch = true
+  # Show a short "last edited" line; sourced from the git commit date.
+  BookDates = true
+
+[markup]
+  [markup.goldmark.renderer]
+    # Allow the occasional inline HTML (e.g. <kbd> keys) in the docs.
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "github"
+    tabWidth = 2
+
+[menu]
+  # A couple of quick links pinned beneath the search box.
+  [[menu.before]]
+    name = "Searpa"
+    url = "https://searpa.io/"
+    weight = 1
