@@ -26,6 +26,7 @@ install, it works in any modern browser, and it does not track you.
 | [Settings]({{< relref "settings" >}}) | Engines, languages, theme, data sources, backup & sync |
 | [Your account]({{< relref "account" >}}) | Sign-in, optional email, password reset, API keys |
 | [Privacy]({{< relref "privacy" >}}) | What Searpa does and does not collect |
+| [Browser setup]({{< relref "browser-setup" >}}) | Set Searpa as the default search engine in Chrome, Firefox, Safari, Edge, Brave and more |
 
 > [!NOTE]
 > The hosted service is currently **invite-only**. If you don't have an account

@@ -23,6 +23,7 @@ Searpa ist eine Metasuchmaschine: Sie geben eine Anfrage ein, und Searpa kombini
 | [Einstellungen]({{< relref "settings" >}}) | Suchmaschinen, Sprachen, Design, Datenquellen, Backup & Sync |
 | [Ihr Konto]({{< relref "account" >}}) | Anmeldung, optionale E-Mail, Passwort zurücksetzen, API-Schlüssel |
 | [Datenschutz]({{< relref "privacy" >}}) | Was Searpa erfasst und was nicht |
+| [Browser einrichten]({{< relref "browser-setup" >}}) | Searpa als Standard-Suchmaschine in Chrome, Firefox, Safari, Edge, Brave und mehr festlegen |
 
 > [!NOTE]
 > Der gehostete Dienst ist derzeit **nur auf Einladung** verfügbar. Wenn Sie noch kein Konto haben, fordern Sie den Zugang auf der Startseite von [searpa.eu](https://searpa.eu/) an.

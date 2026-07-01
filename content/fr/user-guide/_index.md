@@ -23,6 +23,7 @@ Searpa est un métamoteur de recherche : vous saisissez une requête et il méla
 | [Paramètres]({{< relref "settings" >}}) | Moteurs, langues, thème, sources de données, sauvegarde et synchronisation |
 | [Votre compte]({{< relref "account" >}}) | Connexion, e-mail optionnel, réinitialisation du mot de passe, clés API |
 | [Vie privée]({{< relref "privacy" >}}) | Ce que Searpa collecte et ne collecte pas |
+| [Configurer votre navigateur]({{< relref "browser-setup" >}}) | Définir Searpa comme moteur de recherche par défaut dans Chrome, Firefox, Safari, Edge, Brave et plus |
 
 > [!NOTE]
 > Le service hébergé est actuellement **sur invitation uniquement**. Si vous n'avez pas encore de compte, demandez l'accès depuis la page d'accueil de [searpa.eu](https://searpa.eu/).
