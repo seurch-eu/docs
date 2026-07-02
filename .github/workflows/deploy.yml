@@ -14,9 +14,7 @@ name: Deploy
 # Required GitHub Actions variable:
 #   VPS_HOST           VPS IP/hostname (same as servers.web in deploy.yml)
 on:
-  workflow_run:
-    workflows: ["CI"]
-    types: [completed]
+  push:
     branches: [main]
   workflow_dispatch:
 
