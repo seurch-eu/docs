@@ -12,7 +12,7 @@ ARG HUGO_VERSION=0.163.3
 ARG BASE_URL=https://docs.searpa.eu/
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends curl ca-certificates \
+ && apt-get install -y --no-install-recommends curl ca-certificates git \
  && curl -sSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" \
       | tar -xz -C /usr/local/bin hugo \
  && rm -rf /var/lib/apt/lists/*
