@@ -86,6 +86,13 @@ Before the first deploy, replace the `REPLACE_*` placeholders in
 from CI, run `kamal deploy` from a workflow with `BWS_ACCESS_TOKEN` and an SSH
 key, exactly as the main app does.
 
+`.kamal/secrets` shells out to the [Bitwarden Secrets Manager
+CLI](https://bitwarden.com/help/secrets-manager-cli/) (`bws`), so it must be
+installed wherever `kamal deploy`/`kamal setup` runs — including a developer's
+laptop, not just CI (see `.github/workflows/deploy.yml` for the CI install
+step). Without it, Kamal fails with "Bitwarden Secrets Manager CLI is not
+installed".
+
 ### GitHub Pages (zero-infra alternative)
 
 `.github/workflows/pages.yml` builds the site and publishes it to GitHub Pages

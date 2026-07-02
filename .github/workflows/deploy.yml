@@ -29,6 +29,16 @@ jobs:
       - name: Install Kamal
         run: gem install kamal
 
+      - name: Install Bitwarden Secrets Manager CLI (bws)
+        run: |
+          BWS_VERSION="$(curl -fsSL https://api.github.com/repos/bitwarden/sdk-sm/releases \
+            | jq -r '[.[] | select(.tag_name | startswith("bws-v"))][0].tag_name | ltrimstr("bws-v")')"
+          curl -fsSLo bws.zip \
+            "https://github.com/bitwarden/sdk-sm/releases/download/bws-v${BWS_VERSION}/bws-x86_64-unknown-linux-gnu-${BWS_VERSION}.zip"
+          sudo unzip -o bws.zip -d /usr/local/bin
+          sudo chmod +x /usr/local/bin/bws
+          bws --version
+
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
