@@ -36,7 +36,7 @@ Wenn es keine Sofortantwort gibt:
 { "query": "irgendein zufälliger Satz", "answer": null }
 ```
 
-Die Struktur des `answer`-Objekts hängt vom Antwort-`type` ab (Währung, Wetter, Rechner, Einheit, …). Unter der [benutzerseitigen Liste]({{< relref "/de/user-guide/instant-answers" >}}) finden Sie, was übereinstimmen kann; beachten Sie, dass Auslöser mehrsprachig sind.
+Die Struktur des `answer`-Objekts hängt vom Antwort-`type` ab (Währung, Wetter, Rechner, Einheit, …). Unter der [benutzerseitigen Liste]({{< relref "/user-guide/instant-answers" >}}) finden Sie, was übereinstimmen kann; beachten Sie, dass Auslöser mehrsprachig sind.
 
 ## Wissenskarten
 
@@ -57,7 +57,7 @@ Gibt das Wissenspanel für eine Anfrage zurück, abgeleitet aus demselben Web + 
 }
 ```
 
-Jede Karte ist `null`, wenn sie nicht auf die Anfrage zutrifft (nur die relevanten Karten werden befüllt, dieselbe Logik wie die Website: Eine Filmabfrage füllt `tmdb`, eine Ortsabfrage füllt `tripadvisor` und `map`, und so weiter). Die Kartenverfügbarkeit hängt auch davon ab, welche [Anbieter]({{< relref "/de/self-hosting/search-providers#knowledge-card-providers" >}}) die Instanz konfiguriert hat.
+Jede Karte ist `null`, wenn sie nicht auf die Anfrage zutrifft (nur die relevanten Karten werden befüllt, dieselbe Logik wie die Website: Eine Filmabfrage füllt `tmdb`, eine Ortsabfrage füllt `tripadvisor` und `map`, und so weiter). Die Kartenverfügbarkeit hängt auch davon ab, welche [Anbieter]({{< relref "/self-hosting/search-providers#knowledge-card-providers" >}}) die Instanz konfiguriert hat.
 
 > [!NOTE]
 > Eine einzelne `cards/`-Anfrage führt im Hintergrund eine Web-Suche plus eine Wikipedia-Suche aus (um das Thema zu erkennen), daher zählt sie als eine Suche zu Ihrer Nutzung.

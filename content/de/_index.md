@@ -10,20 +10,20 @@ bookToc: false
 
 Diese Dokumentation richtet sich an drei Zielgruppen:
 
-### [Benutzerhandbuch]({{< relref "/de/user-guide" >}})
+### [Benutzerhandbuch]({{< relref "/user-guide" >}})
 
 Alles, was Sie brauchen, um Searpa optimal zu nutzen: Web-Suche, die Tabs Bilder / Nachrichten / Videos / Karten / Übersetzen, Sofortantworten, Wissenskarten, Bangs und Kontoeinstellungen.
-→ Beginnen Sie mit [Erste Schritte]({{< relref "/de/user-guide/getting-started" >}}).
+→ Beginnen Sie mit [Erste Schritte]({{< relref "/user-guide/getting-started" >}}).
 
-### [Selbst-Hosting-Anleitung]({{< relref "/de/self-hosting" >}})
+### [Selbst-Hosting-Anleitung]({{< relref "/self-hosting" >}})
 
 Betreiben Sie Ihre eigene Searpa-Instanz. Voraussetzungen, Docker-Schnellstart, alle Konfigurationsoptionen, Einbindung von Suchanbieterern, Benutzerverwaltung und API-Schlüssel sowie Hinweise zu Produktion und Wartung.
-→ Beginnen Sie mit dem [Schnellstart]({{< relref "/de/self-hosting/quick-start" >}}).
+→ Beginnen Sie mit dem [Schnellstart]({{< relref "/self-hosting/quick-start" >}}).
 
-### [API-Anleitung]({{< relref "/de/api" >}})
+### [API-Anleitung]({{< relref "/api" >}})
 
 Nutzen Sie alle Searpa-Suchfunktionen programmatisch über eine JSON-API: Authentifizierung, Ratenlimits und eine Referenz für jeden Endpunkt mit kopierbaren `curl`- und Python-Beispielen.
-→ Beginnen Sie mit der [API-Übersicht]({{< relref "/de/api" >}}).
+→ Beginnen Sie mit der [API-Übersicht]({{< relref "/api" >}}).
 
 ## Was Searpa macht
 

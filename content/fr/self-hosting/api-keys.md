@@ -5,7 +5,7 @@ weight: 8
 
 # Clés API
 
-Les utilisateurs accèdent à l'[API publique]({{< relref "/fr/api" >}}) avec des clés API par utilisateur. Les utilisateurs peuvent gérer leurs propres clés dans l'interface web (**Paramètres → Clés API**), et vous pouvez les gérer depuis la ligne de commande.
+Les utilisateurs accèdent à l'[API publique]({{< relref "/api" >}}) avec des clés API par utilisateur. Les utilisateurs peuvent gérer leurs propres clés dans l'interface web (**Paramètres → Clés API**), et vous pouvez les gérer depuis la ligne de commande.
 
 ## Comment les clés sont stockées
 
@@ -46,7 +46,7 @@ Une clé révoquée est rejetée immédiatement à la prochaine requête.
 
 ## Limites de débit
 
-Chaque clé est limitée par deux limites qui s'appliquent ensemble : un plafond **burst** à court terme et un plafond **sustained** journalier, configurés avec `API_THROTTLE_BURST` et `API_THROTTLE_SUSTAINED`. Dépasser l'une ou l'autre renvoie HTTP `429`. Voir [Configuration]({{< relref "configuration#public-api-rate-limits" >}}) et la page [Limites de débit de l'API]({{< relref "/fr/api/rate-limits" >}}).
+Chaque clé est limitée par deux limites qui s'appliquent ensemble : un plafond **burst** à court terme et un plafond **sustained** journalier, configurés avec `API_THROTTLE_BURST` et `API_THROTTLE_SUSTAINED`. Dépasser l'une ou l'autre renvoie HTTP `429`. Voir [Configuration]({{< relref "configuration#public-api-rate-limits" >}}) et la page [Limites de débit de l'API]({{< relref "/api/rate-limits" >}}).
 
 ## Comptabilité des usages
 

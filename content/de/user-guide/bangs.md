@@ -7,7 +7,7 @@ weight: 6
 
 **Bangs** sind `!Verknüpfungen`, die Sie in das Suchfeld eingeben, um eine Anfrage direkt zu einer anderen Website oder einem anderen Searpa-Tab zu senden. Searpa versteht das weit verbreitete DuckDuckGo-Bang-Vokabular mit Tausenden von Websites sowie einige eigene.
 
-Die Bang-Definitionen stammen aus dem [Open-Source-Bang-Repository von Kagi](https://github.com/kagisearch/bangs), derselben community-gepflegten `!bang`-Liste, die Kagi veröffentlicht. Selbst-Hoster können diese mit `make bangs` aktualisieren; siehe [Wartung]({{< relref "/de/self-hosting/maintenance#bang-definitions" >}}).
+Die Bang-Definitionen stammen aus dem [Open-Source-Bang-Repository von Kagi](https://github.com/kagisearch/bangs), derselben community-gepflegten `!bang`-Liste, die Kagi veröffentlicht. Selbst-Hoster können diese mit `make bangs` aktualisieren; siehe [Wartung]({{< relref "/self-hosting/maintenance#bang-definitions" >}}).
 
 Ein Bang kann überall in der Anfrage stehen; der Rest des Textes sind die Suchbegriffe.
 

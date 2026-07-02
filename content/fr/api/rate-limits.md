@@ -12,7 +12,7 @@ Chaque clé API dispose de son propre budget, appliqué par **deux limites qui s
 | **Burst** | `60/min` | Plafond à court terme, protège les fournisseurs amont d'un client incontrôlé. |
 | **Sustained** | `5000/day` | Plafonne le volume quotidien total. |
 
-Sur une instance auto-hébergée, ces valeurs sont configurables avec `API_THROTTLE_BURST` et `API_THROTTLE_SUSTAINED`, voir [Configuration]({{< relref "/fr/self-hosting/configuration#public-api-rate-limits" >}}).
+Sur une instance auto-hébergée, ces valeurs sont configurables avec `API_THROTTLE_BURST` et `API_THROTTLE_SUSTAINED`, voir [Configuration]({{< relref "/self-hosting/configuration#public-api-rate-limits" >}}).
 
 ## Lorsque vous dépassez une limite
 

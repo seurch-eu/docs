@@ -7,7 +7,7 @@ weight: 6
 
 Les **bangs** sont des `!raccourcis` que vous tapez dans la zone de recherche pour envoyer directement une requête vers un autre site ou un onglet Searpa différent. Searpa comprend le vocabulaire de bangs à la mode DuckDuckGo largement utilisé, des milliers de sites, plus quelques-uns qui lui sont propres.
 
-Les définitions de bangs proviennent du [dépôt de bangs open source de Kagi](https://github.com/kagisearch/bangs), la même liste `!bang` communautaire que Kagi publie. Les auto-hébergeurs peuvent la rafraîchir avec `make bangs`, voir [Maintenance]({{< relref "/fr/self-hosting/maintenance#bang-definitions" >}}).
+Les définitions de bangs proviennent du [dépôt de bangs open source de Kagi](https://github.com/kagisearch/bangs), la même liste `!bang` communautaire que Kagi publie. Les auto-hébergeurs peuvent la rafraîchir avec `make bangs`, voir [Maintenance]({{< relref "/self-hosting/maintenance#bang-definitions" >}}).
 
 Un bang peut se placer n'importe où dans la requête, le reste du texte constitue les termes de recherche.
 

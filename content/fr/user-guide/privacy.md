@@ -27,7 +27,7 @@ Searpa est conçu pour être une alternative privée aux moteurs de recherche fi
 
 ## Où c'est hébergé
 
-Le service hébergé est exploité dans l'Union européenne sous le droit européen de la vie privée. Étant donné que le moteur de recherche est open source, n'importe qui peut auditer son fonctionnement, ou [déployer sa propre copie]({{< relref "/fr/self-hosting" >}}) et être le seul opérateur à jamais toucher ses données.
+Le service hébergé est exploité dans l'Union européenne sous le droit européen de la vie privée. Étant donné que le moteur de recherche est open source, n'importe qui peut auditer son fonctionnement, ou [déployer sa propre copie]({{< relref "/self-hosting" >}}) et être le seul opérateur à jamais toucher ses données.
 
 > [!NOTE]
 > La politique de confidentialité spécifique, les conditions d'utilisation et les mentions légales dépendent de **qui exploite l'instance** que vous utilisez. Sur le service hébergé, consultez les liens dans le pied de page du site.

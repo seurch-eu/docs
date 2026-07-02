@@ -11,7 +11,7 @@ Chaque fonctionnalité de recherche Searpa — web, images, actualités, vidéos
 L'API est construite avec [Django REST Framework](https://www.django-rest-framework.org/) et montée sous **`/api/v1/`**.
 
 > [!IMPORTANT]
-> L'API publique est une fonctionnalité **auto-hébergée**. Elle est incluse dans le moteur open source et disponible sur toute instance que vous [déployez vous-même]({{< relref "/fr/self-hosting" >}}). Le service hébergé sur [searpa.eu](https://searpa.eu/) **ne l'expose pas** ; pour utiliser l'API, déployez votre propre instance et créez-y une clé.
+> L'API publique est une fonctionnalité **auto-hébergée**. Elle est incluse dans le moteur open source et disponible sur toute instance que vous [déployez vous-même]({{< relref "/self-hosting" >}}). Le service hébergé sur [searpa.eu](https://searpa.eu/) **ne l'expose pas** ; pour utiliser l'API, déployez votre propre instance et créez-y une clé.
 
 ## URL de base
 

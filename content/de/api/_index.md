@@ -11,7 +11,7 @@ Jede Searpa-Suchfunktion – Web, Bilder, Nachrichten, Videos, Karten, Übersetz
 Die API ist mit [Django REST Framework](https://www.django-rest-framework.org/) gebaut und unter **`/api/v1/`** eingehängt.
 
 > [!IMPORTANT]
-> Die öffentliche API ist eine **selbst-gehostete** Funktion. Sie wird mit der Open-Source-Engine geliefert und ist auf jeder Instanz verfügbar, die Sie [selbst betreiben]({{< relref "/de/self-hosting" >}}). Der gehostete Dienst unter [searpa.eu](https://searpa.eu/) stellt sie **nicht** bereit; um die API zu nutzen, betreiben Sie Ihre eigene Instanz und erstellen Sie dort einen Schlüssel.
+> Die öffentliche API ist eine **selbst-gehostete** Funktion. Sie wird mit der Open-Source-Engine geliefert und ist auf jeder Instanz verfügbar, die Sie [selbst betreiben]({{< relref "/self-hosting" >}}). Der gehostete Dienst unter [searpa.eu](https://searpa.eu/) stellt sie **nicht** bereit; um die API zu nutzen, betreiben Sie Ihre eigene Instanz und erstellen Sie dort einen Schlüssel.
 
 ## Basis-URL
 

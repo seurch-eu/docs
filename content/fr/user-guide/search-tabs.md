@@ -40,4 +40,4 @@ Lorsqu'une recherche **web** normale ressemble à une adresse ou un lieu, une mi
 L'onglet **Traduction** traduit du texte entre langues, alimenté par [LibreTranslate](https://libretranslate.com/) (traduction automatique open source). Choisissez une langue cible (et éventuellement une langue source, ou laissez-la se détecter automatiquement), collez votre texte et lisez la traduction. Les langues disponibles dépendent de l'instance LibreTranslate à laquelle l'opérateur est connecté.
 
 > [!NOTE]
-> Si un onglet est manquant, l'opérateur de l'instance n'a pas configuré ce fournisseur. Sur une instance [auto-hébergée]({{< relref "/fr/self-hosting" >}}), vous contrôlez les fournisseurs activés.
+> Si un onglet est manquant, l'opérateur de l'instance n'a pas configuré ce fournisseur. Sur une instance [auto-hébergée]({{< relref "/self-hosting" >}}), vous contrôlez les fournisseurs activés.

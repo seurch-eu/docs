@@ -68,7 +68,7 @@ Mélange des articles de l'[API World News](https://worldnewsapi.com/) dans l'on
 
 ## TMDB (fiche film / série) — `TMDB_API_KEY`
 
-Active la [fiche de connaissance]({{< relref "/fr/user-guide/knowledge-cards" >}}) film / série.
+Active la [fiche de connaissance]({{< relref "/user-guide/knowledge-cards" >}}) film / série.
 
 1. Créez un compte gratuit sur [The Movie Database](https://www.themoviedb.org/).
 2. Allez dans **Paramètres → API** ([lien direct](https://www.themoviedb.org/settings/api)) et demandez une clé **Développeur** (immédiate, gratuite ; vous remplissez un court formulaire).
@@ -114,4 +114,4 @@ L'onglet Traduction est la seule fonctionnalité sans clé qui nécessite quand 
 
 1. Placez chaque valeur dans votre environnement (ou `.env`), voir [Configuration]({{< relref "configuration" >}}).
 2. Redémarrez l'application pour qu'elle prenne en compte les nouvelles variables.
-3. Vérifiez la page **`/status`** (ou le [point de terminaison API `status/`]({{< relref "/fr/api/meta#provider-status" >}})) pour confirmer que chaque fournisseur rapporte un état sain.
+3. Vérifiez la page **`/status`** (ou le [point de terminaison API `status/`]({{< relref "/api/meta#provider-status" >}})) pour confirmer que chaque fournisseur rapporte un état sain.

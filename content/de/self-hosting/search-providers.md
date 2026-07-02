@@ -22,7 +22,7 @@ Brave ist der empfohlene Ausgangspunkt: Ein einzelner Schlüssel betreibt die **
 
 ## Zusätzliche Web-Suchmaschinen
 
-Fügen Sie eine oder beide hinzu, um weitere unabhängige Indizes in den Web-Tab einzumischen (zusammengeführt mit Reciprocal Rank Fusion; siehe [Web-Suche]({{< relref "/de/user-guide/web-search" >}})):
+Fügen Sie eine oder beide hinzu, um weitere unabhängige Indizes in den Web-Tab einzumischen (zusammengeführt mit Reciprocal Rank Fusion; siehe [Web-Suche]({{< relref "/user-guide/web-search" >}})):
 
 | Variable | Anbieter | Schlüssel erhalten |
 |----------|----------|-------------------|
@@ -43,7 +43,7 @@ Jeder Medien-Tab mischt Brave mit einem zweiten Anbieter. Der ergänzende Anbiet
 
 ## Wissenskarten-Anbieter
 
-Der Web-Tab kann bis zu drei [Wissenskarten]({{< relref "/de/user-guide/knowledge-cards" >}}) seitlich anzeigen:
+Der Web-Tab kann bis zu drei [Wissenskarten]({{< relref "/user-guide/knowledge-cards" >}}) seitlich anzeigen:
 
 | Karte | Variable | Anbieter | Schlüssel |
 |-------|----------|----------|----------|

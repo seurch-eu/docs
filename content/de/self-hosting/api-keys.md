@@ -5,7 +5,7 @@ weight: 8
 
 # API-Schlüssel
 
-Benutzer greifen auf die [öffentliche API]({{< relref "/de/api" >}}) mit benutzerspezifischen API-Schlüsseln zu. Benutzer können ihre eigenen Schlüssel in der Web-UI verwalten (**Einstellungen → API-Schlüssel**), und Sie können sie über die Befehlszeile verwalten.
+Benutzer greifen auf die [öffentliche API]({{< relref "/api" >}}) mit benutzerspezifischen API-Schlüsseln zu. Benutzer können ihre eigenen Schlüssel in der Web-UI verwalten (**Einstellungen → API-Schlüssel**), und Sie können sie über die Befehlszeile verwalten.
 
 ## Wie Schlüssel gespeichert werden
 
@@ -46,7 +46,7 @@ Ein widerrufener Schlüssel wird bei der nächsten Anfrage sofort abgelehnt.
 
 ## Ratenlimits
 
-Jeder Schlüssel wird durch zwei zusammen geltende Limits begrenzt: ein kurzfristiges **Burst**-Limit und ein tägliches **Sustained**-Limit, konfiguriert mit `API_THROTTLE_BURST` und `API_THROTTLE_SUSTAINED`. Das Überschreiten eines der beiden gibt HTTP `429` zurück. Siehe [Konfiguration]({{< relref "configuration#public-api-rate-limits" >}}) und die [API-Ratenlimits]({{< relref "/de/api/rate-limits" >}})-Seite.
+Jeder Schlüssel wird durch zwei zusammen geltende Limits begrenzt: ein kurzfristiges **Burst**-Limit und ein tägliches **Sustained**-Limit, konfiguriert mit `API_THROTTLE_BURST` und `API_THROTTLE_SUSTAINED`. Das Überschreiten eines der beiden gibt HTTP `429` zurück. Siehe [Konfiguration]({{< relref "configuration#public-api-rate-limits" >}}) und die [API-Ratenlimits]({{< relref "/api/rate-limits" >}})-Seite.
 
 ## Nutzungserfassung
 

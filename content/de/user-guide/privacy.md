@@ -27,7 +27,7 @@ Searpa ist als datenschutzfreundliche Alternative zu überwachungsfinanzierten S
 
 ## Wo der Dienst betrieben wird
 
-Der gehostete Dienst wird in der Europäischen Union unter europäischem Datenschutzrecht betrieben. Da die Suchmaschine Open Source ist, kann jeder ihre Funktionsweise prüfen oder [eine eigene Kopie betreiben]({{< relref "/de/self-hosting" >}}) und der einzige Betreiber sein, der jemals ihre Daten berührt.
+Der gehostete Dienst wird in der Europäischen Union unter europäischem Datenschutzrecht betrieben. Da die Suchmaschine Open Source ist, kann jeder ihre Funktionsweise prüfen oder [eine eigene Kopie betreiben]({{< relref "/self-hosting" >}}) und der einzige Betreiber sein, der jemals ihre Daten berührt.
 
 > [!NOTE]
 > Die spezifische Datenschutzrichtlinie, die Nutzungsbedingungen und das Impressum hängen davon ab, **wer die Instanz betreibt**, die Sie verwenden. Beim gehosteten Dienst finden Sie die Links in der Website-Fußzeile.

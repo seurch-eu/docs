@@ -58,4 +58,4 @@ GET /api/v1/translate/languages/
 }
 ```
 
-Die Liste spiegelt wider, was die verbundene LibreTranslate-Instanz anbietet; siehe [Übersetzung]({{< relref "/de/self-hosting/translation" >}}) für die Selbst-Hosting-Seite.
+Die Liste spiegelt wider, was die verbundene LibreTranslate-Instanz anbietet; siehe [Übersetzung]({{< relref "/self-hosting/translation" >}}) für die Selbst-Hosting-Seite.

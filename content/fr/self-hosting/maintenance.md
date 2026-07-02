@@ -31,7 +31,7 @@ Les équivalents `make` depuis les sources sont `make refresh-currency` et les c
 
 ### Définitions de bangs
 
-La base de données de [bangs]({{< relref "/fr/user-guide/bangs" >}}) (les milliers de `!raccourcis`) est téléchargée depuis le [dépôt de bangs open source de Kagi](https://github.com/kagisearch/bangs) avec :
+La base de données de [bangs]({{< relref "/user-guide/bangs" >}}) (les milliers de `!raccourcis`) est téléchargée depuis le [dépôt de bangs open source de Kagi](https://github.com/kagisearch/bangs) avec :
 
 ```bash
 python manage.py fetch_bangs        # ou : make bangs

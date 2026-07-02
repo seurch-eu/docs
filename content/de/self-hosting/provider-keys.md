@@ -68,7 +68,7 @@ Mischt Artikel der [World News API](https://worldnewsapi.com/) in den Nachrichte
 
 ## TMDB (Film / TV-Karte) — `TMDB_API_KEY`
 
-Aktiviert die Film / TV-[Wissenskarte]({{< relref "/de/user-guide/knowledge-cards" >}}).
+Aktiviert die Film / TV-[Wissenskarte]({{< relref "/user-guide/knowledge-cards" >}}).
 
 1. Erstellen Sie ein kostenloses Konto bei [The Movie Database](https://www.themoviedb.org/).
 2. Gehen Sie zu **Einstellungen → API** ([direkter Link](https://www.themoviedb.org/settings/api)) und beantragen Sie einen **Entwickler**-Schlüssel (sofort, kostenlos; Sie füllen ein kurzes Formular aus).
@@ -114,4 +114,4 @@ Der Übersetzen-Tab ist die einzige schlüssellose Funktion, die dennoch **Infra
 
 1. Legen Sie jeden Wert in Ihrer Umgebung (oder `.env`) fest; siehe [Konfiguration]({{< relref "configuration" >}}).
 2. Starten Sie die App neu, damit sie die neuen Variablen aufnimmt.
-3. Überprüfen Sie die **`/status`**-Seite (oder den [`status/` API-Endpunkt]({{< relref "/de/api/meta#provider-status" >}})), um zu bestätigen, dass jeder Anbieter als gesund gemeldet wird.
+3. Überprüfen Sie die **`/status`**-Seite (oder den [`status/` API-Endpunkt]({{< relref "/api/meta#provider-status" >}})), um zu bestätigen, dass jeder Anbieter als gesund gemeldet wird.

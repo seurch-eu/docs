@@ -26,13 +26,13 @@ Utilisez le processus de réinitialisation de mot de passe (si vous avez un e-ma
 
 ## Clés API
 
-L'[API]({{< relref "/fr/api" >}}) programmatique est une fonctionnalité **auto-hébergée** ; elle n'est pas disponible sur le service hébergé searpa.eu. Sur une instance que vous [gérez vous-même]({{< relref "/fr/self-hosting" >}}), créez une **clé API** dans **Paramètres → Clés API** :
+L'[API]({{< relref "/api" >}}) programmatique est une fonctionnalité **auto-hébergée** ; elle n'est pas disponible sur le service hébergé searpa.eu. Sur une instance que vous [gérez vous-même]({{< relref "/self-hosting" >}}), créez une **clé API** dans **Paramètres → Clés API** :
 
 - Cliquez pour créer une clé, en lui donnant éventuellement un nom.
 - La **clé complète n'est affichée qu'une seule fois** ; copiez-la immédiatement dans un endroit sûr. Seuls un préfixe et un hachage sont stockés, elle ne peut donc pas être affichée à nouveau.
 - Révoquez une clé à tout moment depuis le même écran.
 
-Votre total mensuel de recherches (sur le site web et l'API) est affiché dans Paramètres. Consultez le [guide API]({{< relref "/fr/api" >}}) pour savoir comment utiliser une clé.
+Votre total mensuel de recherches (sur le site web et l'API) est affiché dans Paramètres. Consultez le [guide API]({{< relref "/api" >}}) pour savoir comment utiliser une clé.
 
 > [!WARNING]
 > Traitez une clé API comme un mot de passe. Quiconque la possède peut rechercher en votre nom et consommer votre limite de débit. Si une clé est compromise, révoquez-la et créez-en une nouvelle.

@@ -54,4 +54,4 @@ Searpa est une application Django standard sans état, vous pouvez donc faire to
 
 ## Proxy d'images et trafic sortant
 
-Si les utilisateurs activent le [proxy d'images]({{< relref "/fr/user-guide/settings" >}}), les miniatures sont récupérées via le serveur ; tenez compte de ce trafic sortant. Tous les appels aux fournisseurs sont en HTTPS sortant depuis le serveur ; si vous êtes derrière une liste blanche, voir les [hôtes des fournisseurs]({{< relref "search-providers#network-allowlist" >}}).
+Si les utilisateurs activent le [proxy d'images]({{< relref "/user-guide/settings" >}}), les miniatures sont récupérées via le serveur ; tenez compte de ce trafic sortant. Tous les appels aux fournisseurs sont en HTTPS sortant depuis le serveur ; si vous êtes derrière une liste blanche, voir les [hôtes des fournisseurs]({{< relref "search-providers#network-allowlist" >}}).

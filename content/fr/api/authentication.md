@@ -8,7 +8,7 @@ weight: 1
 Chaque requête API doit comporter une **clé API** valide. Les clés sont émises par utilisateur ; une requête sans clé reçoit `401`, et une requête avec une clé incorrecte ou révoquée est rejetée.
 
 > [!IMPORTANT]
-> L'API est une fonctionnalité [auto-hébergée]({{< relref "/fr/self-hosting" >}}), donc les clés sont émises sur **votre propre instance**, pas sur le service hébergé searpa.eu.
+> L'API est une fonctionnalité [auto-hébergée]({{< relref "/self-hosting" >}}), donc les clés sont émises sur **votre propre instance**, pas sur le service hébergé searpa.eu.
 
 ## Obtenir une clé
 
@@ -16,7 +16,7 @@ Sur votre instance :
 
 - **Dans l'interface web :** **Paramètres → Clés API**, créez une clé (nommez-la optionnellement). La clé complète est affichée **une seule fois** ; copiez-la immédiatement.
 - **Depuis la ligne de commande** (administrateurs) :
-  `python manage.py create_api_key <nom_utilisateur> --name "mon script"`, voir [Gestion des clés API]({{< relref "/fr/self-hosting/api-keys" >}}).
+  `python manage.py create_api_key <nom_utilisateur> --name "mon script"`, voir [Gestion des clés API]({{< relref "/self-hosting/api-keys" >}}).
 
 Une clé ressemble à :
 

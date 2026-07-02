@@ -8,7 +8,7 @@ weight: 1
 Jede API-Anfrage muss einen gültigen **API-Schlüssel** enthalten. Schlüssel werden pro Benutzer ausgestellt; eine Anfrage ohne einen erhält `401`, und eine Anfrage mit einem schlechten oder widerrufenen Schlüssel wird abgelehnt.
 
 > [!IMPORTANT]
-> Die API ist eine [selbst-gehostete]({{< relref "/de/self-hosting" >}}) Funktion, daher werden Schlüssel auf **Ihrer eigenen Instanz** ausgestellt, nicht beim gehosteten searpa.eu-Dienst.
+> Die API ist eine [selbst-gehostete]({{< relref "/self-hosting" >}}) Funktion, daher werden Schlüssel auf **Ihrer eigenen Instanz** ausgestellt, nicht beim gehosteten searpa.eu-Dienst.
 
 ## Einen Schlüssel erhalten
 
@@ -16,7 +16,7 @@ Auf Ihrer Instanz:
 
 - **In der Web-UI:** **Einstellungen → API-Schlüssel**, erstellen Sie einen Schlüssel (optional benennen). Der vollständige Schlüssel wird **einmal** angezeigt; kopieren Sie ihn sofort.
 - **Über die Befehlszeile** (Administratoren):
-  `python manage.py create_api_key <benutzername> --name "mein Skript"`, siehe [API-Schlüssel ausstellen]({{< relref "/de/self-hosting/api-keys" >}}).
+  `python manage.py create_api_key <benutzername> --name "mein Skript"`, siehe [API-Schlüssel ausstellen]({{< relref "/self-hosting/api-keys" >}}).
 
 Ein Schlüssel sieht aus wie:
 

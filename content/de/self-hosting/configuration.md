@@ -45,7 +45,7 @@ Siehe [Übersetzung]({{< relref "translation" >}}).
 
 ## Öffentliche API-Ratenlimits
 
-Pro API-Schlüssel angewendet (Django REST Framework-Drosselraten, `<Anzahl>/<Zeitraum>`, wobei der Zeitraum `second` / `minute` / `hour` / `day` ist). Beide Limits gelten zusammen. Siehe die [API-Ratenlimits]({{< relref "/de/api/rate-limits" >}})-Seite.
+Pro API-Schlüssel angewendet (Django REST Framework-Drosselraten, `<Anzahl>/<Zeitraum>`, wobei der Zeitraum `second` / `minute` / `hour` / `day` ist). Beide Limits gelten zusammen. Siehe die [API-Ratenlimits]({{< relref "/api/rate-limits" >}})-Seite.
 
 | Variable | Zweck | Standard |
 |----------|-------|---------|

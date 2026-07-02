@@ -40,4 +40,4 @@ Wenn eine normale **Web**-Suche wie eine Adresse oder ein Ort aussieht, erschein
 Der **Übersetzen**-Tab übersetzt Text zwischen Sprachen, powered by [LibreTranslate](https://libretranslate.com/) (Open-Source-Maschinelle Übersetzung). Wählen Sie eine Zielsprache (und optional eine Quellsprache oder lassen Sie sie automatisch erkennen), fügen Sie Ihren Text ein und lesen Sie die Übersetzung. Die verfügbaren Sprachen hängen von der LibreTranslate-Instanz ab, die der Betreiber angebunden hat.
 
 > [!NOTE]
-> Wenn ein Tab fehlt, hat der Instanz-Betreiber diesen Anbieter nicht konfiguriert. Bei einer [selbst gehosteten]({{< relref "/de/self-hosting" >}}) Instanz kontrollieren Sie, welche Anbieter aktiviert sind.
+> Wenn ein Tab fehlt, hat der Instanz-Betreiber diesen Anbieter nicht konfiguriert. Bei einer [selbst gehosteten]({{< relref "/self-hosting" >}}) Instanz kontrollieren Sie, welche Anbieter aktiviert sind.

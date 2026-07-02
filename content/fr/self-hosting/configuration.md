@@ -45,7 +45,7 @@ Voir [Traduction]({{< relref "translation" >}}).
 
 ## Limites de débit de l'API publique
 
-Appliquées par clé API (taux de limitation Django REST Framework, `<nombre>/<période>`, où la période est `second` / `minute` / `hour` / `day`). Les deux limites s'appliquent ensemble. Voir la page [Limites de débit de l'API]({{< relref "/fr/api/rate-limits" >}}).
+Appliquées par clé API (taux de limitation Django REST Framework, `<nombre>/<période>`, où la période est `second` / `minute` / `hour` / `day`). Les deux limites s'appliquent ensemble. Voir la page [Limites de débit de l'API]({{< relref "/api/rate-limits" >}}).
 
 | Variable | Rôle | Par défaut |
 |----------|------|------------|

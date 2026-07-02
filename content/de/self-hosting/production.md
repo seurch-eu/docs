@@ -54,4 +54,4 @@ Searpa ist eine Standard-zustandslose Django-App, sodass Sie mehrere App-Contain
 
 ## Bilder-Proxy und ausgehender Datenverkehr
 
-Wenn Benutzer das [Bilder-Proxy]({{< relref "/de/user-guide/settings" >}}) aktivieren, werden Vorschaubilder über den Server abgerufen; berücksichtigen Sie diesen ausgehenden Datenverkehr. Alle Anbieteraufrufe sind ausgehendes HTTPS vom Server; wenn Sie hinter einer Zulassungsliste sind, sehen Sie die [Anbieter-Hosts]({{< relref "search-providers#network-allowlist" >}}).
+Wenn Benutzer das [Bilder-Proxy]({{< relref "/user-guide/settings" >}}) aktivieren, werden Vorschaubilder über den Server abgerufen; berücksichtigen Sie diesen ausgehenden Datenverkehr. Alle Anbieteraufrufe sind ausgehendes HTTPS vom Server; wenn Sie hinter einer Zulassungsliste sind, sehen Sie die [Anbieter-Hosts]({{< relref "search-providers#network-allowlist" >}}).

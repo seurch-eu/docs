@@ -31,7 +31,7 @@ Die `make`-Äquivalente aus dem Quellcode sind `make refresh-currency` und die o
 
 ### Bang-Definitionen
 
-Die [Bangs]({{< relref "/de/user-guide/bangs" >}})-Datenbank (die Tausenden von `!Verknüpfungen`) wird aus dem [Open-Source-Bang-Repository von Kagi](https://github.com/kagisearch/bangs) heruntergeladen:
+Die [Bangs]({{< relref "/user-guide/bangs" >}})-Datenbank (die Tausenden von `!Verknüpfungen`) wird aus dem [Open-Source-Bang-Repository von Kagi](https://github.com/kagisearch/bangs) heruntergeladen:
 
 ```bash
 python manage.py fetch_bangs        # oder: make bangs

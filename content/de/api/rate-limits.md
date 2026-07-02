@@ -12,7 +12,7 @@ Jeder API-Schlüssel hat sein eigenes Budget, das durch **zwei zusammen geltende
 | **Burst** | `60/min` | Kurzfristiges Limit, schützt vorgelagerte Anbieter vor einem unkontrollierten Client. |
 | **Sustained** | `5000/day` | Begrenzt das tägliche Gesamtvolumen. |
 
-Auf einer selbst-gehosteten Instanz sind diese mit `API_THROTTLE_BURST` und `API_THROTTLE_SUSTAINED` konfigurierbar; siehe [Konfiguration]({{< relref "/de/self-hosting/configuration#public-api-rate-limits" >}}).
+Auf einer selbst-gehosteten Instanz sind diese mit `API_THROTTLE_BURST` und `API_THROTTLE_SUSTAINED` konfigurierbar; siehe [Konfiguration]({{< relref "/self-hosting/configuration#public-api-rate-limits" >}}).
 
 ## Wenn Sie ein Limit überschreiten
 

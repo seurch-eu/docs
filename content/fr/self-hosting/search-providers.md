@@ -22,7 +22,7 @@ Brave est le point de départ recommandé : une seule clé alimente les onglets 
 
 ## Moteurs web supplémentaires
 
-Ajoutez l'un ou les deux pour mélanger d'autres index indépendants dans l'onglet Web (fusionnés par Reciprocal Rank Fusion, voir [Recherche web]({{< relref "/fr/user-guide/web-search" >}})) :
+Ajoutez l'un ou les deux pour mélanger d'autres index indépendants dans l'onglet Web (fusionnés par Reciprocal Rank Fusion, voir [Recherche web]({{< relref "/user-guide/web-search" >}})) :
 
 | Variable | Fournisseur | Obtenir une clé |
 |----------|-------------|-----------------|
@@ -43,7 +43,7 @@ Chaque onglet de médias mélange Brave avec un second fournisseur. Le fournisse
 
 ## Fournisseurs de fiches de connaissance
 
-L'onglet web peut afficher jusqu'à trois [fiches de connaissance]({{< relref "/fr/user-guide/knowledge-cards" >}}) latérales :
+L'onglet web peut afficher jusqu'à trois [fiches de connaissance]({{< relref "/user-guide/knowledge-cards" >}}) latérales :
 
 | Fiche | Variable | Fournisseur | Clé |
 |-------|----------|-------------|-----|
