@@ -15,7 +15,7 @@ enableGitInfo = true
   [languages.en]
     languageName = "English"
     weight = 1
-    contentDir = "content"
+    contentDir = "content/en"
   [languages.fr]
     languageName = "Français"
     weight = 2
