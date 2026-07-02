@@ -12,6 +12,7 @@ concurrency:
 
 jobs:
   deploy:
+    environment: staging
     runs-on: ubuntu-latest
     permissions:
       contents: read
