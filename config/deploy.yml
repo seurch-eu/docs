@@ -22,7 +22,7 @@ image: search-project/docs
 # container is tiny and listens only behind the proxy).
 servers:
   web:
-    - REPLACE_VPS_IP
+    - 51.158.77.198
 
 # kamal-proxy terminates TLS, gets a Let's Encrypt cert for `host`, and does
 # zero-downtime cutovers gated on the /up health check.
