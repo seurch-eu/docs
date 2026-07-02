@@ -51,4 +51,7 @@ jobs:
       - name: Deploy
         env:
           BWS_ACCESS_TOKEN: ${{ secrets.BWS_ACCESS_TOKEN }}
-        run: kamal deploy
+        run: |
+          bws config server-api https://vault.bitwarden.eu/api
+          bws config server-identity https://vault.bitwarden.eu/identity
+          kamal deploy
