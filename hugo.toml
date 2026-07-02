@@ -15,14 +15,17 @@ enableGitInfo = true
   [languages.en]
     languageName = "English"
     weight = 1
+    contentDir = "content"
   [languages.fr]
     languageName = "Français"
     weight = 2
     title = "Documentation Searpa"
+    contentDir = "content/fr"
   [languages.de]
     languageName = "Deutsch"
     weight = 3
     title = "Searpa Dokumentation"
+    contentDir = "content/de"
 
 [params]
   # Auto follows the visitor's system light/dark preference.
