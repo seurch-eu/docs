@@ -27,14 +27,8 @@ jobs:
   deploy:
     environment: staging
     runs-on: ubuntu-latest
-    # Deploy on a manual run, or when the triggering CI run succeeded.
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          # Deploy exactly the commit CI tested (falls back to the dispatched
-          # ref for manual runs).
-          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
 
       - name: Set up Ruby (Kamal is a Ruby gem)
         uses: ruby/setup-ruby@v1
