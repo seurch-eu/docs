@@ -5,7 +5,7 @@ weight: 9
 
 # Maintenance
 
-Searpa needs little ongoing care, but a few **management commands** keep it tidy
+Seurch needs little ongoing care, but a few **management commands** keep it tidy
 and current. Run them on a schedule (a cron job, a systemd timer, or your
 orchestrator's scheduled-task feature). Run each inside the container
 (`docker exec <container> python manage.py …`) or via `make` / `uv run` from

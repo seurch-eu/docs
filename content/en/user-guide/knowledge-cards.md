@@ -5,7 +5,7 @@ weight: 5
 
 # Knowledge cards
 
-When your **web** search (first page) is about a well-known subject, Searpa shows
+When your **web** search (first page) is about a well-known subject, Seurch shows
 up to three **knowledge cards** beside the results, a quick summary so you often
 don't need to click through at all.
 
@@ -20,7 +20,7 @@ don't need to click through at all.
 
 ## How they're chosen
 
-Searpa only shows a card when your query genuinely matches that kind of subject:
+Seurch only shows a card when your query genuinely matches that kind of subject:
 
 - Wikipedia (and Wikidata behind the scenes) work out **what** the subject is, a
   film, a person, a place, in a language-independent way.

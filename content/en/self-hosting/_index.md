@@ -6,9 +6,9 @@ bookCollapseSection: true
 
 # Self-hosting guide
 
-Searpa's search engine is **open source**, so you can run your own instance and
+Seurch's search engine is **open source**, so you can run your own instance and
 be the only operator who ever touches your users' data. This guide is for
-administrators deploying and operating Searpa.
+administrators deploying and operating Seurch.
 
 An instance is a single [Django](https://www.djangoproject.com/) application
 backed by **PostgreSQL**. It ships as a Docker image that serves its own static
@@ -31,7 +31,7 @@ container plus a database.
 | [Production notes]({{< relref "production" >}}) | Static files, health checks, footer, email |
 
 > [!NOTE]
-> **What you get.** Self-hosting gives you the full Searpa search engine, every
+> **What you get.** Self-hosting gives you the full Seurch search engine, every
 > tab, instant answers, knowledge cards, settings and the public API. Which tabs
 > and cards actually appear depends on which [providers]({{< relref "search-providers" >}})
 > you configure.

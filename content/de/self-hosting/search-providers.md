@@ -5,7 +5,7 @@ weight: 4
 
 # Suchanbieter
 
-Searpa kombiniert Ergebnisse von mehreren unabhängigen Anbietern. **Welche Tabs und Karten erscheinen, hängt davon ab, welche Schlüssel Sie setzen.** Ein Anbieter ohne Schlüssel wird ausgeblendet; der betroffene Tab oder die Karte erscheint einfach nicht, anstatt einen Fehler anzuzeigen.
+Seurch kombiniert Ergebnisse von mehreren unabhängigen Anbietern. **Welche Tabs und Karten erscheinen, hängt davon ab, welche Schlüssel Sie setzen.** Ein Anbieter ohne Schlüssel wird ausgeblendet; der betroffene Tab oder die Karte erscheint einfach nicht, anstatt einen Fehler anzuzeigen.
 
 Alle vorgelagerten Aufrufe erfolgen **serverseitig**; Schlüssel werden nie an den Browser weitergegeben.
 

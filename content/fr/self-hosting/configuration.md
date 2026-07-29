@@ -5,7 +5,7 @@ weight: 3
 
 # Configuration
 
-Searpa est entièrement configuré via des **variables d'environnement** (en production) ou un fichier `.env` (en développement). Le dépôt inclut un fichier `.env.example` documentant chaque variable ; cette page en est la référence.
+Seurch est entièrement configuré via des **variables d'environnement** (en production) ou un fichier `.env` (en développement). Le dépôt inclut un fichier `.env.example` documentant chaque variable ; cette page en est la référence.
 
 ## Noyau
 
@@ -14,7 +14,7 @@ Searpa est entièrement configuré via des **variables d'environnement** (en pro
 | `SECRET_KEY` | Clé secrète Django | **Requise en production.** Longue et aléatoire. |
 | `DEBUG` | Mode débogage | Maintenez **`False`** (la valeur par défaut) en production. |
 | `ALLOWED_HOSTS` | Noms d'hôtes séparés par des virgules que l'application servira | ex. `search.example.com`. |
-| `DATABASE_URL` | URL de connexion PostgreSQL | ex. `postgres://utilisateur:mdp@hôte:5432/searpa`. |
+| `DATABASE_URL` | URL de connexion PostgreSQL | ex. `postgres://utilisateur:mdp@hôte:5432/seurch`. |
 | `LOG_LEVEL` | Verbosité des logs | `DEBUG` / `INFO` / `WARNING` / `ERROR` (par défaut `INFO`). |
 
 ## Fournisseurs de recherche

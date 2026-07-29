@@ -6,10 +6,10 @@ bookCollapseSection: true
 
 # User guide
 
-This guide is for people **using** Searpa, on the hosted service at
-[searpa.eu](https://searpa.eu/) or on any instance someone runs for you.
+This guide is for people **using** Seurch, on the hosted service at
+[seurch.eu](https://seurch.eu/) or on any instance someone runs for you.
 
-Searpa is a metasearch engine: you type one query and it blends results from
+Seurch is a metasearch engine: you type one query and it blends results from
 several independent sources into a single clean page. There is nothing to
 install, it works in any modern browser, and it does not track you.
 
@@ -25,9 +25,9 @@ install, it works in any modern browser, and it does not track you.
 | [Bangs]({{< relref "bangs" >}}) | `!shortcuts` to jump straight to another site or tab |
 | [Settings]({{< relref "settings" >}}) | Engines, languages, theme, data sources, backup & sync |
 | [Your account]({{< relref "account" >}}) | Sign-in, optional email, password reset, API keys |
-| [Privacy]({{< relref "privacy" >}}) | What Searpa does and does not collect |
-| [Browser setup]({{< relref "browser-setup" >}}) | Set Searpa as the default search engine in Chrome, Firefox, Safari, Edge, Brave and more |
+| [Privacy]({{< relref "privacy" >}}) | What Seurch does and does not collect |
+| [Browser setup]({{< relref "browser-setup" >}}) | Set Seurch as the default search engine in Chrome, Firefox, Safari, Edge, Brave and more |
 
 > [!NOTE]
 > The hosted service is currently **invite-only**. If you don't have an account
-> yet, request access from the [searpa.eu](https://searpa.eu/) home page.
+> yet, request access from the [seurch.eu](https://seurch.eu/) home page.

@@ -14,7 +14,7 @@ GET /api/v1/web/?q=...
 ```
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<préfixe>.<secret>" \
+curl -H "Authorization: Api-Key seurch_sk_<préfixe>.<secret>" \
   "https://search.example.com/api/v1/web/?q=climat&engine=all&lang=fr&date=w"
 ```
 

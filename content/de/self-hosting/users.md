@@ -5,7 +5,7 @@ weight: 7
 
 # Benutzer & Zugang
 
-Searpa ist **nur mit Anmeldung** zugänglich und hat **keine öffentliche Registrierung**; als Administrator kontrollieren Sie, wer ein Konto hat. Dies hält eine Instanz privat für Ihre Benutzer.
+Seurch ist **nur mit Anmeldung** zugänglich und hat **keine öffentliche Registrierung**; als Administrator kontrollieren Sie, wer ein Konto hat. Dies hält eine Instanz privat für Ihre Benutzer.
 
 ## Konten erstellen
 

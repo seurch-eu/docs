@@ -6,12 +6,12 @@ weight: 6
 # Translation (LibreTranslate)
 
 The **Translate** tab is powered by [LibreTranslate](https://libretranslate.com/),
-an open-source, self-hostable machine-translation server. Searpa calls it
+an open-source, self-hostable machine-translation server. Seurch calls it
 server-side, no third-party translation service is involved.
 
 ## Enabling the tab
 
-Point Searpa at a LibreTranslate instance with `LIBRETRANSLATE_URL`:
+Point Seurch at a LibreTranslate instance with `LIBRETRANSLATE_URL`:
 
 ```
 LIBRETRANSLATE_URL=http://libretranslate:5000
@@ -48,6 +48,6 @@ both run in the same Docker network).
 
 ## Status
 
-LibreTranslate exposes a free `/languages` endpoint, so Searpa's
+LibreTranslate exposes a free `/languages` endpoint, so Seurch's
 [`/status`]({{< relref "search-providers#provider-status-page" >}}) page probes
 it directly and reports whether translation is currently available.

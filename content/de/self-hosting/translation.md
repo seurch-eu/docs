@@ -5,11 +5,11 @@ weight: 6
 
 # Übersetzung (LibreTranslate)
 
-Der **Übersetzen**-Tab wird von [LibreTranslate](https://libretranslate.com/) betrieben, einem Open-Source, selbst-hostbaren Maschinenübersetzungsserver. Searpa ruft ihn serverseitig auf; kein Drittanbieter-Übersetzungsdienst ist beteiligt.
+Der **Übersetzen**-Tab wird von [LibreTranslate](https://libretranslate.com/) betrieben, einem Open-Source, selbst-hostbaren Maschinenübersetzungsserver. Seurch ruft ihn serverseitig auf; kein Drittanbieter-Übersetzungsdienst ist beteiligt.
 
 ## Den Tab aktivieren
 
-Zeigen Sie Searpa mit `LIBRETRANSLATE_URL` auf eine LibreTranslate-Instanz:
+Zeigen Sie Seurch mit `LIBRETRANSLATE_URL` auf eine LibreTranslate-Instanz:
 
 ```
 LIBRETRANSLATE_URL=http://libretranslate:5000
@@ -41,4 +41,4 @@ Setzen Sie dann `LIBRETRANSLATE_URL` auf seine Adresse (verwenden Sie den intern
 
 ## Status
 
-LibreTranslate stellt einen kostenlosen `/languages`-Endpunkt bereit, sodass Searpas [`/status`]({{< relref "search-providers#provider-status-page" >}})-Seite ihn direkt abfragt und berichtet, ob Übersetzung derzeit verfügbar ist.
+LibreTranslate stellt einen kostenlosen `/languages`-Endpunkt bereit, sodass Seurchs [`/status`]({{< relref "search-providers#provider-status-page" >}})-Seite ihn direkt abfragt und berichtet, ob Übersetzung derzeit verfügbar ist.

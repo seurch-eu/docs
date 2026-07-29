@@ -5,7 +5,7 @@ weight: 5
 
 # Fiches de connaissance
 
-Lorsque votre recherche **web** (première page) porte sur un sujet bien connu, Searpa affiche jusqu'à trois **fiches de connaissance** à côté des résultats, un résumé rapide qui vous évite souvent de cliquer.
+Lorsque votre recherche **web** (première page) porte sur un sujet bien connu, Seurch affiche jusqu'à trois **fiches de connaissance** à côté des résultats, un résumé rapide qui vous évite souvent de cliquer.
 
 ## Les fiches
 
@@ -18,7 +18,7 @@ Lorsque votre recherche **web** (première page) porte sur un sujet bien connu, 
 
 ## Comment elles sont choisies
 
-Searpa n'affiche une fiche que lorsque votre requête correspond réellement à ce type de sujet :
+Seurch n'affiche une fiche que lorsque votre requête correspond réellement à ce type de sujet :
 
 - Wikipédia (et Wikidata en arrière-plan) détermine **ce qu'est** le sujet : un film, une personne, un lieu, de manière indépendante de la langue.
 - Les fiches enrichies (film, lieux, Q&A) ne sont récupérées que lorsque la requête ressemble vraiment à ce type de sujet, et le meilleur correspondant est retenu ; les correspondances faibles sont écartées.

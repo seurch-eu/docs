@@ -5,7 +5,7 @@ weight: 2
 
 # Web search
 
-The **Web** tab is Searpa's core. It can draw on three independent web indexes
+The **Web** tab is Seurch's core. It can draw on three independent web indexes
 and blend whatever you enable into one ranked list.
 
 ## The three engines
@@ -21,7 +21,7 @@ single source, or several to blend them. All three are on by default.
 
 ## How results are blended
 
-When more than one engine returns results, Searpa merges them with **Reciprocal
+When more than one engine returns results, Seurch merges them with **Reciprocal
 Rank Fusion (RRF)** rather than just concatenating the lists:
 
 - Each result URL scores points based on how high it ranks in each engine that
@@ -40,7 +40,7 @@ results) still appear.
 - **Time range** — filter to the last day, week, month or year.
 - **Safe search** — on by default; turn it off in
   [Settings]({{< relref "settings" >}}) to include adult results.
-- **Spelling corrections** — when a query looks misspelled, Searpa surfaces a
+- **Spelling corrections** — when a query looks misspelled, Seurch surfaces a
   suggested correction above the results.
 - **Pagination** — page through more results at the bottom of the list.
 - **Languages** — set a preferred search language in Settings, or leave it on

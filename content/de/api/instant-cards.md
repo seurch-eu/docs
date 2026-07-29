@@ -13,10 +13,10 @@ Diese zwei Endpunkte spiegeln die Inline-Antworten und Seitenpanel der Website w
 GET /api/v1/instant/?q=...
 ```
 
-Gibt die Sofortantwort für eine Dienstprogramm-Anfrage zurück (Mathematik, Einheits-/Basis-/Farbumrechnung, Wetter, Währung, Weltzeit, Hashes, QR, „meine IP", …), oder `null`, wenn die Anfrage keine ist, die Searpa inline beantwortet.
+Gibt die Sofortantwort für eine Dienstprogramm-Anfrage zurück (Mathematik, Einheits-/Basis-/Farbumrechnung, Wetter, Währung, Weltzeit, Hashes, QR, „meine IP", …), oder `null`, wenn die Anfrage keine ist, die Seurch inline beantwortet.
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<präfix>.<geheimnis>" \
+curl -H "Authorization: Api-Key seurch_sk_<präfix>.<geheimnis>" \
   "https://search.example.com/api/v1/instant/?q=100+usd+in+eur"
 ```
 

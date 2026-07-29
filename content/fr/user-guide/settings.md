@@ -5,7 +5,7 @@ weight: 7
 
 # Paramètres
 
-Ouvrez **Paramètres** depuis la page d'accueil ou le menu pour personnaliser Searpa. Vos préférences **se synchronisent automatiquement avec votre compte** et sont restaurées sur tous les appareils connectés. Elles sont également stockées dans votre navigateur, ce qui les applique même avant que vous vous connectiez.
+Ouvrez **Paramètres** depuis la page d'accueil ou le menu pour personnaliser Seurch. Vos préférences **se synchronisent automatiquement avec votre compte** et sont restaurées sur tous les appareils connectés. Elles sont également stockées dans votre navigateur, ce qui les applique même avant que vous vous connectiez.
 
 ## Ce que vous pouvez modifier
 
@@ -23,11 +23,11 @@ Ouvrez **Paramètres** depuis la page d'accueil ou le menu pour personnaliser Se
 
 ### Moteurs
 
-Choisissez quels index web Searpa interroge et fusionne, voir [Recherche web]({{< relref "web-search" >}}). C'est aussi là que vous gérez vos **sites bloqués** et vos **[bangs]({{< relref "bangs" >}}) personnalisés**.
+Choisissez quels index web Seurch interroge et fusionne, voir [Recherche web]({{< relref "web-search" >}}). C'est aussi là que vous gérez vos **sites bloqués** et vos **[bangs]({{< relref "bangs" >}}) personnalisés**.
 
 ### Langues
 
-La **langue d'interface** modifie l'interface Searpa ; la **langue de recherche** oriente les résultats vers une langue. Les deux sont par défaut sur *Auto*, ce qui suit votre navigateur. L'interface de Searpa est disponible en anglais, français, allemand, espagnol, italien, portugais et néerlandais.
+La **langue d'interface** modifie l'interface Seurch ; la **langue de recherche** oriente les résultats vers une langue. Les deux sont par défaut sur *Auto*, ce qui suit votre navigateur. L'interface de Seurch est disponible en anglais, français, allemand, espagnol, italien, portugais et néerlandais.
 
 ### Thème et liens
 
@@ -35,11 +35,11 @@ Choisissez un thème clair, sombre ou qui suit les préférences du système, et
 
 ### Proxy des images
 
-Avec le **Proxy des images** activé, les miniatures d'images sont récupérées via le serveur Searpa plutôt que directement depuis la source, de sorte que le site source ne voit jamais votre navigateur. Il est désactivé par défaut car il ajoute une légère latence.
+Avec le **Proxy des images** activé, les miniatures d'images sont récupérées via le serveur Seurch plutôt que directement depuis la source, de sorte que le site source ne voit jamais votre navigateur. Il est désactivé par défaut car il ajoute une légère latence.
 
 ### Sources de données
 
-Bascules précises pour les fournisseurs supplémentaires : fiches de connaissance (Wikipédia, TMDB, TripAdvisor, Stack Exchange), météo, Pixabay (images), Sepia (vidéos), l'API World News, Traduction et OpenStreetMap. Désactivez tout ce que vous ne souhaitez pas que Searpa utilise.
+Bascules précises pour les fournisseurs supplémentaires : fiches de connaissance (Wikipédia, TMDB, TripAdvisor, Stack Exchange), météo, Pixabay (images), Sepia (vidéos), l'API World News, Traduction et OpenStreetMap. Désactivez tout ce que vous ne souhaitez pas que Seurch utilise.
 
 ## Sauvegarde et synchronisation
 

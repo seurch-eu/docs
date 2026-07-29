@@ -5,7 +5,7 @@ weight: 4
 
 # Instant answers
 
-For common utility queries, Searpa shows an **instant answer** right at the top
+For common utility queries, Seurch shows an **instant answer** right at the top
 of the web results, so you get the answer without clicking through. This is in
 the spirit of DuckDuckGo's instant answers.
 

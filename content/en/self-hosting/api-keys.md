@@ -11,7 +11,7 @@ can manage them from the command line.
 
 ## How keys are stored
 
-A key looks like `searpa_sk_<prefix>.<secret>`:
+A key looks like `seurch_sk_<prefix>.<secret>`:
 
 - The **prefix** (8 characters) is stored in the clear for fast lookup.
 - Only a **SHA-256 hash** of the secret is stored, never the secret itself.
@@ -44,7 +44,7 @@ revoked, never the secret.
 ### Revoke a key
 
 ```bash
-python manage.py revoke_api_key searpa_sk_<prefix>
+python manage.py revoke_api_key seurch_sk_<prefix>
 ```
 
 A revoked key is rejected immediately on the next request.

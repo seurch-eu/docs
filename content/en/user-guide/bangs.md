@@ -6,7 +6,7 @@ weight: 6
 # Bangs
 
 **Bangs** are `!shortcuts` you type in the search box to send a query straight to
-another site or to a different Searpa tab. Searpa understands the widely-used
+another site or to a different Seurch tab. Seurch understands the widely-used
 DuckDuckGo-style bang vocabulary, thousands of sites, plus a few of its own.
 
 The bang definitions come from [Kagi's open-source bangs
@@ -27,12 +27,12 @@ Prefix a query with a site's bang to search that site directly:
 | `!yt lofi` | YouTube search for "lofi" |
 | `!a headphones` | Amazon search |
 
-There are thousands of these. If a bang isn't recognised, Searpa just treats it
+There are thousands of these. If a bang isn't recognised, Seurch just treats it
 as part of your normal query.
 
 ## Tab bangs
 
-A handful of bangs jump to one of Searpa's own [tabs]({{< relref "search-tabs" >}})
+A handful of bangs jump to one of Seurch's own [tabs]({{< relref "search-tabs" >}})
 instead of leaving the site:
 
 | Bang(s) | Tab |

@@ -7,7 +7,7 @@ weight: 8
 
 ## Se connecter
 
-Searpa nécessite une connexion ; toute recherche se fait sous votre compte, et il n'existe pas de formulaire d'inscription public. Sur le service hébergé, les comptes sont sur invitation pendant la phase alpha ; sur une instance auto-hébergée, c'est l'administrateur qui crée les comptes.
+Seurch nécessite une connexion ; toute recherche se fait sous votre compte, et il n'existe pas de formulaire d'inscription public. Sur le service hébergé, les comptes sont sur invitation pendant la phase alpha ; sur une instance auto-hébergée, c'est l'administrateur qui crée les comptes.
 
 Votre compte peut être **anonyme** : il nécessite uniquement un nom d'utilisateur et un mot de passe, **sans e-mail ni autre information personnelle**. Il n'existe pas de recherche anonyme (vous êtes toujours connecté), mais le compte derrière n'a pas besoin de vous identifier.
 
@@ -26,7 +26,7 @@ Utilisez le processus de réinitialisation de mot de passe (si vous avez un e-ma
 
 ## Clés API
 
-L'[API]({{< relref "/api" >}}) programmatique est une fonctionnalité **auto-hébergée** ; elle n'est pas disponible sur le service hébergé searpa.eu. Sur une instance que vous [gérez vous-même]({{< relref "/self-hosting" >}}), créez une **clé API** dans **Paramètres → Clés API** :
+L'[API]({{< relref "/api" >}}) programmatique est une fonctionnalité **auto-hébergée** ; elle n'est pas disponible sur le service hébergé seurch.eu. Sur une instance que vous [gérez vous-même]({{< relref "/self-hosting" >}}), créez une **clé API** dans **Paramètres → Clés API** :
 
 - Cliquez pour créer une clé, en lui donnant éventuellement un nom.
 - La **clé complète n'est affichée qu'une seule fois** ; copiez-la immédiatement dans un endroit sûr. Seuls un préfixe et un hachage sont stockés, elle ne peut donc pas être affichée à nouveau.

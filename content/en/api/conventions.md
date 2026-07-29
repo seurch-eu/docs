@@ -44,7 +44,7 @@ alongside the `results`, so a response is self-describing:
 }
 ```
 
-- `query` — the query as Searpa interpreted it.
+- `query` — the query as Seurch interpreted it.
 - `tab` — which kind of search ran.
 - `engine` — the engines actually queried (after resolving `all` / defaults).
 - `correction` — a spelling suggestion for the query, or `""` (web only).

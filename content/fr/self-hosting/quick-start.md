@@ -12,12 +12,12 @@ Le moyen le plus rapide d'avoir une instance opérationnelle est l'image Docker.
 ```bash
 docker run -p 8000:8000 \
   -e SECRET_KEY=votre-long-secret-aléatoire \
-  -e DATABASE_URL=postgres://utilisateur:motdepasse@hôte-db:5432/searpa \
+  -e DATABASE_URL=postgres://utilisateur:motdepasse@hôte-db:5432/seurch \
   -e ALLOWED_HOSTS=search.example.com \
   -e BRAVE_API_KEY=votre-clé-brave \
   -e BRAVE_SUGGEST_API_KEY=votre-clé-brave-suggest \
   -e MARGINALIA_API_KEY=public \
-  searpa
+  seurch
 ```
 
 Au démarrage, le conteneur :
@@ -50,20 +50,20 @@ services:
   db:
     image: postgres:16
     environment:
-      POSTGRES_DB: searpa
-      POSTGRES_USER: searpa
+      POSTGRES_DB: seurch
+      POSTGRES_USER: seurch
       POSTGRES_PASSWORD: changez-moi
     volumes:
       - pgdata:/var/lib/postgresql/data
 
   app:
-    image: searpa
+    image: seurch
     depends_on: [db]
     ports:
       - "8000:8000"
     environment:
       SECRET_KEY: votre-long-secret-aléatoire
-      DATABASE_URL: postgres://searpa:changez-moi@db:5432/searpa
+      DATABASE_URL: postgres://seurch:changez-moi@db:5432/seurch
       ALLOWED_HOSTS: search.example.com
       BRAVE_API_KEY: votre-clé-brave
       BRAVE_SUGGEST_API_KEY: votre-clé-brave-suggest
@@ -82,7 +82,7 @@ Voir [Configuration]({{< relref "configuration" >}}) pour la liste complète des
 
 ## Depuis les sources
 
-Pour construire l'image vous-même ou développer localement, clonez le dépôt Searpa et utilisez le workflow fourni :
+Pour construire l'image vous-même ou développer localement, clonez le dépôt Seurch et utilisez le workflow fourni :
 
 ```bash
 cp .env.example .env        # puis ajoutez au minimum BRAVE_API_KEY
@@ -94,7 +94,7 @@ make superuser              # créer un compte
 `make setup` démarre une pile de développement (PostgreSQL + un intercepteur de mails + LibreTranslate) via Podman Compose, vous obtenez donc un onglet Traduction fonctionnel dès le départ. Exécutez `make` sans arguments pour lister toutes les cibles. Construisez une image de production avec :
 
 ```bash
-docker build -t searpa .
+docker build -t seurch .
 ```
 
 > [!WARNING]

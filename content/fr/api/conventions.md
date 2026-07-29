@@ -38,7 +38,7 @@ Chaque point de terminaison renvoie du JSON. Les points de terminaison de recher
 }
 ```
 
-- `query` — la requête telle que Searpa l'a interprétée.
+- `query` — la requête telle que Seurch l'a interprétée.
 - `tab` — le type de recherche effectuée.
 - `engine` — les moteurs réellement interrogés (après résolution de `all` / des valeurs par défaut).
 - `correction` — une suggestion orthographique pour la requête, ou `""` (web uniquement).

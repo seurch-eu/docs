@@ -5,7 +5,7 @@ weight: 4
 
 # Fournisseurs de recherche
 
-Searpa mélange les résultats de plusieurs fournisseurs indépendants. **Les onglets et fiches qui apparaissent dépendent des clés que vous définissez.** Un fournisseur sans clé est masqué ; l'onglet ou la fiche concerné n'apparaît tout simplement pas, plutôt que d'afficher une erreur.
+Seurch mélange les résultats de plusieurs fournisseurs indépendants. **Les onglets et fiches qui apparaissent dépendent des clés que vous définissez.** Un fournisseur sans clé est masqué ; l'onglet ou la fiche concerné n'apparaît tout simplement pas, plutôt que d'afficher une erreur.
 
 Tous les appels amont se font **côté serveur** ; les clés ne sont jamais exposées au navigateur.
 

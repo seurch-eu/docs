@@ -22,7 +22,7 @@ GET /api/v1/maps/?q=<lieu>&limit=<n>&lang=<code>
 - `lang` — langue préférée pour les noms.
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<préfixe>.<secret>" \
+curl -H "Authorization: Api-Key seurch_sk_<préfixe>.<secret>" \
   "https://search.example.com/api/v1/maps/?q=Tour+Eiffel&limit=1"
 ```
 

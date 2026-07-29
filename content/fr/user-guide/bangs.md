@@ -5,7 +5,7 @@ weight: 6
 
 # Bangs
 
-Les **bangs** sont des `!raccourcis` que vous tapez dans la zone de recherche pour envoyer directement une requête vers un autre site ou un onglet Searpa différent. Searpa comprend le vocabulaire de bangs à la mode DuckDuckGo largement utilisé, des milliers de sites, plus quelques-uns qui lui sont propres.
+Les **bangs** sont des `!raccourcis` que vous tapez dans la zone de recherche pour envoyer directement une requête vers un autre site ou un onglet Seurch différent. Seurch comprend le vocabulaire de bangs à la mode DuckDuckGo largement utilisé, des milliers de sites, plus quelques-uns qui lui sont propres.
 
 Les définitions de bangs proviennent du [dépôt de bangs open source de Kagi](https://github.com/kagisearch/bangs), la même liste `!bang` communautaire que Kagi publie. Les auto-hébergeurs peuvent la rafraîchir avec `make bangs`, voir [Maintenance]({{< relref "/self-hosting/maintenance#bang-definitions" >}}).
 
@@ -22,11 +22,11 @@ Préfixez une requête avec le bang d'un site pour rechercher directement sur ce
 | `!yt lofi` | Recherche YouTube pour « lofi » |
 | `!a casque` | Recherche Amazon |
 
-Il en existe des milliers. Si un bang n'est pas reconnu, Searpa le traite simplement comme une partie de votre requête normale.
+Il en existe des milliers. Si un bang n'est pas reconnu, Seurch le traite simplement comme une partie de votre requête normale.
 
 ## Bangs d'onglet
 
-Une poignée de bangs permet de sauter vers l'un des propres [onglets]({{< relref "search-tabs" >}}) de Searpa au lieu de quitter le site :
+Une poignée de bangs permet de sauter vers l'un des propres [onglets]({{< relref "search-tabs" >}}) de Seurch au lieu de quitter le site :
 
 | Bang(s) | Onglet |
 |---------|--------|

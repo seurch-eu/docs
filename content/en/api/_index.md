@@ -6,7 +6,7 @@ bookCollapseSection: true
 
 # API guide
 
-Every Searpa search feature, web, images, news, videos, maps, translate, instant
+Every Seurch search feature, web, images, news, videos, maps, translate, instant
 answers, knowledge cards, suggestions and provider status, is available
 programmatically over a JSON API. The same service functions back the API and
 the website, so both always return the same results.
@@ -17,7 +17,7 @@ and mounted under **`/api/v1/`**.
 > [!IMPORTANT]
 > The public API is a **self-hosted** feature. It ships with the open-source
 > engine and is available on any instance you [run yourself]({{< relref "/self-hosting" >}}).
-> The hosted service at [searpa.eu](https://searpa.eu/) does **not** expose it,
+> The hosted service at [seurch.eu](https://seurch.eu/) does **not** expose it,
 > so to use the API, run your own instance and create a key there.
 
 ## Base URL
@@ -41,7 +41,7 @@ own instance's host.
 ## A first request
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
+curl -H "Authorization: Api-Key seurch_sk_<prefix>.<secret>" \
   "https://search.example.com/api/v1/web/?q=climate&lang=en"
 ```
 
@@ -62,4 +62,4 @@ curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
 > [!NOTE]
 > The in-app developer page at **`/api/`** links to this documentation and to the
 > key manager. An [Insomnia](https://insomnia.rest/) collection of the endpoints
-> ships in the repository (`scripts/searpa-api.insomnia.json`).
+> ships in the repository (`scripts/seurch-api.insomnia.json`).

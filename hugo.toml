@@ -1,6 +1,6 @@
-baseURL = "https://docs.searpa.eu/"
+baseURL = "https://docs.seurch.eu/"
 defaultContentLanguage = "en"
-title = "Searpa Docs"
+title = "Seurch Docs"
 theme = "hugo-book"
 
 # Book theme expects the table of contents under one section; "*" tells it to
@@ -19,12 +19,12 @@ enableGitInfo = true
   [languages.fr]
     languageName = "Français"
     weight = 2
-    title = "Documentation Searpa"
+    title = "Documentation Seurch"
     contentDir = "content/fr"
   [languages.de]
     languageName = "Deutsch"
     weight = 3
-    title = "Searpa Dokumentation"
+    title = "Seurch Dokumentation"
     contentDir = "content/de"
 
 [params]
@@ -38,7 +38,7 @@ enableGitInfo = true
   BookSearch = true
   # Show a short "last edited" line; sourced from the git commit date.
   BookDates = true
-  # Browser tab icon: the Searpa mark (static/favicon.svg).
+  # Browser tab icon: the Seurch mark (static/favicon.svg).
   BookFavicon = "favicon.svg"
   # Footer "Edit this page" link → the source file on GitHub.
   BookEditLink = "https://github.com/search-project/docs/edit/main/{{ .Path }}"
@@ -57,7 +57,7 @@ enableGitInfo = true
 [params.links]
   # External links rendered as a "Links" section at the foot of the sidebar
   # (see layouts/_partials/docs/inject/menu-after.html).
-  site = "https://searpa.eu/"
-  status = "https://searpa.eu/status"
+  site = "https://seurch.eu/"
+  status = "https://seurch.eu/status"
   engine_repo = "https://github.com/search-project/search"
   docs_repo = "https://github.com/search-project/docs"

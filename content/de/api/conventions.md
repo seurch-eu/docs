@@ -38,7 +38,7 @@ Jeder Endpunkt gibt JSON zurück. Such-Endpunkte geben den Anforderungskontext n
 }
 ```
 
-- `query` — die Anfrage, wie Searpa sie interpretiert hat.
+- `query` — die Anfrage, wie Seurch sie interpretiert hat.
 - `tab` — welche Art von Suche ausgeführt wurde.
 - `engine` — die tatsächlich abgefragten Suchmaschinen (nach Auflösung von `all` / Standardwerten).
 - `correction` — ein Rechtschreibvorschlag für die Anfrage, oder `""` (nur Web).

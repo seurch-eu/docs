@@ -9,7 +9,7 @@ Benutzer greifen auf die [öffentliche API]({{< relref "/api" >}}) mit benutzers
 
 ## Wie Schlüssel gespeichert werden
 
-Ein Schlüssel sieht aus wie `searpa_sk_<präfix>.<geheimnis>`:
+Ein Schlüssel sieht aus wie `seurch_sk_<präfix>.<geheimnis>`:
 
 - Das **Präfix** (8 Zeichen) wird im Klartext für die schnelle Suche gespeichert.
 - Nur ein **SHA-256-Hash** des Geheimnisses wird gespeichert, nie das Geheimnis selbst.
@@ -39,7 +39,7 @@ Zeigt den Namen jedes Schlüssels, sein Präfix, die Erstellungs- und letzte Ver
 ### Schlüssel widerrufen
 
 ```bash
-python manage.py revoke_api_key searpa_sk_<präfix>
+python manage.py revoke_api_key seurch_sk_<präfix>
 ```
 
 Ein widerrufener Schlüssel wird bei der nächsten Anfrage sofort abgelehnt.

@@ -7,7 +7,7 @@ weight: 8
 
 ## Signing in
 
-Searpa is login-only, every search happens under your account, and there is no
+Seurch is login-only, every search happens under your account, and there is no
 public sign-up form. On the hosted service, accounts are invite-only during the
 alpha; on a self-hosted instance the administrator creates accounts.
 
@@ -37,7 +37,7 @@ contact their administrator.
 ## API keys
 
 The programmatic [API]({{< relref "/api" >}}) is a **self-hosted** feature, it is
-not available on the hosted searpa.eu service. On an instance you
+not available on the hosted seurch.eu service. On an instance you
 [run yourself]({{< relref "/self-hosting" >}}), create an **API key** under
 **Settings → API keys**:
 

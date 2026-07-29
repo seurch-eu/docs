@@ -5,7 +5,7 @@ weight: 3
 
 # Onglets de recherche
 
-En plus de l'onglet Web, Searpa propose des onglets dédiés aux images, aux actualités, aux vidéos, aux cartes et à la traduction. Chacun exécute votre requête contre des sources adaptées à ce type de contenu. Un onglet n'apparaît que lorsque l'instance dispose du fournisseur correspondant configuré.
+En plus de l'onglet Web, Seurch propose des onglets dédiés aux images, aux actualités, aux vidéos, aux cartes et à la traduction. Chacun exécute votre requête contre des sources adaptées à ce type de contenu. Un onglet n'apparaît que lorsque l'instance dispose du fournisseur correspondant configuré.
 
 ## Images
 
@@ -28,7 +28,7 @@ L'onglet **Vidéos** mélange les résultats vidéo Brave avec **Sepia**, l'inde
 
 ## Cartes
 
-L'onglet **Cartes** ne nécessite aucune configuration ni compte auprès d'un fournisseur. Tapez un nom de lieu ou une adresse et Searpa :
+L'onglet **Cartes** ne nécessite aucune configuration ni compte auprès d'un fournisseur. Tapez un nom de lieu ou une adresse et Seurch :
 
 - **Géocode** avec [Nominatim](https://nominatim.openstreetmap.org/) (la recherche d'OpenStreetMap), et
 - affiche l'emplacement sur une **carte OpenStreetMap intégrée**, avec un lien **Ouvrir dans Maps** et des itinéraires.

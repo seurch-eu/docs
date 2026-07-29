@@ -1,12 +1,12 @@
 ---
-title: Searpa Documentation
+title: Seurch Documentation
 type: docs
 bookToc: false
 ---
 
-# Searpa Documentation
+# Seurch Documentation
 
-**Searpa** is a privacy-first [metasearch engine](https://en.wikipedia.org/wiki/Metasearch_engine):
+**Seurch** is a privacy-first [metasearch engine](https://en.wikipedia.org/wiki/Metasearch_engine):
 one query blends the best results from several independent sources into a single
 clean, fast page, with no tracking, no ads and no profiling. Its search engine
 is open source, so anyone can audit how it works or run their own copy.
@@ -15,26 +15,26 @@ These docs cover three audiences:
 
 ### [User guide]({{< relref "/user-guide" >}})
 
-Everything you need to get the most out of Searpa: searching the web, the
+Everything you need to get the most out of Seurch: searching the web, the
 Images / News / Videos / Maps / Translate tabs, instant answers, knowledge
 cards, bangs and per-account settings.
 → Start with [Getting started]({{< relref "/user-guide/getting-started" >}}).
 
 ### [Self-hosting guide]({{< relref "/self-hosting" >}})
 
-Run your own Searpa instance. Requirements, a Docker quick start, every
+Run your own Seurch instance. Requirements, a Docker quick start, every
 configuration option, wiring up search providers, creating users and issuing
 API keys, plus production and maintenance notes.
 → Start with [Quick start]({{< relref "/self-hosting/quick-start" >}}).
 
 ### [API guide]({{< relref "/api" >}})
 
-Use every Searpa search feature programmatically over a JSON API:
+Use every Seurch search feature programmatically over a JSON API:
 authentication, rate limits and a reference for each endpoint, with copy-paste
 `curl` and Python examples.
 → Start with [the API overview]({{< relref "/api" >}}).
 
-## What Searpa does
+## What Seurch does
 
 - **Web search across three engines**, Brave, Mojeek and Marginalia. Enable any
   subset; when more than one is active their result lists are merged with
@@ -52,6 +52,6 @@ authentication, rate limits and a reference for each endpoint, with copy-paste
 
 ## Privacy in one line
 
-Searpa does not track you, show ads or build a profile. API keys for upstream
+Seurch does not track you, show ads or build a profile. API keys for upstream
 providers stay on the server and are never exposed to your browser, and queries
 are sent to providers without identifying you.

@@ -6,7 +6,7 @@ bookCollapseSection: true
 
 # Selbst-Hosting-Anleitung
 
-Searpas Suchmaschine ist **Open Source**, sodass Sie Ihre eigene Instanz betreiben und der einzige Betreiber sein können, der jemals die Daten Ihrer Benutzer berührt. Diese Anleitung richtet sich an Administratoren, die Searpa einsetzen und betreiben.
+Seurchs Suchmaschine ist **Open Source**, sodass Sie Ihre eigene Instanz betreiben und der einzige Betreiber sein können, der jemals die Daten Ihrer Benutzer berührt. Diese Anleitung richtet sich an Administratoren, die Seurch einsetzen und betreiben.
 
 Eine Instanz ist eine einzelne [Django](https://www.djangoproject.com/)-Anwendung, die auf **PostgreSQL** basiert. Sie wird als Docker-Image geliefert, das seine eigenen statischen Dateien bereitstellt und beim Start Datenbankmigrationen ausführt, sodass eine minimale Bereitstellung aus einem Container plus einer Datenbank besteht.
 
@@ -26,4 +26,4 @@ Eine Instanz ist eine einzelne [Django](https://www.djangoproject.com/)-Anwendun
 | [Produktionshinweise]({{< relref "production" >}}) | Statische Dateien, Gesundheitsprüfungen, Fußzeile, E-Mail |
 
 > [!NOTE]
-> **Was Sie erhalten.** Selbst-Hosting gibt Ihnen die vollständige Searpa-Suchmaschine: jeden Tab, Sofortantworten, Wissenskarten, Einstellungen und die öffentliche API. Welche Tabs und Karten tatsächlich erscheinen, hängt davon ab, welche [Anbieter]({{< relref "search-providers" >}}) Sie konfigurieren.
+> **Was Sie erhalten.** Selbst-Hosting gibt Ihnen die vollständige Seurch-Suchmaschine: jeden Tab, Sofortantworten, Wissenskarten, Einstellungen und die öffentliche API. Welche Tabs und Karten tatsächlich erscheinen, hängt davon ab, welche [Anbieter]({{< relref "search-providers" >}}) Sie konfigurieren.
