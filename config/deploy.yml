@@ -11,11 +11,11 @@
 # First deploy:   kamal setup
 # Subsequent:     kamal deploy
 
-service: searpa-docs
+service: seurch-docs
 
 # Image repository (without the registry host, which is set under `registry`).
 # Combined with the Scaleway registry below it resolves to
-# rg.fr-par.scw.cloud/searpa-eu/search-project/docs.
+# rg.fr-par.scw.cloud/seurch-eu/search-project/docs.
 image: search-project/docs
 
 # The VPS to deploy to. Can be the same host that runs the main app (the docs
@@ -28,7 +28,7 @@ servers:
 # zero-downtime cutovers gated on the /up health check.
 proxy:
   ssl: true
-  host: docs.searpa.eu          # the public domain (must resolve to the VPS)
+  host: docs.seurch.eu          # the public domain (must resolve to the VPS)
   app_port: 80                  # nginx listens here (see Dockerfile + deploy/nginx.conf)
   healthcheck:
     path: /up                   # served by deploy/nginx.conf
@@ -38,7 +38,7 @@ proxy:
 # is the literal "nologin"; KAMAL_REGISTRY_PASSWORD (from Bitwarden) is a
 # Scaleway API secret key with registry read/write access.
 registry:
-  server: rg.fr-par.scw.cloud/searpa-eu
+  server: rg.fr-par.scw.cloud/seurch-eu
   username: nologin
   password:
     - KAMAL_REGISTRY_PASSWORD
@@ -48,4 +48,4 @@ registry:
 builder:
   arch: amd64
   args:
-    BASE_URL: https://docs.searpa.eu/
+    BASE_URL: https://docs.seurch.eu/

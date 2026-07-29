@@ -7,9 +7,9 @@ weight: 1
 
 ## Anmelden
 
-Searpa erfordert ein Konto; es gibt keine anonyme **Suche**. Das Konto selbst kann jedoch **anonym** sein: Es werden nur ein Benutzername und ein Passwort benötigt; **keine E-Mail-Adresse oder persönlichen Daten sind erforderlich** (eine E-Mail ist optional und dient nur zum Zurücksetzen des Passworts, siehe [Ihr Konto]({{< relref "account" >}})). Beim gehosteten Dienst sind Konten während der Alpha-Phase auf Einladung beschränkt; bei einer selbst gehosteten Instanz erstellt der Administrator die Konten.
+Seurch erfordert ein Konto; es gibt keine anonyme **Suche**. Das Konto selbst kann jedoch **anonym** sein: Es werden nur ein Benutzername und ein Passwort benötigt; **keine E-Mail-Adresse oder persönlichen Daten sind erforderlich** (eine E-Mail ist optional und dient nur zum Zurücksetzen des Passworts, siehe [Ihr Konto]({{< relref "account" >}})). Beim gehosteten Dienst sind Konten während der Alpha-Phase auf Einladung beschränkt; bei einer selbst gehosteten Instanz erstellt der Administrator die Konten.
 
-1. Rufen Sie Ihre Searpa-Instanz auf (der gehostete Dienst ist unter [searpa.eu](https://searpa.eu/) verfügbar).
+1. Rufen Sie Ihre Seurch-Instanz auf (der gehostete Dienst ist unter [seurch.eu](https://seurch.eu/) verfügbar).
 2. Klicken Sie auf **Anmelden** und geben Sie Ihren Benutzernamen und Ihr Passwort ein.
 3. Sie gelangen auf die Such-Startseite.
 
@@ -17,7 +17,7 @@ Wenn Sie Ihr Passwort vergessen haben und eine E-Mail-Adresse zu Ihrem Konto hin
 
 ## Ihre erste Suche
 
-Geben Sie eine Suchanfrage in das Suchfeld ein und drücken Sie <kbd>Enter</kbd>. Searpa fragt alle aktivierten Suchmaschinen gleichzeitig ab, fügt die Ergebnisse zusammen und zeigt sie auf einer einzigen Seite an. Während Sie tippen, erscheinen Autocomplete-Vorschläge; wählen Sie einen mit den Pfeiltasten aus oder tippen Sie weiter.
+Geben Sie eine Suchanfrage in das Suchfeld ein und drücken Sie <kbd>Enter</kbd>. Seurch fragt alle aktivierten Suchmaschinen gleichzeitig ab, fügt die Ergebnisse zusammen und zeigt sie auf einer einzigen Seite an. Während Sie tippen, erscheinen Autocomplete-Vorschläge; wählen Sie einen mit den Pfeiltasten aus oder tippen Sie weiter.
 
 Eine Ergebnisseite kann mehrere Dinge gleichzeitig anzeigen:
 

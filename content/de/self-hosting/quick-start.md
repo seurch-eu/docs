@@ -12,12 +12,12 @@ Der schnellste Weg zu einer laufenden Instanz ist das Docker-Image. Sie benötig
 ```bash
 docker run -p 8000:8000 \
   -e SECRET_KEY=ihr-langer-zufaelliger-schluessel \
-  -e DATABASE_URL=postgres://benutzer:passwort@db-host:5432/searpa \
+  -e DATABASE_URL=postgres://benutzer:passwort@db-host:5432/seurch \
   -e ALLOWED_HOSTS=search.example.com \
   -e BRAVE_API_KEY=ihr-brave-schluessel \
   -e BRAVE_SUGGEST_API_KEY=ihr-brave-suggest-schluessel \
   -e MARGINALIA_API_KEY=public \
-  searpa
+  seurch
 ```
 
 Beim Start:
@@ -50,20 +50,20 @@ services:
   db:
     image: postgres:16
     environment:
-      POSTGRES_DB: searpa
-      POSTGRES_USER: searpa
+      POSTGRES_DB: seurch
+      POSTGRES_USER: seurch
       POSTGRES_PASSWORD: aendern-sie-mich
     volumes:
       - pgdata:/var/lib/postgresql/data
 
   app:
-    image: searpa
+    image: seurch
     depends_on: [db]
     ports:
       - "8000:8000"
     environment:
       SECRET_KEY: ihr-langer-zufaelliger-schluessel
-      DATABASE_URL: postgres://searpa:aendern-sie-mich@db:5432/searpa
+      DATABASE_URL: postgres://seurch:aendern-sie-mich@db:5432/seurch
       ALLOWED_HOSTS: search.example.com
       BRAVE_API_KEY: ihr-brave-schluessel
       BRAVE_SUGGEST_API_KEY: ihr-brave-suggest-schluessel
@@ -82,7 +82,7 @@ Siehe [Konfiguration]({{< relref "configuration" >}}) für die vollständige Lis
 
 ## Aus dem Quellcode
 
-Um das Image selbst zu bauen oder lokal zu entwickeln, klonen Sie das Searpa-Repository und verwenden Sie den mitgelieferten Workflow:
+Um das Image selbst zu bauen oder lokal zu entwickeln, klonen Sie das Seurch-Repository und verwenden Sie den mitgelieferten Workflow:
 
 ```bash
 cp .env.example .env        # dann mindestens BRAVE_API_KEY hinzufügen
@@ -94,7 +94,7 @@ make superuser              # Konto erstellen
 `make setup` startet einen Dev-Stack (PostgreSQL + ein Mail-Catcher + LibreTranslate) via Podman Compose, sodass Sie direkt einen funktionierenden Übersetzen-Tab erhalten. Führen Sie `make` ohne Argumente aus, um alle Ziele aufzulisten. Bauen Sie ein Produktions-Image mit:
 
 ```bash
-docker build -t searpa .
+docker build -t seurch .
 ```
 
 > [!WARNING]

@@ -5,7 +5,7 @@ weight: 10
 
 # Notes de production
 
-Quelques points importants à connaître lorsque vous déployez Searpa pour de vrais utilisateurs.
+Quelques points importants à connaître lorsque vous déployez Seurch pour de vrais utilisateurs.
 
 ## L'image
 
@@ -50,7 +50,7 @@ Voir [Configuration → Liens de pied de page]({{< relref "configuration#footer-
 
 ## Mise à l'échelle
 
-Searpa est une application Django standard sans état, vous pouvez donc faire tourner plusieurs conteneurs d'application derrière votre proxy, tous pointant vers le même PostgreSQL. Exécutez les [commandes de maintenance planifiée]({{< relref "maintenance" >}}) depuis un seul endroit (un hôte cron ou une tâche planifiée unique) plutôt que sur chaque réplique.
+Seurch est une application Django standard sans état, vous pouvez donc faire tourner plusieurs conteneurs d'application derrière votre proxy, tous pointant vers le même PostgreSQL. Exécutez les [commandes de maintenance planifiée]({{< relref "maintenance" >}}) depuis un seul endroit (un hôte cron ou une tâche planifiée unique) plutôt que sur chaque réplique.
 
 ## Proxy d'images et trafic sortant
 

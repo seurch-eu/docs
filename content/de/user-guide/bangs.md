@@ -5,7 +5,7 @@ weight: 6
 
 # Bangs
 
-**Bangs** sind `!Verknüpfungen`, die Sie in das Suchfeld eingeben, um eine Anfrage direkt zu einer anderen Website oder einem anderen Searpa-Tab zu senden. Searpa versteht das weit verbreitete DuckDuckGo-Bang-Vokabular mit Tausenden von Websites sowie einige eigene.
+**Bangs** sind `!Verknüpfungen`, die Sie in das Suchfeld eingeben, um eine Anfrage direkt zu einer anderen Website oder einem anderen Seurch-Tab zu senden. Seurch versteht das weit verbreitete DuckDuckGo-Bang-Vokabular mit Tausenden von Websites sowie einige eigene.
 
 Die Bang-Definitionen stammen aus dem [Open-Source-Bang-Repository von Kagi](https://github.com/kagisearch/bangs), derselben community-gepflegten `!bang`-Liste, die Kagi veröffentlicht. Selbst-Hoster können diese mit `make bangs` aktualisieren; siehe [Wartung]({{< relref "/self-hosting/maintenance#bang-definitions" >}}).
 
@@ -22,11 +22,11 @@ Stellen Sie einer Anfrage den Bang einer Website voran, um direkt auf dieser Web
 | `!yt lofi` | YouTube-Suche nach „Lofi" |
 | `!a kopfhörer` | Amazon-Suche |
 
-Es gibt Tausende davon. Wenn ein Bang nicht erkannt wird, behandelt Searpa ihn einfach als Teil Ihrer normalen Anfrage.
+Es gibt Tausende davon. Wenn ein Bang nicht erkannt wird, behandelt Seurch ihn einfach als Teil Ihrer normalen Anfrage.
 
 ## Tab-Bangs
 
-Eine Handvoll Bangs springt zu einem der eigenen [Tabs]({{< relref "search-tabs" >}}) von Searpa, anstatt die Website zu verlassen:
+Eine Handvoll Bangs springt zu einem der eigenen [Tabs]({{< relref "search-tabs" >}}) von Seurch, anstatt die Website zu verlassen:
 
 | Bang(s) | Tab |
 |---------|-----|

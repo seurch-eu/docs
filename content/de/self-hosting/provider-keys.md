@@ -5,12 +5,12 @@ weight: 5
 
 # API-Schlüssel erhalten
 
-Schritt-für-Schritt-Anleitungen zum Erhalten des Schlüssels jedes Anbieters. Keiner ist erforderlich, um Searpa zu starten, aber mindestens eine **Web-Suchmaschine** (Brave ist am einfachsten) wird für nützliche Ergebnisse benötigt. Jeder Anbieter, den Sie überspringen, blendet seinen Tab oder seine Karte einfach aus; unter [Suchanbieter]({{< relref "search-providers" >}}) finden Sie, was jeder aktiviert.
+Schritt-für-Schritt-Anleitungen zum Erhalten des Schlüssels jedes Anbieters. Keiner ist erforderlich, um Seurch zu starten, aber mindestens eine **Web-Suchmaschine** (Brave ist am einfachsten) wird für nützliche Ergebnisse benötigt. Jeder Anbieter, den Sie überspringen, blendet seinen Tab oder seine Karte einfach aus; unter [Suchanbieter]({{< relref "search-providers" >}}) finden Sie, was jeder aktiviert.
 
 Sobald Sie einen Schlüssel haben, setzen Sie die entsprechende Umgebungsvariable (siehe [Konfiguration]({{< relref "configuration" >}})) und starten Sie die App neu.
 
 > [!NOTE]
-> Alle haben ein **kostenloses Kontingent**, das für eine persönliche oder kleine Team-Instanz großzügig genug ist; Searpa cached aggressiv und ruft die kostenpflichtigen Karten-APIs nur auf, wenn eine Anfrage tatsächlich übereinstimmt. Die geteilten Schlüssel (`public` für Marginalia, anonymes Stack Exchange) benötigen überhaupt keine Anmeldung.
+> Alle haben ein **kostenloses Kontingent**, das für eine persönliche oder kleine Team-Instanz großzügig genug ist; Seurch cached aggressiv und ruft die kostenpflichtigen Karten-APIs nur auf, wenn eine Anfrage tatsächlich übereinstimmt. Die geteilten Schlüssel (`public` für Marginalia, anonymes Stack Exchange) benötigen überhaupt keine Anmeldung.
 
 ## Brave Search — `BRAVE_API_KEY`
 
@@ -83,13 +83,13 @@ Aktiviert die Restaurant / Hotel / Attraktionskarte.
 3. Kopieren Sie ihn in `TRIPADVISOR_API_KEY`.
 
 > [!NOTE]
-> Die TripAdvisor Content API verlangt die Anzeige von TripAdvisor-Attributionen, wo ihre Daten erscheinen, was Searpas Karte bereits tut. Sie können den Schlüssel in deren Portal auch auf die IP Ihres Servers beschränken.
+> Die TripAdvisor Content API verlangt die Anzeige von TripAdvisor-Attributionen, wo ihre Daten erscheinen, was Seurchs Karte bereits tut. Sie können den Schlüssel in deren Portal auch auf die IP Ihres Servers beschränken.
 
 ## Stack Exchange (Q&A-Karte) — `STACKEXCHANGE_API_KEY`
 
 Aktiviert die Stack Exchange-Fragen-und-Antworten-Karte. **Ein Schlüssel ist optional.**
 
-- **Ohne Schlüssel** verwendet Searpa das gemeinsame anonyme Kontingent (10.000 Anfragen/Tag geteilt zwischen allen anonymen Aufrufern), was für geringen Datenverkehr ausreicht.
+- **Ohne Schlüssel** verwendet Seurch das gemeinsame anonyme Kontingent (10.000 Anfragen/Tag geteilt zwischen allen anonymen Aufrufern), was für geringen Datenverkehr ausreicht.
 - **Mit einem Schlüssel** erhalten Sie ein dediziertes, viel höheres Kontingent:
 
   1. Registrieren Sie eine App bei [Stack Apps → Register OAuth](https://stackapps.com/apps/oauth/register) (verwenden Sie die URL Ihrer Instanz; Sie benötigen den OAuth-Fluss nicht).
@@ -108,7 +108,7 @@ Diese funktionieren sofort, ohne Konto oder Schlüssel:
 | **Open-Meteo** | Die Wetter-Sofortantwort |
 | **Frankfurter** | Die Währungs-Sofortantwort |
 
-Der Übersetzen-Tab ist die einzige schlüssellose Funktion, die dennoch **Infrastruktur** benötigt: eine LibreTranslate-Instanz, auf die Sie Searpa zeigen; siehe [Übersetzung]({{< relref "translation" >}}).
+Der Übersetzen-Tab ist die einzige schlüssellose Funktion, die dennoch **Infrastruktur** benötigt: eine LibreTranslate-Instanz, auf die Sie Seurch zeigen; siehe [Übersetzung]({{< relref "translation" >}}).
 
 ## Nach dem Hinzufügen von Schlüsseln
 

@@ -5,7 +5,7 @@ weight: 9
 
 # Wartung
 
-Searpa benötigt wenig laufende Pflege, aber einige **Verwaltungsbefehle** halten es ordentlich und aktuell. Führen Sie diese nach einem Zeitplan aus (ein Cron-Job, ein systemd-Timer oder die Funktion für geplante Aufgaben Ihres Orchestrators). Führen Sie jeden im Container aus (`docker exec <container> python manage.py …`) oder via `make` / `uv run` aus dem Quellcode.
+Seurch benötigt wenig laufende Pflege, aber einige **Verwaltungsbefehle** halten es ordentlich und aktuell. Führen Sie diese nach einem Zeitplan aus (ein Cron-Job, ein systemd-Timer oder die Funktion für geplante Aufgaben Ihres Orchestrators). Führen Sie jeden im Container aus (`docker exec <container> python manage.py …`) oder via `make` / `uv run` aus dem Quellcode.
 
 ## Geplante Aufgaben
 

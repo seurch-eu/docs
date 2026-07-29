@@ -5,7 +5,7 @@ weight: 3
 
 # Such-Tabs
 
-Neben dem Web-Tab hat Searpa dedizierte Tabs für Bilder, Nachrichten, Videos, Karten und Übersetzungen. Jeder führt Ihre Anfrage gegen Quellen aus, die für diese Art von Inhalt geeignet sind. Ein Tab erscheint nur, wenn die Instanz den benötigten Anbieter konfiguriert hat.
+Neben dem Web-Tab hat Seurch dedizierte Tabs für Bilder, Nachrichten, Videos, Karten und Übersetzungen. Jeder führt Ihre Anfrage gegen Quellen aus, die für diese Art von Inhalt geeignet sind. Ein Tab erscheint nur, wenn die Instanz den benötigten Anbieter konfiguriert hat.
 
 ## Bilder
 
@@ -28,7 +28,7 @@ Der **Videos**-Tab kombiniert Brave-Videoergebnisse mit **Sepia**, dem Suchindex
 
 ## Karten
 
-Der **Karten**-Tab benötigt keine Einrichtung und kein Konto bei einem Anbieter. Geben Sie einen Ortsnamen oder eine Adresse ein, und Searpa:
+Der **Karten**-Tab benötigt keine Einrichtung und kein Konto bei einem Anbieter. Geben Sie einen Ortsnamen oder eine Adresse ein, und Seurch:
 
 - **Geokodiert** ihn mit [Nominatim](https://nominatim.openstreetmap.org/) (OpenStreetMaps Suche) und
 - zeigt den Standort auf einer **eingebetteten OpenStreetMap-Karte** mit einem Link **In Maps öffnen** und Wegbeschreibungen.

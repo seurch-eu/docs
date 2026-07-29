@@ -5,25 +5,25 @@ weight: 9
 
 # Privacy
 
-Searpa is built to be a private alternative to surveillance-funded search. Here
+Seurch is built to be a private alternative to surveillance-funded search. Here
 is what that means in practice.
 
-## What Searpa does not do
+## What Seurch does not do
 
-- **No tracking.** Searpa does not follow you around the web or across sessions
+- **No tracking.** Seurch does not follow you around the web or across sessions
   to build a profile.
 - **No ads.** There is no advertising, so there is no incentive to profile you.
 - **No selling data.** Your searches are not a product sold to anyone.
 
 ## How your queries are handled
 
-- Searches run **server-side**. Searpa talks to upstream providers (Brave,
+- Searches run **server-side**. Seurch talks to upstream providers (Brave,
   Mojeek, Marginalia and the rest) on your behalf, so those providers don't see
-  your browser or IP, they see Searpa's server.
+  your browser or IP, they see Seurch's server.
 - **Provider API keys never reach your browser.** All upstream calls happen on
   the server.
 - **Image proxying** (optional, in [Settings]({{< relref "settings" >}})) routes
-  thumbnails through the Searpa server so source sites don't see your browser
+  thumbnails through the Seurch server so source sites don't see your browser
   either.
 - Results are briefly **cached** on the server to keep things fast and reduce
   load on providers; the cache is keyed to the query, not to you.

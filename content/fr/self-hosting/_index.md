@@ -6,7 +6,7 @@ bookCollapseSection: true
 
 # Guide d'auto-hébergement
 
-Le moteur de recherche de Searpa est **open source**, vous pouvez donc déployer votre propre instance et être le seul opérateur à jamais toucher les données de vos utilisateurs. Ce guide est destiné aux administrateurs déployant et exploitant Searpa.
+Le moteur de recherche de Seurch est **open source**, vous pouvez donc déployer votre propre instance et être le seul opérateur à jamais toucher les données de vos utilisateurs. Ce guide est destiné aux administrateurs déployant et exploitant Seurch.
 
 Une instance est une application [Django](https://www.djangoproject.com/) unique s'appuyant sur **PostgreSQL**. Elle est livrée sous forme d'image Docker qui sert ses propres fichiers statiques et applique les migrations de base de données au démarrage, de sorte qu'un déploiement minimal consiste en un conteneur plus une base de données.
 
@@ -26,4 +26,4 @@ Une instance est une application [Django](https://www.djangoproject.com/) unique
 | [Notes de production]({{< relref "production" >}}) | Fichiers statiques, vérifications de santé, pied de page, e-mail |
 
 > [!NOTE]
-> **Ce que vous obtenez.** L'auto-hébergement vous donne le moteur de recherche Searpa complet, chaque onglet, les réponses instantanées, les fiches de connaissance, les paramètres et l'API publique. Les onglets et fiches qui apparaissent réellement dépendent des [fournisseurs]({{< relref "search-providers" >}}) que vous configurez.
+> **Ce que vous obtenez.** L'auto-hébergement vous donne le moteur de recherche Seurch complet, chaque onglet, les réponses instantanées, les fiches de connaissance, les paramètres et l'API publique. Les onglets et fiches qui apparaissent réellement dépendent des [fournisseurs]({{< relref "search-providers" >}}) que vous configurez.

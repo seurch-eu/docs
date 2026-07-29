@@ -5,7 +5,7 @@ weight: 7
 
 # Utilisateurs et accès
 
-Searpa est **accessible uniquement par connexion** et **sans inscription publique**, donc en tant qu'administrateur, vous contrôlez qui a un compte. C'est ce qui maintient une instance privée pour vos utilisateurs.
+Seurch est **accessible uniquement par connexion** et **sans inscription publique**, donc en tant qu'administrateur, vous contrôlez qui a un compte. C'est ce qui maintient une instance privée pour vos utilisateurs.
 
 ## Créer des comptes
 

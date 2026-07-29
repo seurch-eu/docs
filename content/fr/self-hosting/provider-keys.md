@@ -5,12 +5,12 @@ weight: 5
 
 # Obtenir les clés API
 
-Guides pas à pas pour obtenir la clé de chaque fournisseur. Aucune n'est requise pour démarrer Searpa, mais au moins un **moteur web** (Brave est le plus simple) est nécessaire pour des résultats utiles. Chaque fournisseur que vous ignorez masque simplement son onglet ou sa fiche ; voir [Fournisseurs de recherche]({{< relref "search-providers" >}}) pour ce que chacun active.
+Guides pas à pas pour obtenir la clé de chaque fournisseur. Aucune n'est requise pour démarrer Seurch, mais au moins un **moteur web** (Brave est le plus simple) est nécessaire pour des résultats utiles. Chaque fournisseur que vous ignorez masque simplement son onglet ou sa fiche ; voir [Fournisseurs de recherche]({{< relref "search-providers" >}}) pour ce que chacun active.
 
 Une fois que vous avez une clé, définissez la variable d'environnement correspondante (voir [Configuration]({{< relref "configuration" >}})) et redémarrez l'application.
 
 > [!NOTE]
-> Tous ces fournisseurs ont un **niveau gratuit** suffisamment généreux pour une instance personnelle ou pour une petite équipe ; Searpa met agressivement en cache et n'appelle les API de fiches payantes que lorsqu'une requête correspond réellement. Les clés partagées (`public` pour Marginalia, Stack Exchange anonyme) ne nécessitent aucune inscription.
+> Tous ces fournisseurs ont un **niveau gratuit** suffisamment généreux pour une instance personnelle ou pour une petite équipe ; Seurch met agressivement en cache et n'appelle les API de fiches payantes que lorsqu'une requête correspond réellement. Les clés partagées (`public` pour Marginalia, Stack Exchange anonyme) ne nécessitent aucune inscription.
 
 ## Brave Search — `BRAVE_API_KEY`
 
@@ -83,13 +83,13 @@ Active la fiche restaurant / hôtel / attraction.
 3. Copiez-la dans `TRIPADVISOR_API_KEY`.
 
 > [!NOTE]
-> L'API Content TripAdvisor nécessite d'afficher les attributions TripAdvisor là où ses données apparaissent, ce que la fiche de Searpa fait déjà. Vous pouvez également restreindre la clé à l'IP de votre serveur dans leur portail.
+> L'API Content TripAdvisor nécessite d'afficher les attributions TripAdvisor là où ses données apparaissent, ce que la fiche de Seurch fait déjà. Vous pouvez également restreindre la clé à l'IP de votre serveur dans leur portail.
 
 ## Stack Exchange (fiche Q&A) — `STACKEXCHANGE_API_KEY`
 
 Active la fiche de questions-réponses Stack Exchange. **Une clé est optionnelle.**
 
-- **Sans clé**, Searpa utilise le quota partagé anonyme (10 000 requêtes/jour partagées entre tous les appelants anonymes), ce qui convient pour un faible trafic.
+- **Sans clé**, Seurch utilise le quota partagé anonyme (10 000 requêtes/jour partagées entre tous les appelants anonymes), ce qui convient pour un faible trafic.
 - **Avec une clé**, vous obtenez un quota dédié beaucoup plus élevé :
 
   1. Enregistrez une application sur [Stack Apps → Register OAuth](https://stackapps.com/apps/oauth/register) (utilisez l'URL de votre instance ; vous n'avez pas besoin du flux OAuth).
@@ -108,7 +108,7 @@ Ceux-ci fonctionnent d'emblée, sans compte ni clé :
 | **Open-Meteo** | La réponse instantanée météo |
 | **Frankfurter** | La réponse instantanée devise |
 
-L'onglet Traduction est la seule fonctionnalité sans clé qui nécessite quand même une **infrastructure** : une instance LibreTranslate vers laquelle vous pointez Searpa, voir [Traduction]({{< relref "translation" >}}).
+L'onglet Traduction est la seule fonctionnalité sans clé qui nécessite quand même une **infrastructure** : une instance LibreTranslate vers laquelle vous pointez Seurch, voir [Traduction]({{< relref "translation" >}}).
 
 ## Après avoir ajouté les clés
 

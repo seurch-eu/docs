@@ -18,7 +18,7 @@ GET /api/v1/suggest/?q=...
 ```
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
+curl -H "Authorization: Api-Key seurch_sk_<prefix>.<secret>" \
   "https://search.example.com/api/v1/suggest/?q=clim"
 ```
 
@@ -74,7 +74,7 @@ GET /api/v1/key/
 ```json
 {
   "name": "my script",
-  "prefix": "searpa_sk_1a2b3c4d",
+  "prefix": "seurch_sk_1a2b3c4d",
   "created_at": "2026-06-01T10:00:00Z",
   "last_used_at": "2026-06-30T09:15:00Z",
   "revoked": false

@@ -5,7 +5,7 @@ weight: 7
 
 # Users & access
 
-Searpa is **login-only** with **no public registration**, so as the
+Seurch is **login-only** with **no public registration**, so as the
 administrator you control who has an account. This is what keeps an instance
 private to your users.
 

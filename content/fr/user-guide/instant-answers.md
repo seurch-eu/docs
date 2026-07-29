@@ -5,7 +5,7 @@ weight: 4
 
 # Réponses instantanées
 
-Pour les requêtes utilitaires courantes, Searpa affiche une **réponse instantanée** tout en haut des résultats web, vous donnant la réponse sans cliquer nulle part. C'est dans l'esprit des réponses instantanées de DuckDuckGo.
+Pour les requêtes utilitaires courantes, Seurch affiche une **réponse instantanée** tout en haut des résultats web, vous donnant la réponse sans cliquer nulle part. C'est dans l'esprit des réponses instantanées de DuckDuckGo.
 
 Presque toutes les réponses instantanées sont calculées **localement sur le serveur**, sans tiers impliqué et sans envoyer votre requête nulle part.
 

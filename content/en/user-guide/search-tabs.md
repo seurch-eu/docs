@@ -5,7 +5,7 @@ weight: 3
 
 # Search tabs
 
-Besides the Web tab, Searpa has dedicated tabs for images, news, videos, maps
+Besides the Web tab, Seurch has dedicated tabs for images, news, videos, maps
 and translation. Each runs your query against sources suited to that kind of
 content. A tab only appears when the instance has the provider it needs
 configured.
@@ -43,7 +43,7 @@ Results show a thumbnail, the duration and the host site.
 ## Maps
 
 The **Maps** tab needs no setup and no account with any provider. Type a place
-name or address and Searpa:
+name or address and Seurch:
 
 - **Geocodes** it with [Nominatim](https://nominatim.openstreetmap.org/)
   (OpenStreetMap's search), and

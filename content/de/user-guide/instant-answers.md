@@ -5,7 +5,7 @@ weight: 4
 
 # Sofortantworten
 
-Bei häufigen Dienstprogramm-Anfragen zeigt Searpa eine **Sofortantwort** ganz oben in den Web-Ergebnissen an, sodass Sie die Antwort erhalten, ohne durchklicken zu müssen. Dies ist im Geiste der Sofortantworten von DuckDuckGo.
+Bei häufigen Dienstprogramm-Anfragen zeigt Seurch eine **Sofortantwort** ganz oben in den Web-Ergebnissen an, sodass Sie die Antwort erhalten, ohne durchklicken zu müssen. Dies ist im Geiste der Sofortantworten von DuckDuckGo.
 
 Fast jede Sofortantwort wird **lokal auf dem Server** berechnet, ohne Beteiligung Dritter und ohne Weitersenden Ihrer Anfrage.
 

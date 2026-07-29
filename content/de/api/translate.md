@@ -22,11 +22,11 @@ POST /api/v1/translate/
 
 ```bash
 # GET
-curl -H "Authorization: Api-Key searpa_sk_<präfix>.<geheimnis>" \
+curl -H "Authorization: Api-Key seurch_sk_<präfix>.<geheimnis>" \
   "https://search.example.com/api/v1/translate/?q=hello&target=de"
 
 # POST (besser für langen Text)
-curl -X POST -H "Authorization: Api-Key searpa_sk_<präfix>.<geheimnis>" \
+curl -X POST -H "Authorization: Api-Key seurch_sk_<präfix>.<geheimnis>" \
   -d "q=hello world" -d "target=de" \
   "https://search.example.com/api/v1/translate/"
 ```

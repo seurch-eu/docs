@@ -13,10 +13,10 @@ Ces deux points de terminaison reproduisent les réponses en ligne et les pannea
 GET /api/v1/instant/?q=...
 ```
 
-Renvoie la réponse instantanée pour une requête utilitaire (calculs, conversion d'unités/base/couleur, météo, devise, horloge mondiale, hachages, QR, « quelle est mon IP », …), ou `null` lorsque la requête n'est pas une réponse inline de Searpa.
+Renvoie la réponse instantanée pour une requête utilitaire (calculs, conversion d'unités/base/couleur, météo, devise, horloge mondiale, hachages, QR, « quelle est mon IP », …), ou `null` lorsque la requête n'est pas une réponse inline de Seurch.
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<préfixe>.<secret>" \
+curl -H "Authorization: Api-Key seurch_sk_<préfixe>.<secret>" \
   "https://search.example.com/api/v1/instant/?q=100+usd+en+eur"
 ```
 

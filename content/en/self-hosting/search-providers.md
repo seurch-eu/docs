@@ -5,7 +5,7 @@ weight: 4
 
 # Search providers
 
-Searpa blends results from several independent providers. **Which tabs and cards
+Seurch blends results from several independent providers. **Which tabs and cards
 appear depends on which keys you set.** A provider with no key is hidden, the
 affected tab or card simply doesn't show, rather than displaying an error.
 

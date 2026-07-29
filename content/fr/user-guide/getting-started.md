@@ -7,9 +7,9 @@ weight: 1
 
 ## Se connecter
 
-Searpa nécessite un compte ; il n'existe pas de **recherche** anonyme. Le compte lui-même peut toutefois être **anonyme** : seuls un nom d'utilisateur et un mot de passe sont nécessaires, **aucune adresse e-mail ni information personnelle n'est requise** (l'e-mail est facultatif et sert uniquement à la réinitialisation du mot de passe, voir [Votre compte]({{< relref "account" >}})). Sur le service hébergé, les comptes sont sur invitation pendant la phase alpha ; sur une instance auto-hébergée, c'est l'administrateur qui les crée.
+Seurch nécessite un compte ; il n'existe pas de **recherche** anonyme. Le compte lui-même peut toutefois être **anonyme** : seuls un nom d'utilisateur et un mot de passe sont nécessaires, **aucune adresse e-mail ni information personnelle n'est requise** (l'e-mail est facultatif et sert uniquement à la réinitialisation du mot de passe, voir [Votre compte]({{< relref "account" >}})). Sur le service hébergé, les comptes sont sur invitation pendant la phase alpha ; sur une instance auto-hébergée, c'est l'administrateur qui les crée.
 
-1. Rendez-vous sur votre instance Searpa (le service hébergé est disponible sur [searpa.eu](https://searpa.eu/)).
+1. Rendez-vous sur votre instance Seurch (le service hébergé est disponible sur [seurch.eu](https://seurch.eu/)).
 2. Cliquez sur **Se connecter** et saisissez votre nom d'utilisateur et votre mot de passe.
 3. Vous arrivez sur la page d'accueil de recherche.
 
@@ -17,7 +17,7 @@ Si vous oubliez votre mot de passe et avez ajouté une adresse e-mail à votre c
 
 ## Votre première recherche
 
-Saisissez une requête dans la zone de recherche et appuyez sur <kbd>Entrée</kbd>. Searpa interroge simultanément tous les moteurs activés, fusionne les résultats et les affiche sur une seule page. Au fur et à mesure que vous tapez, des suggestions de saisie automatique apparaissent ; sélectionnez-en une avec les touches fléchées ou continuez à taper.
+Saisissez une requête dans la zone de recherche et appuyez sur <kbd>Entrée</kbd>. Seurch interroge simultanément tous les moteurs activés, fusionne les résultats et les affiche sur une seule page. Au fur et à mesure que vous tapez, des suggestions de saisie automatique apparaissent ; sélectionnez-en une avec les touches fléchées ou continuez à taper.
 
 Une page de résultats peut afficher plusieurs éléments simultanément :
 

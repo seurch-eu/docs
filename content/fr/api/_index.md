@@ -6,12 +6,12 @@ bookCollapseSection: true
 
 # Guide API
 
-Chaque fonctionnalité de recherche Searpa — web, images, actualités, vidéos, cartes, traduction, réponses instantanées, fiches de connaissance, suggestions et statut des fournisseurs — est disponible par programme via une API JSON. Le même service alimente à la fois l'API et le site web, de sorte que les deux renvoient toujours les mêmes résultats.
+Chaque fonctionnalité de recherche Seurch — web, images, actualités, vidéos, cartes, traduction, réponses instantanées, fiches de connaissance, suggestions et statut des fournisseurs — est disponible par programme via une API JSON. Le même service alimente à la fois l'API et le site web, de sorte que les deux renvoient toujours les mêmes résultats.
 
 L'API est construite avec [Django REST Framework](https://www.django-rest-framework.org/) et montée sous **`/api/v1/`**.
 
 > [!IMPORTANT]
-> L'API publique est une fonctionnalité **auto-hébergée**. Elle est incluse dans le moteur open source et disponible sur toute instance que vous [déployez vous-même]({{< relref "/self-hosting" >}}). Le service hébergé sur [searpa.eu](https://searpa.eu/) **ne l'expose pas** ; pour utiliser l'API, déployez votre propre instance et créez-y une clé.
+> L'API publique est une fonctionnalité **auto-hébergée**. Elle est incluse dans le moteur open source et disponible sur toute instance que vous [déployez vous-même]({{< relref "/self-hosting" >}}). Le service hébergé sur [seurch.eu](https://seurch.eu/) **ne l'expose pas** ; pour utiliser l'API, déployez votre propre instance et créez-y une clé.
 
 ## URL de base
 
@@ -31,7 +31,7 @@ Les exemples ci-dessous utilisent `search.example.com` comme substitut ; remplac
 ## Une première requête
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<préfixe>.<secret>" \
+curl -H "Authorization: Api-Key seurch_sk_<préfixe>.<secret>" \
   "https://search.example.com/api/v1/web/?q=climat&lang=fr"
 ```
 
@@ -50,4 +50,4 @@ curl -H "Authorization: Api-Key searpa_sk_<préfixe>.<secret>" \
 | [Erreurs]({{< relref "errors" >}}) | Codes de statut et corps d'erreur |
 
 > [!NOTE]
-> La page développeur intégrée sur **`/api/`** renvoie vers cette documentation et vers le gestionnaire de clés. Une collection [Insomnia](https://insomnia.rest/) des points de terminaison est incluse dans le dépôt (`scripts/searpa-api.insomnia.json`).
+> La page développeur intégrée sur **`/api/`** renvoie vers cette documentation et vers le gestionnaire de clés. Une collection [Insomnia](https://insomnia.rest/) des points de terminaison est incluse dans le dépôt (`scripts/seurch-api.insomnia.json`).

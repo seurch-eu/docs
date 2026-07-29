@@ -5,7 +5,7 @@ weight: 2
 
 # Recherche web
 
-L'onglet **Web** est le cœur de Searpa. Il peut s'appuyer sur trois index web indépendants et fusionner ceux que vous activez en une seule liste classée.
+L'onglet **Web** est le cœur de Seurch. Il peut s'appuyer sur trois index web indépendants et fusionner ceux que vous activez en une seule liste classée.
 
 ## Les trois moteurs
 
@@ -19,7 +19,7 @@ Vous choisissez les moteurs à utiliser dans **Paramètres → Moteurs**. Active
 
 ## Comment les résultats sont fusionnés
 
-Lorsque plusieurs moteurs renvoient des résultats, Searpa les fusionne avec **Reciprocal Rank Fusion (RRF)** plutôt que de simplement concaténer les listes :
+Lorsque plusieurs moteurs renvoient des résultats, Seurch les fusionne avec **Reciprocal Rank Fusion (RRF)** plutôt que de simplement concaténer les listes :
 
 - Chaque URL de résultat reçoit des points selon son classement dans chaque moteur qui l'a retournée.
 - La même URL provenant de plusieurs moteurs est regroupée en **une seule** entrée, et ses scores s'additionnent, ce qui fait remonter une page sur laquelle plusieurs moteurs s'accordent.
@@ -31,7 +31,7 @@ L'effet : les résultats larges et courants que tout le monde remonte sont bien 
 
 - **Plage temporelle** — filtrez sur le dernier jour, la dernière semaine, le dernier mois ou l'année.
 - **Recherche sécurisée** — activée par défaut ; désactivez-la dans [Paramètres]({{< relref "settings" >}}) pour inclure les résultats pour adultes.
-- **Corrections orthographiques** — lorsqu'une requête semble mal orthographiée, Searpa propose une correction au-dessus des résultats.
+- **Corrections orthographiques** — lorsqu'une requête semble mal orthographiée, Seurch propose une correction au-dessus des résultats.
 - **Pagination** — naviguez dans d'autres résultats en bas de la liste.
 - **Langues** — définissez une langue de recherche préférée dans Paramètres, ou laissez-la sur *Auto* pour suivre votre navigateur.
 

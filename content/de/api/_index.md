@@ -6,12 +6,12 @@ bookCollapseSection: true
 
 # API-Anleitung
 
-Jede Searpa-Suchfunktion – Web, Bilder, Nachrichten, Videos, Karten, Übersetzen, Sofortantworten, Wissenskarten, Vorschläge und Anbieterstatus – ist programmatisch über eine JSON-API verfügbar. Derselbe Dienst bedient sowohl die API als auch die Website, sodass beide immer die gleichen Ergebnisse zurückgeben.
+Jede Seurch-Suchfunktion – Web, Bilder, Nachrichten, Videos, Karten, Übersetzen, Sofortantworten, Wissenskarten, Vorschläge und Anbieterstatus – ist programmatisch über eine JSON-API verfügbar. Derselbe Dienst bedient sowohl die API als auch die Website, sodass beide immer die gleichen Ergebnisse zurückgeben.
 
 Die API ist mit [Django REST Framework](https://www.django-rest-framework.org/) gebaut und unter **`/api/v1/`** eingehängt.
 
 > [!IMPORTANT]
-> Die öffentliche API ist eine **selbst-gehostete** Funktion. Sie wird mit der Open-Source-Engine geliefert und ist auf jeder Instanz verfügbar, die Sie [selbst betreiben]({{< relref "/self-hosting" >}}). Der gehostete Dienst unter [searpa.eu](https://searpa.eu/) stellt sie **nicht** bereit; um die API zu nutzen, betreiben Sie Ihre eigene Instanz und erstellen Sie dort einen Schlüssel.
+> Die öffentliche API ist eine **selbst-gehostete** Funktion. Sie wird mit der Open-Source-Engine geliefert und ist auf jeder Instanz verfügbar, die Sie [selbst betreiben]({{< relref "/self-hosting" >}}). Der gehostete Dienst unter [seurch.eu](https://seurch.eu/) stellt sie **nicht** bereit; um die API zu nutzen, betreiben Sie Ihre eigene Instanz und erstellen Sie dort einen Schlüssel.
 
 ## Basis-URL
 
@@ -31,7 +31,7 @@ Die nachfolgenden Beispiele verwenden `search.example.com` als Platzhalter; erse
 ## Eine erste Anfrage
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<präfix>.<geheimnis>" \
+curl -H "Authorization: Api-Key seurch_sk_<präfix>.<geheimnis>" \
   "https://search.example.com/api/v1/web/?q=klima&lang=de"
 ```
 
@@ -50,4 +50,4 @@ curl -H "Authorization: Api-Key searpa_sk_<präfix>.<geheimnis>" \
 | [Fehler]({{< relref "errors" >}}) | Statuscodes und Fehlerbodies |
 
 > [!NOTE]
-> Die In-App-Entwicklerseite unter **`/api/`** verlinkt auf diese Dokumentation und zum Schlüsselmanager. Eine [Insomnia](https://insomnia.rest/)-Sammlung der Endpunkte wird im Repository geliefert (`scripts/searpa-api.insomnia.json`).
+> Die In-App-Entwicklerseite unter **`/api/`** verlinkt auf diese Dokumentation und zum Schlüsselmanager. Eine [Insomnia](https://insomnia.rest/)-Sammlung der Endpunkte wird im Repository geliefert (`scripts/seurch-api.insomnia.json`).

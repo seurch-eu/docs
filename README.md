@@ -1,6 +1,6 @@
-# Searpa documentation
+# Seurch documentation
 
-Public documentation for [Searpa](https://searpa.eu/), the privacy-first
+Public documentation for [Seurch](https://seurch.eu/), the privacy-first
 metasearch engine. Built with [Hugo](https://gohugo.io/) and the
 [hugo-book](https://github.com/alex-shpak/hugo-book) theme.
 
@@ -40,7 +40,7 @@ hugo --gc --minify   # output written to ./public
 │   ├── user-guide/        # User guide
 │   ├── self-hosting/      # Self-hosting guide
 │   └── api/               # API guide
-├── assets/_custom.scss    # Searpa theme overlay (slate + indigo, light/dark)
+├── assets/_custom.scss    # Seurch theme overlay (slate + indigo, light/dark)
 ├── layouts/               # theme overrides (sidebar "Links" section)
 ├── themes/hugo-book/      # vendored theme (MIT, see its LICENSE)
 ├── Dockerfile             # Hugo build → nginx (used by Kamal)
@@ -66,7 +66,7 @@ The site is static, so it can be served anywhere. Two paths are provided:
 
 ### Kamal (production)
 
-The docs are deployed the same way as the main Searpa app, with
+The docs are deployed the same way as the main Seurch app, with
 [Kamal](https://kamal-deploy.org): a multi-stage `Dockerfile` builds the site
 with Hugo and serves the result with nginx, and kamal-proxy terminates TLS
 (Let's Encrypt) in front of it.

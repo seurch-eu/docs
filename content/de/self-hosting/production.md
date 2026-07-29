@@ -5,7 +5,7 @@ weight: 10
 
 # Produktionshinweise
 
-Einige wichtige Punkte, wenn Sie Searpa für echte Benutzer betreiben.
+Einige wichtige Punkte, wenn Sie Seurch für echte Benutzer betreiben.
 
 ## Das Image
 
@@ -50,7 +50,7 @@ Siehe [Konfiguration → Fußzeilen-Links]({{< relref "configuration#footer-link
 
 ## Skalierung
 
-Searpa ist eine Standard-zustandslose Django-App, sodass Sie mehrere App-Container hinter Ihrem Proxy betreiben können, die alle auf dasselbe PostgreSQL zeigen. Führen Sie die [geplanten Wartungsbefehle]({{< relref "maintenance" >}}) von einem einzigen Ort aus (einem Cron-Host oder einer geplanten Aufgabe), nicht auf jeder Instanz.
+Seurch ist eine Standard-zustandslose Django-App, sodass Sie mehrere App-Container hinter Ihrem Proxy betreiben können, die alle auf dasselbe PostgreSQL zeigen. Führen Sie die [geplanten Wartungsbefehle]({{< relref "maintenance" >}}) von einem einzigen Ort aus (einem Cron-Host oder einer geplanten Aufgabe), nicht auf jeder Instanz.
 
 ## Bilder-Proxy und ausgehender Datenverkehr
 

@@ -18,10 +18,10 @@ GET /api/v1/instant/?q=...
 
 Returns the instant answer for a utility query (maths, unit/base/colour
 conversion, weather, currency, world clock, hashes, QR, "what's my IP", …), or
-`null` when the query isn't one Searpa answers inline.
+`null` when the query isn't one Seurch answers inline.
 
 ```bash
-curl -H "Authorization: Api-Key searpa_sk_<prefix>.<secret>" \
+curl -H "Authorization: Api-Key seurch_sk_<prefix>.<secret>" \
   "https://search.example.com/api/v1/instant/?q=100+usd+to+eur"
 ```
 

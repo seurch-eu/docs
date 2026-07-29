@@ -7,15 +7,15 @@ weight: 1
 
 ## Sign in
 
-Searpa requires an account, there is no anonymous **search**. The account
+Seurch requires an account, there is no anonymous **search**. The account
 itself, though, can be **anonymous**: only a username and password are needed,
 **no email or personal details are required** (an email is optional, and only
 for password reset, see [Your account]({{< relref "account" >}})). On the hosted
 service, accounts are invite-only during the alpha; on a self-hosted instance
 the administrator creates them.
 
-1. Go to your Searpa instance (the hosted service is at
-   [searpa.eu](https://searpa.eu/)).
+1. Go to your Seurch instance (the hosted service is at
+   [seurch.eu](https://seurch.eu/)).
 2. Click **Sign in** and enter your username and password.
 3. You land on the search home page.
 
@@ -25,7 +25,7 @@ cannot be recovered, see [Your account]({{< relref "account" >}}).
 
 ## Your first search
 
-Type a query into the search box and press <kbd>Enter</kbd>. Searpa queries
+Type a query into the search box and press <kbd>Enter</kbd>. Seurch queries
 every enabled engine at once, merges the results and shows them on a single
 page. As you type, autocomplete suggestions appear; pick one with the arrow
 keys or keep typing.

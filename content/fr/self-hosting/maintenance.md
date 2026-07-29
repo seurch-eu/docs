@@ -5,7 +5,7 @@ weight: 9
 
 # Maintenance
 
-Searpa nécessite peu de maintenance continue, mais quelques **commandes de gestion** permettent de le garder propre et à jour. Exécutez-les selon un planning (tâche cron, minuteur systemd ou fonctionnalité de tâche planifiée de votre orchestrateur). Exécutez chacune à l'intérieur du conteneur (`docker exec <conteneur> python manage.py …`) ou via `make` / `uv run` depuis les sources.
+Seurch nécessite peu de maintenance continue, mais quelques **commandes de gestion** permettent de le garder propre et à jour. Exécutez-les selon un planning (tâche cron, minuteur systemd ou fonctionnalité de tâche planifiée de votre orchestrateur). Exécutez chacune à l'intérieur du conteneur (`docker exec <conteneur> python manage.py …`) ou via `make` / `uv run` depuis les sources.
 
 ## Tâches planifiées
 

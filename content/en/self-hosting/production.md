@@ -5,7 +5,7 @@ weight: 10
 
 # Production notes
 
-A few things worth knowing when you run Searpa for real users.
+A few things worth knowing when you run Seurch for real users.
 
 ## The image
 
@@ -62,7 +62,7 @@ See [Configuration → Footer links]({{< relref "configuration#footer-links" >}}
 
 ## Scaling
 
-Searpa is a standard stateless Django app, so you can run several app containers
+Seurch is a standard stateless Django app, so you can run several app containers
 behind your proxy pointed at the same PostgreSQL. Run the
 [scheduled maintenance commands]({{< relref "maintenance" >}}) from a single
 place (one cron host or one scheduled task) rather than on every replica.

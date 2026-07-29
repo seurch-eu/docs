@@ -9,7 +9,7 @@ Les utilisateurs accèdent à l'[API publique]({{< relref "/api" >}}) avec des c
 
 ## Comment les clés sont stockées
 
-Une clé ressemble à `searpa_sk_<préfixe>.<secret>` :
+Une clé ressemble à `seurch_sk_<préfixe>.<secret>` :
 
 - Le **préfixe** (8 caractères) est stocké en clair pour une recherche rapide.
 - Seul un **hachage SHA-256** du secret est stocké, jamais le secret lui-même.
@@ -39,7 +39,7 @@ Affiche le nom de chaque clé, son préfixe, l'heure de création et de dernièr
 ### Révoquer une clé
 
 ```bash
-python manage.py revoke_api_key searpa_sk_<préfixe>
+python manage.py revoke_api_key seurch_sk_<préfixe>
 ```
 
 Une clé révoquée est rejetée immédiatement à la prochaine requête.

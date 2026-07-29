@@ -6,7 +6,7 @@ weight: 5
 # Getting API keys
 
 Step-by-step guides for obtaining each provider's key. None are required to boot
-Searpa, but at least one **web engine** (Brave is the easiest) is needed for
+Seurch, but at least one **web engine** (Brave is the easiest) is needed for
 useful results. Each provider you skip simply hides its tab or card, see
 [Search providers]({{< relref "search-providers" >}}) for what each one enables.
 
@@ -15,7 +15,7 @@ Once you have a key, set the matching environment variable (see
 
 > [!NOTE]
 > All of these have a **free tier** that is generous enough for a personal or
-> small-team instance, Searpa caches aggressively and only calls the paid card
+> small-team instance, Seurch caches aggressively and only calls the paid card
 > APIs when a query actually matches. The shared keys (`public` for Marginalia,
 > anonymous Stack Exchange) need no signup at all.
 
@@ -105,14 +105,14 @@ Enables the restaurant / hotel / attraction card.
 
 > [!NOTE]
 > The TripAdvisor Content API requires showing TripAdvisor attribution where its
-> data appears, which Searpa's card already does. You can also restrict the key to
+> data appears, which Seurch's card already does. You can also restrict the key to
 > your server's IP in their portal.
 
 ## Stack Exchange (Q&A card) — `STACKEXCHANGE_API_KEY`
 
 Enables the Stack Exchange question-and-answer card. **A key is optional.**
 
-- **Without a key**, Searpa uses the shared anonymous quota (10,000 requests/day
+- **Without a key**, Seurch uses the shared anonymous quota (10,000 requests/day
   shared across all anonymous callers), which is fine for low traffic.
 - **With a key**, you get a dedicated, much higher quota:
 
@@ -135,7 +135,7 @@ These work out of the box, no account, no key:
 | **Frankfurter** | The currency instant answer |
 
 The Translate tab is the one keyless feature that still needs **infrastructure**:
-a LibreTranslate instance you point Searpa at, see
+a LibreTranslate instance you point Seurch at, see
 [Translation]({{< relref "translation" >}}).
 
 ## After adding keys

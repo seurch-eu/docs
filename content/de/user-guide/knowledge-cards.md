@@ -5,7 +5,7 @@ weight: 5
 
 # Wissenskarten
 
-Wenn Ihre **Web**-Suche (erste Seite) ein bekanntes Thema betrifft, zeigt Searpa bis zu drei **Wissenskarten** neben den Ergebnissen an – eine Schnellzusammenfassung, sodass Sie oft nicht durchklicken müssen.
+Wenn Ihre **Web**-Suche (erste Seite) ein bekanntes Thema betrifft, zeigt Seurch bis zu drei **Wissenskarten** neben den Ergebnissen an – eine Schnellzusammenfassung, sodass Sie oft nicht durchklicken müssen.
 
 ## Die Karten
 
@@ -18,7 +18,7 @@ Wenn Ihre **Web**-Suche (erste Seite) ein bekanntes Thema betrifft, zeigt Searpa
 
 ## Wie sie ausgewählt werden
 
-Searpa zeigt eine Karte nur dann an, wenn Ihre Anfrage wirklich zu dieser Art von Thema passt:
+Seurch zeigt eine Karte nur dann an, wenn Ihre Anfrage wirklich zu dieser Art von Thema passt:
 
 - Wikipedia (und Wikidata im Hintergrund) ermittelt sprachunabhängig, **was** das Thema ist – ein Film, eine Person, ein Ort.
 - Die reichhaltigeren Karten (Film, Orte, Q&A) werden nur abgerufen, wenn die Anfrage tatsächlich nach dieser Art von Sache aussieht, und der beste Treffer gewinnt; schwache Treffer werden verworfen.

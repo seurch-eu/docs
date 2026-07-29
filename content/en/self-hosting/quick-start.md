@@ -14,12 +14,12 @@ key]({{< relref "search-providers" >}}).
 ```bash
 docker run -p 8000:8000 \
   -e SECRET_KEY=your-long-random-secret \
-  -e DATABASE_URL=postgres://user:password@db-host:5432/searpa \
+  -e DATABASE_URL=postgres://user:password@db-host:5432/seurch \
   -e ALLOWED_HOSTS=search.example.com \
   -e BRAVE_API_KEY=your-brave-key \
   -e BRAVE_SUGGEST_API_KEY=your-brave-suggest-key \
   -e MARGINALIA_API_KEY=public \
-  searpa
+  seurch
 ```
 
 On start the container:
@@ -57,20 +57,20 @@ services:
   db:
     image: postgres:16
     environment:
-      POSTGRES_DB: searpa
-      POSTGRES_USER: searpa
+      POSTGRES_DB: seurch
+      POSTGRES_USER: seurch
       POSTGRES_PASSWORD: change-me
     volumes:
       - pgdata:/var/lib/postgresql/data
 
   app:
-    image: searpa
+    image: seurch
     depends_on: [db]
     ports:
       - "8000:8000"
     environment:
       SECRET_KEY: your-long-random-secret
-      DATABASE_URL: postgres://searpa:change-me@db:5432/searpa
+      DATABASE_URL: postgres://seurch:change-me@db:5432/seurch
       ALLOWED_HOSTS: search.example.com
       BRAVE_API_KEY: your-brave-key
       BRAVE_SUGGEST_API_KEY: your-brave-suggest-key
@@ -91,7 +91,7 @@ for the keys that enable each tab and card.
 
 ## From source
 
-To build the image yourself or develop locally, clone the Searpa repository and
+To build the image yourself or develop locally, clone the Seurch repository and
 use the bundled workflow:
 
 ```bash
@@ -106,7 +106,7 @@ via Podman Compose, so you get a working Translate tab out of the box. Run `make
 with no arguments to list every target. Build a production image with:
 
 ```bash
-docker build -t searpa .
+docker build -t seurch .
 ```
 
 > [!WARNING]
