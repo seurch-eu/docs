@@ -28,7 +28,7 @@ servers:
 # zero-downtime cutovers gated on the /up health check.
 proxy:
   ssl: true
-  host: docs.seurch.eu          # the public domain (must resolve to the VPS)
+  host: docs.searpa.eu          # the public domain (must resolve to the VPS)
   app_port: 80                  # nginx listens here (see Dockerfile + deploy/nginx.conf)
   healthcheck:
     path: /up                   # served by deploy/nginx.conf
@@ -48,4 +48,4 @@ registry:
 builder:
   arch: amd64
   args:
-    BASE_URL: https://docs.seurch.eu/
+    BASE_URL: https://docs.searpa.eu/
