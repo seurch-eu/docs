@@ -5,7 +5,7 @@ weight: 3
 
 # Onglets de recherche
 
-En plus de l'onglet Web, Seurch propose des onglets dédiés aux images, aux actualités, aux vidéos, aux cartes et à la traduction. Chacun exécute votre requête contre des sources adaptées à ce type de contenu. Un onglet n'apparaît que lorsque l'instance dispose du fournisseur correspondant configuré.
+En plus de l'onglet Web, Seurch propose des onglets dédiés aux images, aux actualités, aux vidéos, aux cartes et à la traduction. Chacun exécute votre requête contre des sources adaptées à ce type de contenu. Un onglet n'apparaît que lorsque l'instance dispose du fournisseur correspondant configuré **et** que vous avez activé au moins un des fournisseurs de cet onglet dans [Paramètres → Moteurs]({{< relref "settings" >}}), où chaque type de recherche conserve sa propre sélection.
 
 ## Images
 
@@ -40,4 +40,4 @@ Lorsqu'une recherche **web** normale ressemble à une adresse ou un lieu, une mi
 L'onglet **Traduction** traduit du texte entre langues, alimenté par [LibreTranslate](https://libretranslate.com/) (traduction automatique open source). Choisissez une langue cible (et éventuellement une langue source, ou laissez-la se détecter automatiquement), collez votre texte et lisez la traduction. Les langues disponibles dépendent de l'instance LibreTranslate à laquelle l'opérateur est connecté.
 
 > [!NOTE]
-> Si un onglet est manquant, l'opérateur de l'instance n'a pas configuré ce fournisseur. Sur une instance [auto-hébergée]({{< relref "/self-hosting" >}}), vous contrôlez les fournisseurs activés.
+> Si un onglet est manquant, soit l'opérateur de l'instance n'a pas configuré ce fournisseur, soit vous avez désactivé tous les fournisseurs de ce type de recherche dans [Paramètres → Moteurs]({{< relref "settings" >}}). Sur une instance [auto-hébergée]({{< relref "/self-hosting" >}}), vous contrôlez les deux.

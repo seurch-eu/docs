@@ -47,6 +47,8 @@ not available on the hosted seurch.eu service. On an instance you
 - Revoke a key any time from the same screen.
 
 Your monthly search total (across the website and the API) is shown in Settings.
+A web search counts once per engine it queries, so blending four engines adds
+four to the total; every other kind of search counts as one.
 See the [API guide]({{< relref "/api" >}}) for how to use a key.
 
 > [!WARNING]

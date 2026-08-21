@@ -25,7 +25,7 @@ curl -H "Authorization: Api-Key seurch_sk_<prefix>.<secret>" \
   "query": "climate",
   "tab": "web",
   "page": 1,
-  "engine": ["brave", "mojeek", "marginalia"],
+  "engine": ["brave", "mojeek", "marginalia", "staan"],
   "correction": "",
   "results": [
     {
@@ -36,7 +36,7 @@ curl -H "Authorization: Api-Key seurch_sk_<prefix>.<secret>" \
       "favicon_url": "https://...",
       "age": "2 days ago",
       "source": "all",
-      "source_label": "Brave, Mojeek, Marginalia",
+      "source_label": "Mojeek · Marginalia · Staan",
       "sitelinks": []
     }
   ]
@@ -44,8 +44,11 @@ curl -H "Authorization: Api-Key seurch_sk_<prefix>.<secret>" \
 ```
 
 - `source` / `source_label` — which engine(s) returned the result. `brave` /
-  `mojeek` / `marginalia` for a single engine, or `both` / `all` for cross-engine
-  agreement (`source_label` is the readable form).
+  `mojeek` / `marginalia` / `staan` for a single engine, `both` when two agree,
+  or `all` for three or more. `source_label` is the readable form, engine names
+  joined with ` · `. Brave is deliberately left out of that label: its
+  attribution terms allow naming it only with their exact logo treatment, so the
+  label names the other engines only.
 - `correction` — a suggested spelling correction, or `""`.
 
 ## Image search

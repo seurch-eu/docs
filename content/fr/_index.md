@@ -27,10 +27,10 @@ Utilisez toutes les fonctionnalités de recherche Seurch par programme via une A
 
 ## Ce que fait Seurch
 
-- **Recherche web sur trois moteurs**, Brave, Mojeek et Marginalia. Activez n'importe quel sous-ensemble ; lorsque plusieurs sont actifs, leurs listes de résultats sont fusionnées par Reciprocal Rank Fusion et dédupliquées, ce qui fait remonter un résultat sur lequel plusieurs moteurs s'accordent.
+- **Recherche web sur quatre moteurs**, Brave, Mojeek, Marginalia et Staan. Activez n'importe quel sous-ensemble ; lorsque plusieurs sont actifs, leurs listes de résultats sont fusionnées par Reciprocal Rank Fusion et dédupliquées, ce qui fait remonter un résultat sur lequel plusieurs moteurs s'accordent.
 - **Onglets Images, Actualités, Vidéos, Cartes et Traduction**, chacun appuyé par des fournisseurs indépendants.
 - **Réponses instantanées** au-dessus des résultats : calculatrice, conversion d'unités et de devises, météo, horloge mondiale, codes QR, hachages et bien plus, calculés localement sur le serveur.
-- **Fiches de connaissance** à côté des résultats, provenant de Wikipédia, TMDB, TripAdvisor et Stack Exchange.
+- **Fiches de connaissance** à côté des résultats, provenant de Wikipédia, TheTVDB, TripAdvisor et Stack Exchange.
 - **Paramètres par compte** synchronisés sur tous les appareils, avec export et import.
 - Une **API JSON publique** couvrant toutes ces fonctionnalités.
 

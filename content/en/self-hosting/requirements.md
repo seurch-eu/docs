@@ -22,7 +22,7 @@ compilation, is built into the image.
 | Component | Enables |
 |-----------|---------|
 | **A LibreTranslate instance** | The [Translate]({{< relref "translation" >}}) tab. |
-| **Provider API keys** (Mojeek, Marginalia, TMDB, TripAdvisor, Stack Exchange, Pixabay, World News) | Extra engines, media providers and knowledge cards. |
+| **Provider API keys** (Mojeek, Marginalia, Staan, TheTVDB, TripAdvisor, Stack Exchange, Pixabay, World News) | Extra engines, media providers and knowledge cards. |
 | **An SMTP server** | Password-reset email. Without it, users without a password are locked out, see [Users & access]({{< relref "users" >}}). |
 
 ## For local development from source

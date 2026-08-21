@@ -13,7 +13,7 @@ the website keeps in its preferences cookie, here they're explicit in the URL.
 | Parameter | Applies to | Values | Default |
 |-----------|-----------|--------|---------|
 | `q` | all search endpoints | The query string (**required**) | — |
-| `engine` | web, images, news, videos, cards | `brave`, `mojeek`, `marginalia`, or `all`; comma/space-separate several | `all` |
+| `engine` | web, images, news, videos, cards | `brave`, `mojeek`, `marginalia`, `staan`, or `all`; comma/space-separate several | `all` |
 | `safe` | web, images, news, videos, cards | `on` / `off` (`off`, `false`, `0`, `no` all mean off) | `on` |
 | `lang` | most endpoints | A language code, e.g. `en`, `fr` | empty (auto) |
 | `page` | web, images, news, videos | Page number, `1`–`50` | `1` |
@@ -23,8 +23,8 @@ Notes:
 
 - **`engine`** — an unknown engine name returns `400` with the list of valid
   names. Media tabs blend their supplementary provider (Pixabay / World News /
-  Sepia) on top of Brave; for the Mojeek/Marginalia engines that supplementary
-  provider is the sole media source.
+  Sepia) on top of Brave; for the web-only engines (`mojeek`, `marginalia` and
+  `staan`) that supplementary provider is the sole media source.
 - **`page`** — values above `50` are clamped to `50` (keeps a client from walking
   a provider into the ground), values below `1` clamp to `1`.
 
@@ -38,7 +38,7 @@ alongside the `results`, so a response is self-describing:
   "query": "climate",
   "tab": "web",
   "page": 1,
-  "engine": ["brave", "mojeek", "marginalia"],
+  "engine": ["brave", "mojeek", "marginalia", "staan"],
   "correction": "",
   "results": [ /* ... */ ]
 }

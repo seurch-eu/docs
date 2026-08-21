@@ -5,7 +5,7 @@ weight: 3
 
 # Such-Tabs
 
-Neben dem Web-Tab hat Seurch dedizierte Tabs für Bilder, Nachrichten, Videos, Karten und Übersetzungen. Jeder führt Ihre Anfrage gegen Quellen aus, die für diese Art von Inhalt geeignet sind. Ein Tab erscheint nur, wenn die Instanz den benötigten Anbieter konfiguriert hat.
+Neben dem Web-Tab hat Seurch dedizierte Tabs für Bilder, Nachrichten, Videos, Karten und Übersetzungen. Jeder führt Ihre Anfrage gegen Quellen aus, die für diese Art von Inhalt geeignet sind. Ein Tab erscheint nur, wenn die Instanz den benötigten Anbieter konfiguriert hat **und** Sie unter [Einstellungen → Suchmaschinen]({{< relref "settings" >}}) mindestens einen der Anbieter dieses Tabs aktiviert haben – dort behält jede Suchart ihre eigene Auswahl.
 
 ## Bilder
 
@@ -40,4 +40,4 @@ Wenn eine normale **Web**-Suche wie eine Adresse oder ein Ort aussieht, erschein
 Der **Übersetzen**-Tab übersetzt Text zwischen Sprachen, powered by [LibreTranslate](https://libretranslate.com/) (Open-Source-Maschinelle Übersetzung). Wählen Sie eine Zielsprache (und optional eine Quellsprache oder lassen Sie sie automatisch erkennen), fügen Sie Ihren Text ein und lesen Sie die Übersetzung. Die verfügbaren Sprachen hängen von der LibreTranslate-Instanz ab, die der Betreiber angebunden hat.
 
 > [!NOTE]
-> Wenn ein Tab fehlt, hat der Instanz-Betreiber diesen Anbieter nicht konfiguriert. Bei einer [selbst gehosteten]({{< relref "/self-hosting" >}}) Instanz kontrollieren Sie, welche Anbieter aktiviert sind.
+> Wenn ein Tab fehlt, hat entweder der Instanz-Betreiber diesen Anbieter nicht konfiguriert, oder Sie haben unter [Einstellungen → Suchmaschinen]({{< relref "settings" >}}) alle Anbieter dieser Suchart deaktiviert. Bei einer [selbst gehosteten]({{< relref "/self-hosting" >}}) Instanz kontrollieren Sie beides.

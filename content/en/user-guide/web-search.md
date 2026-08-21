@@ -5,19 +5,31 @@ weight: 2
 
 # Web search
 
-The **Web** tab is Seurch's core. It can draw on three independent web indexes
+The **Web** tab is Seurch's core. It can draw on four independent web indexes
 and blend whatever you enable into one ranked list.
 
-## The three engines
+## The four engines
 
 | Engine | What it is |
 |--------|------------|
 | **Brave** | A large independent web index (also powers Images, News and Videos). |
 | **Mojeek** | An independent UK search index with its own crawler. |
 | **Marginalia** | A non-commercial index focused on the small, non-commercial web. |
+| **Staan** | A European index built by European Search Perspective, the Qwant / Ecosia joint venture. Web results only. |
 
-You choose which engines to use in **Settings → Engines**. Enable just one for a
-single source, or several to blend them. All three are on by default.
+You choose which engines to use in **Settings → Engines**, under **Web**. Enable
+just one for a single source, or several to blend them. The selection is **per
+search type**, so the engines behind your web results never touch Images or
+News, see [Settings]({{< relref "settings" >}}).
+
+On a self-hosted instance every engine the operator has a key for is on by
+default. On the hosted service a new account starts on **Brave and Staan**, and
+the others wait to be switched on.
+
+> [!NOTE]
+> Staan stops paginating after an offset of 30, so it contributes to the **first
+> four pages** of a search and then drops out, and it skips queries longer than
+> 400 characters. The other engines carry on answering either way.
 
 ## How results are blended
 
@@ -49,8 +61,8 @@ results) still appear.
 ## Blocking sites
 
 You can hide results from domains you never want to see. Add them under
-**Settings → Engines** (blocked sites); matching results are filtered out of
-every web search. This list is stored against your account.
+**Settings → Blocked sites**; matching results are filtered out of every web
+search. This list is stored against your account.
 
 ## Bangs
 

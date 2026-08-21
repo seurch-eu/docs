@@ -12,7 +12,7 @@ Lorsque votre recherche **web** (première page) porte sur un sujet bien connu, 
 | Fiche | Source | Affiche |
 |-------|--------|---------|
 | **Wikipédia** | Wikipédia | Un résumé, une image et un lien vers le sujet. C'est la fiche principale, elle aide aussi à détecter ce que les autres fiches doivent montrer. |
-| **Film / Série** | [TMDB](https://www.themoviedb.org/) | Détails d'un film ou d'une série : affiche, note, année, synopsis. |
+| **Film / Série** | [TheTVDB](https://thetvdb.com/) | Détails d'un film ou d'une série : affiche, note, année, synopsis. |
 | **Lieux** | [TripAdvisor](https://www.tripadvisor.com/) | Un restaurant, un hôtel ou une attraction : note, adresse (qui renvoie à la [carte]({{< relref "search-tabs" >}})) et un lien. |
 | **Q&A** | [Stack Exchange](https://stackexchange.com/) | La meilleure question et réponse pour une requête technique. |
 

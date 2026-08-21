@@ -31,11 +31,28 @@ A provider with no key is simply hidden (not shown as broken). Full details on
 | `BRAVE_SUGGEST_API_KEY` | Autocomplete suggestions (a separate Brave subscription). |
 | `MOJEEK_API_KEY` | The Mojeek web engine. |
 | `MARGINALIA_API_KEY` | The Marginalia web engine (`public` works out of the box). |
-| `TMDB_API_KEY` | The film / TV knowledge card. |
+| `STAAN_API_KEY` | The Staan web engine (European index, web results only). |
+| `THETVDB_API_KEY` | The film / TV knowledge card (TheTVDB v4). |
+| `THETVDB_PIN` | Subscriber PIN, only for a user-supported TheTVDB key. |
 | `TRIPADVISOR_API_KEY` | The places knowledge card. |
 | `STACKEXCHANGE_API_KEY` | A higher Stack Exchange quota for the Q&A card (optional). |
 | `PIXABAY_API_KEY` | Pixabay images blended into the Images tab. |
 | `WORLDNEWS_API_KEY` | World News API articles blended into the News tab. |
+
+### The "Paid" badge
+
+`PAID_PROVIDERS` decides which providers **Settings → Engines** marks with a
+**Paid** badge, so a user can see which ones are metered commercial APIs before
+switching them on. Leave it unset to use the app's own list (Brave, Mojeek,
+Staan, World News); set it as a comma-separated list of provider keys when your
+deployment is on different plans:
+
+```
+PAID_PROVIDERS=brave,mojeek,staan,worldnews
+```
+
+Names that aren't provider keys are ignored, so `PAID_PROVIDERS=none` badges
+nothing. The badge is a label only, it never changes what a user may enable.
 
 ## Translation
 
@@ -85,3 +102,14 @@ FOOTER_LINKS=Privacy=https://example.com/privacy,Legal notice=https://example.co
 ```
 
 Leave `FOOTER_LINKS` unset to show no extra footer links.
+
+## Source link and build info
+
+| Variable | Purpose |
+|----------|---------|
+| `SOURCE_URL` | Repository linked from the footer's **Source** link. Point it at your own fork if you run a modified version. |
+| `GIT_REF` | Git branch or tag shown next to the copyright in the footer. |
+| `GIT_SHA` | Commit hash shown next to the copyright, so a deployment can be traced back to the exact build. |
+
+The Docker image sets `GIT_REF` and `GIT_SHA` automatically at build time, only
+set them by hand for other deployment methods.

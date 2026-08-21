@@ -31,7 +31,7 @@ Oben auf der Ergebnisseite finden Sie Tabs. Jeder führt dieselbe Anfrage gegen 
 
 | Tab | Was er durchsucht |
 |-----|------------------|
-| **Web** | Webseiten über Brave, Mojeek und Marginalia |
+| **Web** | Webseiten über Brave, Mojeek, Marginalia und Staan |
 | **Bilder** | Bilder mit Lightbox und „ähnliche Bilder" |
 | **Nachrichten** | Aktuelle Nachrichtenartikel |
 | **Videos** | Videoergebnisse mit Vorschaubildern und Dauer |

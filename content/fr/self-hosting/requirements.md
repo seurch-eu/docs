@@ -21,7 +21,7 @@ Tout le reste — serveur web, service des fichiers statiques et compilation des
 | Composant | Permet |
 |-----------|--------|
 | **Une instance LibreTranslate** | L'onglet [Traduction]({{< relref "translation" >}}). |
-| **Clés API de fournisseurs** (Mojeek, Marginalia, TMDB, TripAdvisor, Stack Exchange, Pixabay, World News) | Moteurs supplémentaires, fournisseurs de médias et fiches de connaissance. |
+| **Clés API de fournisseurs** (Mojeek, Marginalia, Staan, TheTVDB, TripAdvisor, Stack Exchange, Pixabay, World News) | Moteurs supplémentaires, fournisseurs de médias et fiches de connaissance. |
 | **Un serveur SMTP** | E-mail de réinitialisation de mot de passe. Sans lui, les utilisateurs sans mot de passe sont bloqués, voir [Utilisateurs et accès]({{< relref "users" >}}). |
 
 ## Pour le développement local depuis les sources

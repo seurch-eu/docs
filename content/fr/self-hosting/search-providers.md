@@ -22,16 +22,17 @@ Brave est le point de départ recommandé : une seule clé alimente les onglets 
 
 ## Moteurs web supplémentaires
 
-Ajoutez l'un ou les deux pour mélanger d'autres index indépendants dans l'onglet Web (fusionnés par Reciprocal Rank Fusion, voir [Recherche web]({{< relref "/user-guide/web-search" >}})) :
+Ajoutez-en autant que vous le souhaitez pour mélanger d'autres index indépendants dans l'onglet Web (fusionnés par Reciprocal Rank Fusion, voir [Recherche web]({{< relref "/user-guide/web-search" >}})) :
 
 | Variable | Fournisseur | Obtenir une clé |
 |----------|-------------|-----------------|
 | `MOJEEK_API_KEY` | Mojeek (index UK indépendant) | [mojeek.com/services/search/api](https://www.mojeek.com/services/search/api/) |
 | `MARGINALIA_API_KEY` | Marginalia (index petit web) | Pas d'inscription, la valeur littérale `public` est une clé partagée gratuite (limitée à ~1 requête / 5 s). Pour un quota plus élevé, en faire la demande sur [marginalia-search.com](https://about.marginalia-search.com/article/api/) |
+| `STAAN_API_KEY` | Staan (index européen, par Qwant et Ecosia) | [staan.ai](https://staan.ai/) — 1 000 requêtes gratuites par mois, puis à partir de 1 EUR pour 1 000. S'arrête après les quatre premières pages d'une recherche |
 
 ## Fournisseurs de médias
 
-Chaque onglet de médias mélange Brave avec un second fournisseur. Le fournisseur supplémentaire est aussi la **seule** source pour les moteurs Mojeek/Marginalia, qui n'ont pas de recherche de médias propre.
+Chaque onglet de médias mélange Brave avec un second fournisseur. Le fournisseur supplémentaire est aussi la **seule** source pour les moteurs uniquement web (Mojeek, Marginalia et Staan), qui n'ont pas de recherche de médias propre.
 
 | Onglet | Variable | Fournisseur | Clé |
 |--------|----------|-------------|-----|
@@ -48,11 +49,11 @@ L'onglet web peut afficher jusqu'à trois [fiches de connaissance]({{< relref "/
 | Fiche | Variable | Fournisseur | Clé |
 |-------|----------|-------------|-----|
 | Wikipédia | *(aucune)* | Wikipedia / Wikidata | Aucune clé requise |
-| Film / Série | `TMDB_API_KEY` | [TMDB](https://www.themoviedb.org/settings/api) | Gratuite |
+| Film / Série | `THETVDB_API_KEY` (+ `THETVDB_PIN`) | [TheTVDB](https://www.thetvdb.com/dashboard/account/apikey) | Licence commerciale, ou clé financée par les utilisateurs plus le code PIN d'abonné |
 | Lieux | `TRIPADVISOR_API_KEY` | [TripAdvisor Content API](https://www.tripadvisor.com/developers) | Gratuite |
 | Q&A | `STACKEXCHANGE_API_KEY` | [Stack Exchange](https://stackapps.com/apps/oauth/register) | Optionnelle, augmente le quota partagé anonyme |
 
-Les API de fiches payantes ne sont appelées que lorsqu'une requête ressemble réellement à un film ou un lieu, et chaque consultation est mise en cache pendant une heure, ce qui les maintient confortablement dans les niveaux gratuits.
+Les API de fiches payantes ne sont appelées que lorsqu'une requête ressemble réellement à un film ou un lieu, et chaque consultation est mise en cache pendant une heure : le volume d'appels reste donc faible, largement dans le niveau gratuit de TripAdvisor et modeste au regard d'une licence TheTVDB.
 
 ## Page de statut des fournisseurs
 

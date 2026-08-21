@@ -23,7 +23,7 @@ curl -H "Authorization: Api-Key seurch_sk_<präfix>.<geheimnis>" \
   "query": "klima",
   "tab": "web",
   "page": 1,
-  "engine": ["brave", "mojeek", "marginalia"],
+  "engine": ["brave", "mojeek", "marginalia", "staan"],
   "correction": "",
   "results": [
     {
@@ -34,14 +34,14 @@ curl -H "Authorization: Api-Key seurch_sk_<präfix>.<geheimnis>" \
       "favicon_url": "https://...",
       "age": "vor 2 Tagen",
       "source": "all",
-      "source_label": "Brave, Mojeek, Marginalia",
+      "source_label": "Mojeek · Marginalia · Staan",
       "sitelinks": []
     }
   ]
 }
 ```
 
-- `source` / `source_label` — welche Suchmaschinen das Ergebnis zurückgegeben haben. `brave` / `mojeek` / `marginalia` für eine einzelne Suchmaschine, oder `both` / `all` für suchmaschinenübergreifende Übereinstimmung (`source_label` ist die lesbare Form).
+- `source` / `source_label` — welche Suchmaschinen das Ergebnis zurückgegeben haben. `brave` / `mojeek` / `marginalia` / `staan` für eine einzelne Suchmaschine, `both` bei zwei übereinstimmenden, oder `all` bei drei oder mehr. `source_label` ist die lesbare Form, die Namen mit ` · ` verbunden. Brave wird darin bewusst weggelassen: Braves Attributionsbedingungen erlauben eine Nennung nur mit der exakten Logo-Darstellung, daher nennt das Label nur die übrigen Suchmaschinen.
 - `correction` — ein vorgeschlagener Rechtschreibvorschlag, oder `""`.
 
 ## Bildsuche

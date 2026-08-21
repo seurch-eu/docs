@@ -22,16 +22,17 @@ Brave ist der empfohlene Ausgangspunkt: Ein einzelner Schlüssel betreibt die **
 
 ## Zusätzliche Web-Suchmaschinen
 
-Fügen Sie eine oder beide hinzu, um weitere unabhängige Indizes in den Web-Tab einzumischen (zusammengeführt mit Reciprocal Rank Fusion; siehe [Web-Suche]({{< relref "/user-guide/web-search" >}})):
+Fügen Sie beliebige davon hinzu, um weitere unabhängige Indizes in den Web-Tab einzumischen (zusammengeführt mit Reciprocal Rank Fusion; siehe [Web-Suche]({{< relref "/user-guide/web-search" >}})):
 
 | Variable | Anbieter | Schlüssel erhalten |
 |----------|----------|-------------------|
 | `MOJEEK_API_KEY` | Mojeek (unabhängiger britischer Index) | [mojeek.com/services/search/api](https://www.mojeek.com/services/search/api/) |
 | `MARGINALIA_API_KEY` | Marginalia (Small-Web-Index) | Keine Anmeldung; der Literalwert `public` ist ein kostenloser geteilter Schlüssel (begrenzt auf ~1 Anfrage / 5 s). Für ein höheres Kontingent auf [marginalia-search.com](https://about.marginalia-search.com/article/api/) anfragen |
+| `STAAN_API_KEY` | Staan (europäischer Index, von Qwant und Ecosia) | [staan.ai](https://staan.ai/) — 1.000 kostenlose Anfragen pro Monat, danach ab 1 EUR pro 1.000. Endet nach den ersten vier Seiten einer Suche |
 
 ## Medienanbieter
 
-Jeder Medien-Tab mischt Brave mit einem zweiten Anbieter. Der ergänzende Anbieter ist auch die **einzige** Quelle für die Mojeek/Marginalia-Suchmaschinen, die keine eigene Mediensuche haben.
+Jeder Medien-Tab mischt Brave mit einem zweiten Anbieter. Der ergänzende Anbieter ist auch die **einzige** Quelle für die reinen Web-Suchmaschinen (Mojeek, Marginalia und Staan), die keine eigene Mediensuche haben.
 
 | Tab | Variable | Anbieter | Schlüssel |
 |-----|----------|----------|----------|
@@ -48,11 +49,11 @@ Der Web-Tab kann bis zu drei [Wissenskarten]({{< relref "/user-guide/knowledge-c
 | Karte | Variable | Anbieter | Schlüssel |
 |-------|----------|----------|----------|
 | Wikipedia | *(keiner)* | Wikipedia / Wikidata | Kein Schlüssel erforderlich |
-| Film / TV | `TMDB_API_KEY` | [TMDB](https://www.themoviedb.org/settings/api) | Kostenlos |
+| Film / TV | `THETVDB_API_KEY` (+ `THETVDB_PIN`) | [TheTVDB](https://www.thetvdb.com/dashboard/account/apikey) | Kommerzielle Lizenz oder ein nutzerfinanzierter Schlüssel plus Abonnenten-PIN |
 | Orte | `TRIPADVISOR_API_KEY` | [TripAdvisor Content API](https://www.tripadvisor.com/developers) | Kostenlos |
 | Q&A | `STACKEXCHANGE_API_KEY` | [Stack Exchange](https://stackapps.com/apps/oauth/register) | Optional, erhöht das gemeinsame anonyme Kontingent |
 
-Die kostenpflichtigen Karten-APIs werden nur aufgerufen, wenn eine Anfrage tatsächlich wie ein Film oder ein Ort aussieht, und jeder Abruf wird eine Stunde gecacht, sodass sie innerhalb kostenloser Kontingente bleiben.
+Die kostenpflichtigen Karten-APIs werden nur aufgerufen, wenn eine Anfrage tatsächlich wie ein Film oder ein Ort aussieht, und jeder Abruf wird eine Stunde gecacht. Das Aufrufvolumen bleibt damit niedrig – deutlich innerhalb des kostenlosen Kontingents von TripAdvisor und bescheiden gemessen an einer TheTVDB-Lizenz.
 
 ## Anbieter-Statusseite
 

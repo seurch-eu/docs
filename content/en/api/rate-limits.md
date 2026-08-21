@@ -35,7 +35,9 @@ indicated time. A robust client should handle `429` with exponential backoff.
 ## Usage counting
 
 Each **search** request counts toward the key owner's monthly search total (the
-same total shown for website searches in Settings). This includes:
+same total shown for website searches in Settings). A **web** search counts once
+per engine it queries, so a four-engine query adds four; every other endpoint
+counts as one. This includes:
 
 `web/`, `images/`, `images/similar/` (only when a real search runs), `news/`,
 `videos/`, `maps/`, `translate/`, `translate/languages/`, `instant/`, `cards/`

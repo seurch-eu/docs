@@ -12,7 +12,7 @@ Les points de terminaison de recherche acceptent un ensemble commun de paramètr
 | Paramètre | S'applique à | Valeurs | Par défaut |
 |-----------|-------------|---------|------------|
 | `q` | tous les points de terminaison de recherche | La chaîne de requête (**requise**) | — |
-| `engine` | web, images, actualités, vidéos, fiches | `brave`, `mojeek`, `marginalia`, ou `all` ; séparez-en plusieurs par une virgule ou un espace | `all` |
+| `engine` | web, images, actualités, vidéos, fiches | `brave`, `mojeek`, `marginalia`, `staan`, ou `all` ; séparez-en plusieurs par une virgule ou un espace | `all` |
 | `safe` | web, images, actualités, vidéos, fiches | `on` / `off` (`off`, `false`, `0`, `no` signifient tous off) | `on` |
 | `lang` | la plupart des points de terminaison | Un code de langue, par ex. `fr`, `en` | vide (auto) |
 | `page` | web, images, actualités, vidéos | Numéro de page, `1`–`50` | `1` |
@@ -20,7 +20,7 @@ Les points de terminaison de recherche acceptent un ensemble commun de paramètr
 
 Notes :
 
-- **`engine`** — un nom de moteur inconnu renvoie `400` avec la liste des noms valides. Les onglets médias mélangent leur fournisseur supplémentaire (Pixabay / World News / Sepia) par-dessus Brave ; pour les moteurs Mojeek/Marginalia, ce fournisseur supplémentaire est la seule source de médias.
+- **`engine`** — un nom de moteur inconnu renvoie `400` avec la liste des noms valides. Les onglets médias mélangent leur fournisseur supplémentaire (Pixabay / World News / Sepia) par-dessus Brave ; pour les moteurs uniquement web (`mojeek`, `marginalia` et `staan`), ce fournisseur supplémentaire est la seule source de médias.
 - **`page`** — les valeurs supérieures à `50` sont limitées à `50` (évite qu'un client ne surcharge un fournisseur), les valeurs inférieures à `1` sont limitées à `1`.
 
 ## Structure des réponses
@@ -32,7 +32,7 @@ Chaque point de terminaison renvoie du JSON. Les points de terminaison de recher
   "query": "climat",
   "tab": "web",
   "page": 1,
-  "engine": ["brave", "mojeek", "marginalia"],
+  "engine": ["brave", "mojeek", "marginalia", "staan"],
   "correction": "",
   "results": [ /* ... */ ]
 }

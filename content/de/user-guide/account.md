@@ -32,7 +32,7 @@ Die programmatische [API]({{< relref "/api" >}}) ist eine **selbst-gehostete** F
 - Der **vollständige Schlüssel wird nur einmal angezeigt**; kopieren Sie ihn sofort an einen sicheren Ort. Nur ein Präfix und ein Hash werden gespeichert, er kann also nicht erneut angezeigt werden.
 - Widerrufen Sie einen Schlüssel jederzeit über denselben Bildschirm.
 
-Ihre monatliche Suchen-Gesamtzahl (über die Website und die API) wird in den Einstellungen angezeigt. Weitere Informationen zur Nutzung eines Schlüssels finden Sie in der [API-Anleitung]({{< relref "/api" >}}).
+Ihre monatliche Suchen-Gesamtzahl (über die Website und die API) wird in den Einstellungen angezeigt. Eine Web-Suche zählt einmal pro abgefragter Suchmaschine, das Kombinieren von vier Suchmaschinen erhöht die Gesamtzahl also um vier; jede andere Art von Suche zählt als eine. Weitere Informationen zur Nutzung eines Schlüssels finden Sie in der [API-Anleitung]({{< relref "/api" >}}).
 
 > [!WARNING]
 > Behandeln Sie einen API-Schlüssel wie ein Passwort. Jeder, der ihn hat, kann in Ihrem Namen suchen und Ihr Ratenlimit verbrauchen. Wenn ein Schlüssel kompromittiert wird, widerrufen Sie ihn und erstellen Sie einen neuen.
