@@ -10,7 +10,7 @@ Guides pas à pas pour obtenir la clé de chaque fournisseur. Aucune n'est requi
 Une fois que vous avez une clé, définissez la variable d'environnement correspondante (voir [Configuration]({{< relref "configuration" >}})) et redémarrez l'application.
 
 > [!NOTE]
-> Tous ces fournisseurs ont un **niveau gratuit** suffisamment généreux pour une instance personnelle ou pour une petite équipe ; Seurch met agressivement en cache et n'appelle les API de fiches payantes que lorsqu'une requête correspond réellement. Les clés partagées (`public` pour Marginalia, Stack Exchange anonyme) ne nécessitent aucune inscription.
+> La plupart de ces fournisseurs ont un **niveau gratuit** suffisamment généreux pour une instance personnelle ou pour une petite équipe ; Seurch met agressivement en cache et n'appelle les API de fiches payantes que lorsqu'une requête correspond réellement. Les clés partagées (`public` pour Marginalia, Stack Exchange anonyme) ne nécessitent aucune inscription. **TheTVDB** fait exception : il n'a pas de niveau gratuit et exige soit une licence commerciale, soit une clé financée par les utilisateurs accompagnée d'un code PIN d'abonné.
 
 ## Brave Search — `BRAVE_API_KEY`
 
@@ -50,6 +50,19 @@ Ajoute l'index **Marginalia** non commercial et axé sur le petit web. **Aucune 
 MARGINALIA_API_KEY=public   # fonctionne d'emblée
 ```
 
+## Staan — `STAAN_API_KEY`
+
+Ajoute **Staan** à l'onglet Web, l'index web européen construit par European Search Perspective (la coentreprise de Qwant et Ecosia). Résultats web uniquement.
+
+1. Inscrivez-vous sur [staan.ai](https://staan.ai/).
+2. Créez une clé API depuis votre tableau de bord.
+3. Renseignez-la dans `STAAN_API_KEY`.
+
+Le quota est de **1 000 requêtes gratuites par mois**, puis à partir de **1 EUR pour 1 000**.
+
+> [!NOTE]
+> L'API de Staan plafonne la pagination à un décalage de 30 : Staan alimente donc les **quatre premières pages** d'une recherche puis se retire. Elle refuse également les requêtes de plus de 400 caractères. Dans les deux cas les autres moteurs répondent toujours, la page n'est donc jamais vide.
+
 ## Pixabay (images) — `PIXABAY_API_KEY`
 
 Mélange des images **Pixabay** libres de droits dans l'onglet Images.
@@ -66,13 +79,17 @@ Mélange des articles de l'[API World News](https://worldnewsapi.com/) dans l'on
 2. Ouvrez votre **tableau de bord de compte** et copiez la **clé API**.
 3. Définissez-la comme `WORLDNEWS_API_KEY`.
 
-## TMDB (fiche film / série) — `TMDB_API_KEY`
+## TheTVDB (fiche film / série) — `THETVDB_API_KEY`
 
 Active la [fiche de connaissance]({{< relref "/user-guide/knowledge-cards" >}}) film / série.
 
-1. Créez un compte gratuit sur [The Movie Database](https://www.themoviedb.org/).
-2. Allez dans **Paramètres → API** ([lien direct](https://www.themoviedb.org/settings/api)) et demandez une clé **Développeur** (immédiate, gratuite ; vous remplissez un court formulaire).
-3. Copiez la valeur **Clé API (authentification v3)** dans `TMDB_API_KEY`.
+1. Créez un compte sur [TheTVDB](https://thetvdb.com/) et ouvrez votre [tableau de bord des clés API](https://www.thetvdb.com/dashboard/account/apikey).
+2. TheTVDB [propose deux licences pour son API](https://thetvdb.com/api-information) ; choisissez celle sous laquelle votre instance est réellement licenciée :
+   - une **licence négociée / commerciale**, qui ne demande que la clé, ou
+   - une **clé financée par les utilisateurs**, qui exige en plus le **code PIN** d'abonné TheTVDB de l'utilisateur final.
+3. Copiez la clé dans `THETVDB_API_KEY` et, pour une clé financée par les utilisateurs, le code PIN d'abonné dans `THETVDB_PIN` (laissez-le vide pour une clé licenciée).
+
+L'attribution est affichée sur la fiche, comme l'exigent les conditions de TheTVDB.
 
 ## TripAdvisor (fiche lieux) — `TRIPADVISOR_API_KEY`
 

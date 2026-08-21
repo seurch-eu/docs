@@ -27,11 +27,23 @@ Diese Schlüssel bestimmen, welche Suchmaschinen, Medien-Tabs und Wissenskarten 
 | `BRAVE_SUGGEST_API_KEY` | Autocomplete-Vorschläge (ein separates Brave-Abonnement). |
 | `MOJEEK_API_KEY` | Die Mojeek-Web-Suchmaschine. |
 | `MARGINALIA_API_KEY` | Die Marginalia-Web-Suchmaschine (`public` funktioniert sofort). |
-| `TMDB_API_KEY` | Die Film / TV-Wissenskarte. |
+| `STAAN_API_KEY` | Die Staan-Web-Suchmaschine (europäischer Index, nur Web-Ergebnisse). |
+| `THETVDB_API_KEY` | Die Film / TV-Wissenskarte (TheTVDB v4). |
+| `THETVDB_PIN` | Abonnenten-PIN, nur für einen nutzerfinanzierten TheTVDB-Schlüssel. |
 | `TRIPADVISOR_API_KEY` | Die Orte-Wissenskarte. |
 | `STACKEXCHANGE_API_KEY` | Ein höheres Stack Exchange-Kontingent für die Q&A-Karte (optional). |
 | `PIXABAY_API_KEY` | Pixabay-Bilder gemischt in den Bilder-Tab. |
 | `WORLDNEWS_API_KEY` | World News API-Artikel gemischt in den Nachrichten-Tab. |
+
+### Das Abzeichen „Kostenpflichtig"
+
+`PAID_PROVIDERS` bestimmt, welche Anbieter unter **Einstellungen → Suchmaschinen** mit einem **Kostenpflichtig**-Abzeichen versehen werden, damit Nutzer erkennen, welche davon kostenpflichtige kommerzielle APIs sind, bevor sie sie einschalten. Nicht gesetzt verwendet die eigene Liste der App (Brave, Mojeek, Staan, World News); setzen Sie eine kommagetrennte Liste von Anbieterschlüsseln, wenn Ihre Instanz andere Tarife nutzt:
+
+```
+PAID_PROVIDERS=brave,mojeek,staan,worldnews
+```
+
+Namen, die keine Anbieterschlüssel sind, werden ignoriert, `PAID_PROVIDERS=none` kennzeichnet also nichts. Das Abzeichen ist nur eine Beschriftung, es ändert nie, was ein Nutzer aktivieren darf.
 
 ## Übersetzung
 
@@ -75,3 +87,13 @@ FOOTER_LINKS=Datenschutz=https://example.com/privacy,Impressum=https://example.c
 ```
 
 Lassen Sie `FOOTER_LINKS` nicht gesetzt, um keine zusätzlichen Fußzeilen-Links anzuzeigen.
+
+## Quell-Link und Build-Informationen
+
+| Variable | Zweck |
+|----------|-------|
+| `SOURCE_URL` | Repository, auf das der **Quelle**-Link in der Fußzeile verweist. Zeigen Sie auf Ihren eigenen Fork, wenn Sie eine geänderte Version betreiben. |
+| `GIT_REF` | Git-Branch oder -Tag, angezeigt neben dem Copyright in der Fußzeile. |
+| `GIT_SHA` | Commit-Hash neben dem Copyright, damit eine Instanz auf den genauen Build zurückgeführt werden kann. |
+
+Das Docker-Image setzt `GIT_REF` und `GIT_SHA` automatisch beim Build; setzen Sie sie nur bei anderen Bereitstellungsmethoden von Hand.

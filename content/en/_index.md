@@ -36,7 +36,7 @@ authentication, rate limits and a reference for each endpoint, with copy-paste
 
 ## What Seurch does
 
-- **Web search across three engines**, Brave, Mojeek and Marginalia. Enable any
+- **Web search across four engines**, Brave, Mojeek, Marginalia and Staan. Enable any
   subset; when more than one is active their result lists are merged with
   Reciprocal Rank Fusion and deduplicated, so a result several engines agree on
   rises to the top.
@@ -45,7 +45,7 @@ authentication, rate limits and a reference for each endpoint, with copy-paste
 - **Instant answers** above the results, a calculator, unit and currency
   conversion, weather, world clock, QR codes, hashes and more, most computed
   locally on the server.
-- **Knowledge cards** beside the results, from Wikipedia, TMDB, TripAdvisor and
+- **Knowledge cards** beside the results, from Wikipedia, TheTVDB, TripAdvisor and
   Stack Exchange.
 - **Per-account settings** that sync across devices, with export and import.
 - A **public JSON API** covering every one of those features.

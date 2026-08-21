@@ -21,7 +21,7 @@ Alles andere – Webserver, Bereitstellung statischer Dateien und Kompilierung d
 | Komponente | Ermöglicht |
 |------------|-----------|
 | **Eine LibreTranslate-Instanz** | Den [Übersetzen]({{< relref "translation" >}})-Tab. |
-| **Anbieter-API-Schlüssel** (Mojeek, Marginalia, TMDB, TripAdvisor, Stack Exchange, Pixabay, World News) | Zusätzliche Suchmaschinen, Medienanbieter und Wissenskarten. |
+| **Anbieter-API-Schlüssel** (Mojeek, Marginalia, Staan, TheTVDB, TripAdvisor, Stack Exchange, Pixabay, World News) | Zusätzliche Suchmaschinen, Medienanbieter und Wissenskarten. |
 | **Ein SMTP-Server** | Passwort-Reset-E-Mail. Ohne ihn sind Benutzer ohne Passwort ausgesperrt; siehe [Benutzer & Zugang]({{< relref "users" >}}). |
 
 ## Für die lokale Entwicklung aus dem Quellcode

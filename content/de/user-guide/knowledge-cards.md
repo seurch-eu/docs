@@ -12,7 +12,7 @@ Wenn Ihre **Web**-Suche (erste Seite) ein bekanntes Thema betrifft, zeigt Seurch
 | Karte | Quelle | Zeigt |
 |-------|--------|-------|
 | **Wikipedia** | Wikipedia | Eine Zusammenfassung, ein Bild und einen Link zum Thema. Dies ist die Ankerkarte; sie hilft auch zu erkennen, was die anderen Karten zeigen sollen. |
-| **Film / TV** | [TMDB](https://www.themoviedb.org/) | Details zu einem Film oder einer TV-Sendung: Poster, Bewertung, Jahr, Übersicht. |
+| **Film / TV** | [TheTVDB](https://thetvdb.com/) | Details zu einem Film oder einer TV-Sendung: Poster, Bewertung, Jahr, Übersicht. |
 | **Orte** | [TripAdvisor](https://www.tripadvisor.com/) | Ein Restaurant, Hotel oder eine Attraktion: Bewertung, Adresse (die zur [Karte]({{< relref "search-tabs" >}}) verlinkt) und ein Link. |
 | **Q&A** | [Stack Exchange](https://stackexchange.com/) | Die beste Frage und Antwort für eine technische Anfrage. |
 

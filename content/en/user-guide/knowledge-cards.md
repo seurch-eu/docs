@@ -14,7 +14,7 @@ don't need to click through at all.
 | Card | Source | Shows |
 |------|--------|-------|
 | **Wikipedia** | Wikipedia | A summary, image and link for the subject. This is the anchor card, it also helps detect what the other cards should show. |
-| **Film / TV** | [TMDB](https://www.themoviedb.org/) | Details for a movie or TV show: poster, rating, year, overview. |
+| **Film / TV** | [TheTVDB](https://thetvdb.com/) | Details for a movie or TV show: poster, rating, year, overview. |
 | **Places** | [TripAdvisor](https://www.tripadvisor.com/) | A restaurant, hotel or attraction: rating, address (which links to the [map]({{< relref "search-tabs" >}})) and a link. |
 | **Q&A** | [Stack Exchange](https://stackexchange.com/) | The top question and answer for a technical query. |
 

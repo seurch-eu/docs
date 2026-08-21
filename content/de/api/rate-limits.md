@@ -30,7 +30,7 @@ DRF enthält einen `Retry-After`-Hinweis in der Nachricht; warten Sie und versuc
 
 ## Nutzungserfassung
 
-Jede **Such**-Anfrage zählt zum monatlichen Suchen-Gesamtbetrag des Schlüsselinhabers (der gleiche Gesamtbetrag, der für Website-Suchen in den Einstellungen angezeigt wird). Dies umfasst:
+Jede **Such**-Anfrage zählt zum monatlichen Suchen-Gesamtbetrag des Schlüsselinhabers (der gleiche Gesamtbetrag, der für Website-Suchen in den Einstellungen angezeigt wird). Eine **Web**-Suche zählt einmal pro abgefragter Suchmaschine, eine Anfrage über vier Suchmaschinen also vier; jeder andere Endpunkt zählt als eine. Dies umfasst:
 
 `web/`, `images/`, `images/similar/` (nur wenn eine echte Suche ausgeführt wird), `news/`, `videos/`, `maps/`, `translate/`, `translate/languages/`, `instant/`, `cards/` und `suggest/`.
 

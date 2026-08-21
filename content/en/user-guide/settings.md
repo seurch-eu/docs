@@ -14,21 +14,48 @@ before you sign in.
 
 | Setting | Options | Default |
 |---------|---------|---------|
-| **Engines** | Any mix of Brave / Mojeek / Marginalia | All enabled |
+| **Engines** | Per search type, any mix of the providers that type can use | Everything the instance has configured |
 | **Safe search** | On / Off | On |
 | **Search language** | Auto, or one of the seven UI languages | Auto (your browser) |
 | **Interface language** | Auto, or one of the seven UI languages | Auto |
 | **Theme** | System / Light / Dark | System |
 | **Open links** | Same tab / New tab | Same tab |
+| **Similar images** | On / Off | On |
 | **Proxy images** | On / Off | Off |
-| **Lazy-load knowledge cards** | On / Off | On |
-| **Data sources** | Per-provider on/off toggles | All enabled |
 
 ### Engines
 
-Pick which web indexes Seurch queries and blends, see
-[Web search]({{< relref "web-search" >}}). This is also where you manage your
-**blocked sites** and **custom [bangs]({{< relref "bangs" >}})**.
+**Settings → Engines** is where you pick the providers behind each kind of
+search. It is grouped by **search type**, Web, Images, News, Videos, Maps and
+Translate, and **each search type keeps its own selection**, so an engine can
+power your web results without touching Images or News. Results from every
+provider enabled for a search type are interleaved and deduplicated.
+
+Within a search type the providers are split into:
+
+- **Search engines**, the ones that produce that type's results: the four
+  [web engines]({{< relref "web-search" >}}) on Web, and Brave plus one
+  supplementary provider on each media tab (Pixabay for Images, the World News
+  API for News, Sepia for Videos).
+- **Data sources**, the ones that enrich them: the
+  [knowledge cards]({{< relref "knowledge-cards" >}}) (Wikipedia, TheTVDB,
+  TripAdvisor, Stack Exchange) and the weather instant answer.
+
+Each toggle shows where the provider is operated from, an **Open source** badge
+where the underlying project is open source, and a **Paid** badge where it is a
+metered commercial API, so the cost of switching one on is visible where the
+switch is.
+
+By default every provider the instance has configured is enabled. On the hosted
+service a new account instead starts on **Brave and Staan**, and the other
+metered providers wait to be switched on.
+
+> [!NOTE]
+> Turning **everything** off for a search type hides that tab from the results
+> page. Switch a provider back on and the tab comes back.
+
+**Blocked sites** and **custom [bangs]({{< relref "bangs" >}})** have their own
+sections in the settings sidebar.
 
 ### Languages
 
@@ -48,12 +75,12 @@ With **Proxy images** on, image thumbnails are fetched through the Seurch server
 instead of directly from the source, so the source site never sees your browser.
 It is off by default because it adds a little latency.
 
-### Data sources
+### Similar images
 
-Fine-grained toggles for the supplementary providers, knowledge cards (Wikipedia,
-TMDB, TripAdvisor, Stack Exchange), weather, Pixabay (images), Sepia (videos),
-the World News API, Translate and OpenStreetMap. Turn off anything you don't want
-Seurch to use.
+When you open an image result, Seurch shows a grid of visually similar pictures
+beside it. Each of those lookups runs an image search of its own, so it counts
+towards your monthly search total. Turn **Similar images** off to skip it
+entirely.
 
 ## Backup & sync
 

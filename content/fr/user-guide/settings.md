@@ -11,19 +11,32 @@ Ouvrez **Paramètres** depuis la page d'accueil ou le menu pour personnaliser Se
 
 | Paramètre | Options | Par défaut |
 |-----------|---------|------------|
-| **Moteurs** | Toute combinaison de Brave / Mojeek / Marginalia | Tous activés |
+| **Moteurs** | Par type de recherche, toute combinaison des fournisseurs disponibles pour ce type | Tout ce que l'instance a configuré |
 | **Recherche sécurisée** | Activée / Désactivée | Activée |
 | **Langue de recherche** | Auto, ou l'une des sept langues d'interface | Auto (votre navigateur) |
 | **Langue d'interface** | Auto, ou l'une des sept langues d'interface | Auto |
 | **Thème** | Système / Clair / Sombre | Système |
 | **Ouvrir les liens** | Même onglet / Nouvel onglet | Même onglet |
+| **Images similaires** | Activées / Désactivées | Activées |
 | **Proxy des images** | Activé / Désactivé | Désactivé |
-| **Chargement différé des fiches** | Activé / Désactivé | Activé |
-| **Sources de données** | Bascules activé/désactivé par fournisseur | Tous activés |
 
 ### Moteurs
 
-Choisissez quels index web Seurch interroge et fusionne, voir [Recherche web]({{< relref "web-search" >}}). C'est aussi là que vous gérez vos **sites bloqués** et vos **[bangs]({{< relref "bangs" >}}) personnalisés**.
+**Paramètres → Moteurs** est l'endroit où vous choisissez les fournisseurs derrière chaque type de recherche. La section est regroupée par **type de recherche** — Web, Images, Actualités, Vidéos, Cartes et Traduire — et **chaque type conserve sa propre sélection** : un moteur peut donc alimenter vos résultats web sans toucher aux Images ni aux Actualités. Les résultats de tous les fournisseurs activés pour un type de recherche sont entrelacés et dédupliqués.
+
+Au sein d'un type de recherche, les fournisseurs se répartissent en :
+
+- **Moteurs de recherche**, ceux qui produisent les résultats de ce type : les quatre [moteurs web]({{< relref "web-search" >}}) pour Web, et Brave plus un fournisseur supplémentaire pour chaque onglet de médias (Pixabay pour Images, l'API World News pour Actualités, Sepia pour Vidéos).
+- **Sources de données**, celles qui les enrichissent : les [fiches de connaissance]({{< relref "knowledge-cards" >}}) (Wikipédia, TheTVDB, TripAdvisor, Stack Exchange) et la réponse instantanée météo.
+
+Chaque bascule indique depuis où le fournisseur est opéré, un badge **Open source** lorsque le projet sous-jacent est libre, et un badge **Payant** lorsqu'il s'agit d'une API commerciale facturée à l'usage : le coût d'une activation est ainsi visible là où se trouve l'interrupteur.
+
+Par défaut, chaque fournisseur configuré par l'instance est activé. Sur le service hébergé, un nouveau compte démarre plutôt avec **Brave et Staan**, les autres fournisseurs payants attendant d'être activés.
+
+> [!NOTE]
+> Désactiver **tout** pour un type de recherche masque cet onglet de la page de résultats. Réactivez un fournisseur et l'onglet revient.
+
+**Sites bloqués** et **[bangs]({{< relref "bangs" >}}) personnalisés** ont leurs propres sections dans la barre latérale des paramètres.
 
 ### Langues
 
@@ -37,9 +50,9 @@ Choisissez un thème clair, sombre ou qui suit les préférences du système, et
 
 Avec le **Proxy des images** activé, les miniatures d'images sont récupérées via le serveur Seurch plutôt que directement depuis la source, de sorte que le site source ne voit jamais votre navigateur. Il est désactivé par défaut car il ajoute une légère latence.
 
-### Sources de données
+### Images similaires
 
-Bascules précises pour les fournisseurs supplémentaires : fiches de connaissance (Wikipédia, TMDB, TripAdvisor, Stack Exchange), météo, Pixabay (images), Sepia (vidéos), l'API World News, Traduction et OpenStreetMap. Désactivez tout ce que vous ne souhaitez pas que Seurch utilise.
+Lorsque vous ouvrez un résultat d'image, Seurch affiche à côté une grille d'images visuellement similaires. Chacune de ces recherches est elle-même une recherche d'images et compte donc dans votre total mensuel. Désactivez **Images similaires** pour l'ignorer entièrement.
 
 ## Sauvegarde et synchronisation
 

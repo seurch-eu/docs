@@ -10,7 +10,7 @@ Schritt-für-Schritt-Anleitungen zum Erhalten des Schlüssels jedes Anbieters. K
 Sobald Sie einen Schlüssel haben, setzen Sie die entsprechende Umgebungsvariable (siehe [Konfiguration]({{< relref "configuration" >}})) und starten Sie die App neu.
 
 > [!NOTE]
-> Alle haben ein **kostenloses Kontingent**, das für eine persönliche oder kleine Team-Instanz großzügig genug ist; Seurch cached aggressiv und ruft die kostenpflichtigen Karten-APIs nur auf, wenn eine Anfrage tatsächlich übereinstimmt. Die geteilten Schlüssel (`public` für Marginalia, anonymes Stack Exchange) benötigen überhaupt keine Anmeldung.
+> Die meisten haben ein **kostenloses Kontingent**, das für eine persönliche oder kleine Team-Instanz großzügig genug ist; Seurch cached aggressiv und ruft die kostenpflichtigen Karten-APIs nur auf, wenn eine Anfrage tatsächlich übereinstimmt. Die geteilten Schlüssel (`public` für Marginalia, anonymes Stack Exchange) benötigen überhaupt keine Anmeldung. **TheTVDB** ist die Ausnahme: Es hat kein kostenloses Kontingent und erfordert entweder eine kommerzielle Lizenz oder einen nutzerfinanzierten Schlüssel plus Abonnenten-PIN.
 
 ## Brave Search — `BRAVE_API_KEY`
 
@@ -50,6 +50,19 @@ Fügt den nicht-kommerziellen **Marginalia**-Small-Web-Index hinzu. **Keine Anme
 MARGINALIA_API_KEY=public   # funktioniert sofort
 ```
 
+## Staan — `STAAN_API_KEY`
+
+Fügt dem Web-Tab **Staan** hinzu, den europäischen Web-Index von European Search Perspective (dem Gemeinschaftsunternehmen von Qwant und Ecosia). Nur Web-Ergebnisse.
+
+1. Registrieren Sie sich auf [staan.ai](https://staan.ai/).
+2. Erstellen Sie in Ihrem Dashboard einen API-Schlüssel.
+3. Setzen Sie ihn als `STAAN_API_KEY`.
+
+Das Kontingent beträgt **1.000 kostenlose Anfragen pro Monat**, danach ab **1 EUR pro 1.000**.
+
+> [!NOTE]
+> Die API von Staan begrenzt die Paginierung auf einen Offset von 30. Staan trägt daher zu den **ersten vier Seiten** einer Suche bei und entfällt danach. Ebenso werden Anfragen mit mehr als 400 Zeichen abgelehnt. In beiden Fällen antworten die übrigen Suchmaschinen weiterhin, die Seite bleibt also nie leer.
+
 ## Pixabay (Bilder) — `PIXABAY_API_KEY`
 
 Mischt lizenzfreie **Pixabay**-Bilder in den Bilder-Tab.
@@ -66,13 +79,17 @@ Mischt Artikel der [World News API](https://worldnewsapi.com/) in den Nachrichte
 2. Öffnen Sie Ihr **Konto-Dashboard** und kopieren Sie den **API-Schlüssel**.
 3. Setzen Sie ihn als `WORLDNEWS_API_KEY`.
 
-## TMDB (Film / TV-Karte) — `TMDB_API_KEY`
+## TheTVDB (Film / TV-Karte) — `THETVDB_API_KEY`
 
 Aktiviert die Film / TV-[Wissenskarte]({{< relref "/user-guide/knowledge-cards" >}}).
 
-1. Erstellen Sie ein kostenloses Konto bei [The Movie Database](https://www.themoviedb.org/).
-2. Gehen Sie zu **Einstellungen → API** ([direkter Link](https://www.themoviedb.org/settings/api)) und beantragen Sie einen **Entwickler**-Schlüssel (sofort, kostenlos; Sie füllen ein kurzes Formular aus).
-3. Kopieren Sie den **API-Schlüssel (v3 auth)**-Wert in `TMDB_API_KEY`.
+1. Erstellen Sie ein Konto bei [TheTVDB](https://thetvdb.com/) und öffnen Sie Ihr [API-Schlüssel-Dashboard](https://www.thetvdb.com/dashboard/account/apikey).
+2. TheTVDB [lizenziert seine API](https://thetvdb.com/api-information) auf zwei Arten; wählen Sie die, unter der Ihre Instanz tatsächlich lizenziert ist:
+   - eine **ausgehandelte / kommerzielle Lizenz**, die nur den Schlüssel benötigt, oder
+   - einen **nutzerfinanzierten Schlüssel**, der zusätzlich die TheTVDB-Abonnenten-**PIN** des Endnutzers benötigt.
+3. Kopieren Sie den Schlüssel in `THETVDB_API_KEY` und bei einem nutzerfinanzierten Schlüssel die Abonnenten-PIN in `THETVDB_PIN` (bei einer lizenzierten Variante leer lassen).
+
+Die Namensnennung wird auf der Karte angezeigt, wie es die Bedingungen von TheTVDB verlangen.
 
 ## TripAdvisor (Orte-Karte) — `TRIPADVISOR_API_KEY`
 

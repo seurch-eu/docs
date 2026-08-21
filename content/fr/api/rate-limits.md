@@ -30,7 +30,7 @@ DRF inclut un indice `Retry-After` dans le message ; reculez et réessayez aprè
 
 ## Comptabilité des usages
 
-Chaque requête de **recherche** compte dans le total mensuel de recherches du propriétaire de la clé (le même total affiché pour les recherches sur le site web dans Paramètres). Cela inclut :
+Chaque requête de **recherche** compte dans le total mensuel de recherches du propriétaire de la clé (le même total affiché pour les recherches sur le site web dans Paramètres). Une recherche **web** compte une fois par moteur interrogé : une requête sur quatre moteurs en ajoute donc quatre ; tout autre point d'accès compte pour une. Cela inclut :
 
 `web/`, `images/`, `images/similar/` (uniquement lorsqu'une vraie recherche s'exécute), `news/`, `videos/`, `maps/`, `translate/`, `translate/languages/`, `instant/`, `cards/` et `suggest/`.
 

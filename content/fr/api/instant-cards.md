@@ -50,14 +50,14 @@ Renvoie le panneau de connaissance pour une requête, dérivé du même contexte
 {
   "query": "inception",
   "wikipedia": { "...": "..." },
-  "tmdb": { "...": "..." },
+  "thetvdb": { "...": "..." },
   "tripadvisor": null,
   "stackexchange": null,
   "map": null
 }
 ```
 
-Chaque fiche est `null` lorsqu'elle ne s'applique pas à la requête (seules les fiches pertinentes sont renseignées, la même logique que le site web : une requête sur un film remplit `tmdb`, une requête sur un lieu remplit `tripadvisor` et `map`, etc.). La disponibilité des fiches dépend aussi des [fournisseurs]({{< relref "/self-hosting/search-providers#knowledge-card-providers" >}}) configurés sur l'instance.
+Chaque fiche est `null` lorsqu'elle ne s'applique pas à la requête (seules les fiches pertinentes sont renseignées, la même logique que le site web : une requête sur un film remplit `thetvdb`, une requête sur un lieu remplit `tripadvisor` et `map`, etc.). La disponibilité des fiches dépend aussi des [fournisseurs]({{< relref "/self-hosting/search-providers#knowledge-card-providers" >}}) configurés sur l'instance.
 
 > [!NOTE]
 > Une seule requête `cards/` effectue une recherche web plus une consultation Wikipedia en arrière-plan (pour détecter le sujet), donc elle compte comme une recherche dans votre usage.

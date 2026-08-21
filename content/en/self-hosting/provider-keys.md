@@ -14,10 +14,12 @@ Once you have a key, set the matching environment variable (see
 [Configuration]({{< relref "configuration" >}})) and restart the app.
 
 > [!NOTE]
-> All of these have a **free tier** that is generous enough for a personal or
+> Most of these have a **free tier** that is generous enough for a personal or
 > small-team instance, Seurch caches aggressively and only calls the paid card
 > APIs when a query actually matches. The shared keys (`public` for Marginalia,
-> anonymous Stack Exchange) need no signup at all.
+> anonymous Stack Exchange) need no signup at all. **TheTVDB** is the exception:
+> it has no free tier, and needs either a commercial licence or a user-supported
+> key plus a subscriber PIN.
 
 ## Brave Search — `BRAVE_API_KEY`
 
@@ -65,6 +67,23 @@ Adds the non-commercial, small-web **Marginalia** index. **No signup required.**
 MARGINALIA_API_KEY=public   # works out of the box
 ```
 
+## Staan — `STAAN_API_KEY`
+
+Adds **Staan**, the European web index built by European Search Perspective (the
+Qwant / Ecosia joint venture), to the Web tab. Web results only.
+
+1. Sign up at [staan.ai](https://staan.ai/).
+2. Create an API key from your dashboard.
+3. Set it as `STAAN_API_KEY`.
+
+The allowance is **1,000 free requests a month**, then from **EUR 1 per 1,000**.
+
+> [!NOTE]
+> Staan's API caps pagination at an offset of 30, so it contributes to the
+> **first four pages** of a search and drops out after that. It also rejects
+> queries longer than 400 characters. In both cases the other engines still
+> answer, so the page is never empty.
+
 ## Pixabay (images) — `PIXABAY_API_KEY`
 
 Blends royalty-free **Pixabay** images into the Images tab.
@@ -84,14 +103,21 @@ News tab.
 2. Open your **account dashboard** and copy the **API key**.
 3. Set it as `WORLDNEWS_API_KEY`.
 
-## TMDB (film / TV card) — `TMDB_API_KEY`
+## TheTVDB (film / TV card) — `THETVDB_API_KEY`
 
 Enables the film / TV [knowledge card]({{< relref "/user-guide/knowledge-cards" >}}).
 
-1. Create a free account at [The Movie Database](https://www.themoviedb.org/).
-2. Go to **Settings → API** ([direct link](https://www.themoviedb.org/settings/api))
-   and request a **Developer** key (instant, free; you fill in a short form).
-3. Copy the **API Key (v3 auth)** value into `TMDB_API_KEY`.
+1. Create an account at [TheTVDB](https://thetvdb.com/) and open your
+   [API key dashboard](https://www.thetvdb.com/dashboard/account/apikey).
+2. TheTVDB [licenses its API](https://thetvdb.com/api-information) two ways, pick
+   whichever your deployment is actually licensed under:
+   - a **negotiated / commercial licence**, which needs the key alone, or
+   - a **user-supported key**, which additionally needs the end user's own
+     TheTVDB subscriber **PIN**.
+3. Copy the key into `THETVDB_API_KEY` and, for a user-supported key, the
+   subscriber PIN into `THETVDB_PIN` (leave it empty for a licensed key).
+
+Attribution is shown on the card, as TheTVDB's terms require.
 
 ## TripAdvisor (places card) — `TRIPADVISOR_API_KEY`
 

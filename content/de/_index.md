@@ -27,10 +27,10 @@ Nutzen Sie alle Seurch-Suchfunktionen programmatisch über eine JSON-API: Authen
 
 ## Was Seurch macht
 
-- **Web-Suche über drei Suchmaschinen**: Brave, Mojeek und Marginalia. Aktivieren Sie eine beliebige Teilmenge; wenn mehrere aktiv sind, werden ihre Ergebnislisten per Reciprocal Rank Fusion zusammengeführt und dedupliziert, sodass ein Ergebnis, über das sich mehrere Suchmaschinen einig sind, nach oben steigt.
+- **Web-Suche über vier Suchmaschinen**: Brave, Mojeek, Marginalia und Staan. Aktivieren Sie eine beliebige Teilmenge; wenn mehrere aktiv sind, werden ihre Ergebnislisten per Reciprocal Rank Fusion zusammengeführt und dedupliziert, sodass ein Ergebnis, über das sich mehrere Suchmaschinen einig sind, nach oben steigt.
 - **Bilder-, Nachrichten-, Video-, Karten- und Übersetzen**-Tabs, jeweils von unabhängigen Anbietern unterstützt.
 - **Sofortantworten** über den Ergebnissen: Rechner, Einheiten- und Währungsumrechnung, Wetter, Weltzeit, QR-Codes, Hashes und mehr – die meisten lokal auf dem Server berechnet.
-- **Wissenskarten** neben den Ergebnissen, aus Wikipedia, TMDB, TripAdvisor und Stack Exchange.
+- **Wissenskarten** neben den Ergebnissen, aus Wikipedia, TheTVDB, TripAdvisor und Stack Exchange.
 - **Kontoeinstellungen**, die geräteübergreifend synchronisiert werden, mit Export und Import.
 - Eine **öffentliche JSON-API**, die alle diese Funktionen abdeckt.
 

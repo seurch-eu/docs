@@ -23,7 +23,7 @@ curl -H "Authorization: Api-Key seurch_sk_<préfixe>.<secret>" \
   "query": "climat",
   "tab": "web",
   "page": 1,
-  "engine": ["brave", "mojeek", "marginalia"],
+  "engine": ["brave", "mojeek", "marginalia", "staan"],
   "correction": "",
   "results": [
     {
@@ -34,14 +34,14 @@ curl -H "Authorization: Api-Key seurch_sk_<préfixe>.<secret>" \
       "favicon_url": "https://...",
       "age": "il y a 2 jours",
       "source": "all",
-      "source_label": "Brave, Mojeek, Marginalia",
+      "source_label": "Mojeek · Marginalia · Staan",
       "sitelinks": []
     }
   ]
 }
 ```
 
-- `source` / `source_label` — quels moteurs ont renvoyé le résultat. `brave` / `mojeek` / `marginalia` pour un seul moteur, ou `both` / `all` pour un accord inter-moteurs (`source_label` est la forme lisible).
+- `source` / `source_label` — quels moteurs ont renvoyé le résultat. `brave` / `mojeek` / `marginalia` / `staan` pour un seul moteur, `both` lorsque deux s'accordent, ou `all` à partir de trois. `source_label` est la forme lisible, les noms joints par ` · `. Brave en est délibérément absent : ses conditions d'attribution n'autorisent à le nommer qu'avec leur traitement de logo exact, le libellé ne nomme donc que les autres moteurs.
 - `correction` — une correction orthographique suggérée, ou `""`.
 
 ## Recherche d'images

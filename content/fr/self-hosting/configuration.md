@@ -27,11 +27,23 @@ Ces clés déterminent quels moteurs, onglets de médias et fiches de connaissan
 | `BRAVE_SUGGEST_API_KEY` | Suggestions de complétion automatique (un abonnement Brave séparé). |
 | `MOJEEK_API_KEY` | Le moteur web Mojeek. |
 | `MARGINALIA_API_KEY` | Le moteur web Marginalia (`public` fonctionne d'emblée). |
-| `TMDB_API_KEY` | La fiche de connaissance film / série. |
+| `STAAN_API_KEY` | Le moteur web Staan (index européen, résultats web uniquement). |
+| `THETVDB_API_KEY` | La fiche de connaissance film / série (TheTVDB v4). |
+| `THETVDB_PIN` | Code PIN d'abonné, uniquement pour une clé TheTVDB financée par les utilisateurs. |
 | `TRIPADVISOR_API_KEY` | La fiche de connaissance lieux. |
 | `STACKEXCHANGE_API_KEY` | Un quota Stack Exchange plus élevé pour la fiche Q&A (optionnel). |
 | `PIXABAY_API_KEY` | Images Pixabay mélangées dans l'onglet Images. |
 | `WORLDNEWS_API_KEY` | Articles de l'API World News mélangés dans l'onglet Actualités. |
+
+### Le badge « Payant »
+
+`PAID_PROVIDERS` détermine quels fournisseurs **Paramètres → Moteurs** signale d'un badge **Payant**, afin qu'un utilisateur voie lesquels sont des API commerciales facturées à l'usage avant de les activer. Non défini, la liste interne de l'application s'applique (Brave, Mojeek, Staan, World News) ; renseignez une liste de clés de fournisseurs séparées par des virgules si votre instance est sur d'autres forfaits :
+
+```
+PAID_PROVIDERS=brave,mojeek,staan,worldnews
+```
+
+Les noms qui ne sont pas des clés de fournisseurs sont ignorés : `PAID_PROVIDERS=none` ne badge donc rien. Le badge n'est qu'une étiquette, il ne change jamais ce qu'un utilisateur peut activer.
 
 ## Traduction
 
@@ -75,3 +87,13 @@ FOOTER_LINKS=Confidentialité=https://example.com/privacy,Mentions légales=http
 ```
 
 Laissez `FOOTER_LINKS` non défini pour n'afficher aucun lien supplémentaire en pied de page.
+
+## Lien vers les sources et informations de build
+
+| Variable | Rôle |
+|----------|------|
+| `SOURCE_URL` | Dépôt vers lequel pointe le lien **Source** du pied de page. Faites-le pointer vers votre propre fork si vous exécutez une version modifiée. |
+| `GIT_REF` | Branche ou tag Git affiché à côté du copyright dans le pied de page. |
+| `GIT_SHA` | Hash du commit affiché à côté du copyright, pour retracer un déploiement jusqu'au build exact. |
+
+L'image Docker définit `GIT_REF` et `GIT_SHA` automatiquement au moment du build ; ne les renseignez à la main que pour d'autres méthodes de déploiement.

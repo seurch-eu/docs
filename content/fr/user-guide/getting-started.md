@@ -31,7 +31,7 @@ En haut des résultats se trouvent des onglets. Chacun exécute la même requêt
 
 | Onglet | Ce qu'il recherche |
 |--------|-------------------|
-| **Web** | Pages web sur Brave, Mojeek et Marginalia |
+| **Web** | Pages web sur Brave, Mojeek, Marginalia et Staan |
 | **Images** | Photos, avec lightbox et « images similaires » |
 | **Actualités** | Articles d'actualité récents |
 | **Vidéos** | Résultats vidéo avec miniatures et durées |

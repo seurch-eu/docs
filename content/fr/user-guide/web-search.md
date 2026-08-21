@@ -5,17 +5,23 @@ weight: 2
 
 # Recherche web
 
-L'onglet **Web** est le cœur de Seurch. Il peut s'appuyer sur trois index web indépendants et fusionner ceux que vous activez en une seule liste classée.
+L'onglet **Web** est le cœur de Seurch. Il peut s'appuyer sur quatre index web indépendants et fusionner ceux que vous activez en une seule liste classée.
 
-## Les trois moteurs
+## Les quatre moteurs
 
 | Moteur | Description |
 |--------|-------------|
 | **Brave** | Un grand index web indépendant (alimente aussi Images, Actualités et Vidéos). |
 | **Mojeek** | Un index de recherche britannique indépendant avec son propre robot d'exploration. |
 | **Marginalia** | Un index non commercial axé sur le web petit et non commercial. |
+| **Staan** | Un index européen construit par European Search Perspective, la coentreprise de Qwant et Ecosia. Résultats web uniquement. |
 
-Vous choisissez les moteurs à utiliser dans **Paramètres → Moteurs**. Activez-en un seul pour une source unique, ou plusieurs pour les combiner. Les trois sont activés par défaut.
+Vous choisissez les moteurs à utiliser dans **Paramètres → Moteurs**, section **Web**. Activez-en un seul pour une source unique, ou plusieurs pour les combiner. La sélection est **propre à chaque type de recherche** : les moteurs derrière vos résultats web ne touchent donc ni Images ni Actualités, voir [Paramètres]({{< relref "settings" >}}).
+
+Sur une instance auto-hébergée, chaque moteur pour lequel l'opérateur dispose d'une clé est activé par défaut. Sur le service hébergé, un nouveau compte démarre avec **Brave et Staan**, les autres attendent d'être activés.
+
+> [!NOTE]
+> Staan cesse de paginer au-delà d'un décalage de 30 : il alimente les **quatre premières pages** d'une recherche puis se retire, et il ignore les requêtes de plus de 400 caractères. Les autres moteurs continuent de répondre dans les deux cas.
 
 ## Comment les résultats sont fusionnés
 
@@ -37,7 +43,7 @@ L'effet : les résultats larges et courants que tout le monde remonte sont bien 
 
 ## Bloquer des sites
 
-Vous pouvez masquer les résultats provenant de domaines que vous ne souhaitez jamais voir. Ajoutez-les dans **Paramètres → Moteurs** (sites bloqués) ; les résultats correspondants sont filtrés de toutes les recherches web. Cette liste est stockée dans votre compte.
+Vous pouvez masquer les résultats provenant de domaines que vous ne souhaitez jamais voir. Ajoutez-les dans **Paramètres → Sites bloqués** ; les résultats correspondants sont filtrés de toutes les recherches web. Cette liste est stockée dans votre compte.
 
 ## Bangs
 

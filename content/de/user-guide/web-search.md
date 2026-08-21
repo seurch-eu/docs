@@ -5,17 +5,23 @@ weight: 2
 
 # Web-Suche
 
-Der **Web**-Tab ist das Herzstück von Seurch. Er kann auf drei unabhängige Web-Indizes zurückgreifen und alles, was Sie aktivieren, in einer einzigen Rangliste zusammenführen.
+Der **Web**-Tab ist das Herzstück von Seurch. Er kann auf vier unabhängige Web-Indizes zurückgreifen und alles, was Sie aktivieren, in einer einzigen Rangliste zusammenführen.
 
-## Die drei Suchmaschinen
+## Die vier Suchmaschinen
 
 | Suchmaschine | Beschreibung |
 |--------------|--------------|
 | **Brave** | Ein großer unabhängiger Web-Index (unterstützt auch Bilder, Nachrichten und Videos). |
 | **Mojeek** | Ein unabhängiger britischer Suchindex mit eigenem Crawler. |
 | **Marginalia** | Ein nicht-kommerzieller Index, der sich auf das kleine, nicht-kommerzielle Web konzentriert. |
+| **Staan** | Ein europäischer Index von European Search Perspective, dem Gemeinschaftsunternehmen von Qwant und Ecosia. Nur Web-Ergebnisse. |
 
-Sie wählen die zu verwendenden Suchmaschinen unter **Einstellungen → Suchmaschinen** aus. Aktivieren Sie nur eine für eine einzige Quelle oder mehrere, um sie zu kombinieren. Alle drei sind standardmäßig aktiviert.
+Sie wählen die zu verwendenden Suchmaschinen unter **Einstellungen → Suchmaschinen** im Abschnitt **Web** aus. Aktivieren Sie nur eine für eine einzige Quelle oder mehrere, um sie zu kombinieren. Die Auswahl gilt **pro Suchart**, die Suchmaschinen hinter Ihren Web-Ergebnissen berühren also weder Bilder noch Nachrichten; siehe [Einstellungen]({{< relref "settings" >}}).
+
+Auf einer selbst gehosteten Instanz ist jede Suchmaschine standardmäßig aktiv, für die der Betreiber einen Schlüssel hinterlegt hat. Beim gehosteten Dienst startet ein neues Konto mit **Brave und Staan**, die übrigen warten darauf, eingeschaltet zu werden.
+
+> [!NOTE]
+> Staan paginiert nur bis zu einem Offset von 30 und trägt daher zu den **ersten vier Seiten** einer Suche bei; danach entfällt es. Ebenso werden Anfragen mit mehr als 400 Zeichen übersprungen. Die übrigen Suchmaschinen antworten in beiden Fällen weiterhin.
 
 ## Wie Ergebnisse zusammengeführt werden
 
@@ -37,7 +43,7 @@ Der Effekt: Breite, bekannte Ergebnisse, die alle anzeigen, werden gut platziert
 
 ## Websites blockieren
 
-Sie können Ergebnisse von Domains ausblenden, die Sie nie sehen möchten. Fügen Sie diese unter **Einstellungen → Suchmaschinen** (blockierte Websites) hinzu; übereinstimmende Ergebnisse werden aus jeder Web-Suche herausgefiltert. Diese Liste wird in Ihrem Konto gespeichert.
+Sie können Ergebnisse von Domains ausblenden, die Sie nie sehen möchten. Fügen Sie diese unter **Einstellungen → Gesperrte Seiten** hinzu; übereinstimmende Ergebnisse werden aus jeder Web-Suche herausgefiltert. Diese Liste wird in Ihrem Konto gespeichert.
 
 ## Bangs
 

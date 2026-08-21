@@ -32,7 +32,7 @@ L'[API]({{< relref "/api" >}}) programmatique est une fonctionnalité **auto-hé
 - La **clé complète n'est affichée qu'une seule fois** ; copiez-la immédiatement dans un endroit sûr. Seuls un préfixe et un hachage sont stockés, elle ne peut donc pas être affichée à nouveau.
 - Révoquez une clé à tout moment depuis le même écran.
 
-Votre total mensuel de recherches (sur le site web et l'API) est affiché dans Paramètres. Consultez le [guide API]({{< relref "/api" >}}) pour savoir comment utiliser une clé.
+Votre total mensuel de recherches (sur le site web et l'API) est affiché dans Paramètres. Une recherche web compte une fois par moteur interrogé : combiner quatre moteurs ajoute donc quatre au total ; tout autre type de recherche compte pour une. Consultez le [guide API]({{< relref "/api" >}}) pour savoir comment utiliser une clé.
 
 > [!WARNING]
 > Traitez une clé API comme un mot de passe. Quiconque la possède peut rechercher en votre nom et consommer votre limite de débit. Si une clé est compromise, révoquez-la et créez-en une nouvelle.

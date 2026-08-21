@@ -45,7 +45,7 @@ a different kind of source:
 
 | Tab | What it searches |
 |-----|------------------|
-| **Web** | Web pages across Brave, Mojeek and Marginalia |
+| **Web** | Web pages across Brave, Mojeek, Marginalia and Staan |
 | **Images** | Pictures, with a lightbox and "similar images" |
 | **News** | Recent news articles |
 | **Videos** | Video results with thumbnails and durations |

@@ -8,7 +8,9 @@ weight: 3
 Besides the Web tab, Seurch has dedicated tabs for images, news, videos, maps
 and translation. Each runs your query against sources suited to that kind of
 content. A tab only appears when the instance has the provider it needs
-configured.
+configured **and** you have at least one of that tab's providers switched on in
+[Settings → Engines]({{< relref "settings" >}}), where every search type keeps
+its own selection.
 
 ## Images
 
@@ -63,6 +65,7 @@ paste your text, and read the translation. The available languages depend on the
 LibreTranslate instance the operator has connected.
 
 > [!NOTE]
-> If a tab is missing, the instance operator hasn't configured that provider. On a
-> [self-hosted]({{< relref "/self-hosting" >}}) instance you control which
-> providers are enabled.
+> If a tab is missing, either the instance operator hasn't configured that
+> provider, or you have switched every provider for that search type off in
+> [Settings → Engines]({{< relref "settings" >}}). On a
+> [self-hosted]({{< relref "/self-hosting" >}}) instance you control both.

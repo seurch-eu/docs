@@ -58,7 +58,7 @@ context the website uses. Accepts `lang`, `safe` and `engine`.
 {
   "query": "inception",
   "wikipedia": { "...": "..." },
-  "tmdb": { "...": "..." },
+  "thetvdb": { "...": "..." },
   "tripadvisor": null,
   "stackexchange": null,
   "map": null
@@ -66,7 +66,7 @@ context the website uses. Accepts `lang`, `safe` and `engine`.
 ```
 
 Each card is `null` when it doesn't apply to the query (only the relevant cards
-are populated, the same logic as the website, so a film query fills `tmdb`, a
+are populated, the same logic as the website, so a film query fills `thetvdb`, a
 place query fills `tripadvisor` and `map`, and so on). Card availability also
 depends on which [providers]({{< relref "/self-hosting/search-providers#knowledge-card-providers" >}})
 the instance has configured.

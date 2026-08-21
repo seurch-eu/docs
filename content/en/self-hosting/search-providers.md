@@ -28,19 +28,20 @@ configuration notice instead of results.
 
 ## Extra web engines
 
-Add either or both to blend more independent indexes into the Web tab (merged
+Add any of these to blend more independent indexes into the Web tab (merged
 with Reciprocal Rank Fusion, see [Web search]({{< relref "/user-guide/web-search" >}})):
 
 | Variable | Provider | Get a key |
 |----------|----------|-----------|
 | `MOJEEK_API_KEY` | Mojeek (independent UK index) | [mojeek.com/services/search/api](https://www.mojeek.com/services/search/api/) |
 | `MARGINALIA_API_KEY` | Marginalia (small-web index) | No signup, the literal value `public` is a free shared key (rate-limited to ~1 request / 5 s). For a higher quota, request one at [marginalia-search.com](https://about.marginalia-search.com/article/api/) |
+| `STAAN_API_KEY` | Staan (European index, by Qwant and Ecosia) | [staan.ai](https://staan.ai/) — 1,000 free requests a month, then from EUR 1 per 1,000. Caps out after the first four pages of a search |
 
 ## Media providers
 
 Each media tab blends Brave with a second provider. The supplementary provider is
-also the **sole** source for the Mojeek/Marginalia engines, which have no media
-search of their own.
+also the **sole** source for the web-only engines (Mojeek, Marginalia and Staan),
+which have no media search of their own.
 
 | Tab | Variable | Provider | Key |
 |-----|----------|----------|-----|
@@ -57,13 +58,13 @@ The web tab can show up to three side [knowledge cards]({{< relref "/user-guide/
 | Card | Variable | Provider | Key |
 |------|----------|----------|-----|
 | Wikipedia | *(none)* | Wikipedia / Wikidata | No key required |
-| Film / TV | `TMDB_API_KEY` | [TMDB](https://www.themoviedb.org/settings/api) | Free |
+| Film / TV | `THETVDB_API_KEY` (+ `THETVDB_PIN`) | [TheTVDB](https://www.thetvdb.com/dashboard/account/apikey) | Commercial licence, or a user-supported key plus the subscriber PIN |
 | Places | `TRIPADVISOR_API_KEY` | [TripAdvisor Content API](https://www.tripadvisor.com/developers) | Free |
 | Q&A | `STACKEXCHANGE_API_KEY` | [Stack Exchange](https://stackapps.com/apps/oauth/register) | Optional, raises the shared anonymous quota |
 
 The paid card APIs are only called when a query actually looks like a film or a
-place, and each lookup is cached for an hour, so they stay within free tiers
-comfortably.
+place, and each lookup is cached for an hour, so call volume stays low, well
+inside TripAdvisor's free tier and modest against a TheTVDB licence.
 
 ## Provider status page
 
