@@ -40,7 +40,8 @@ recent coverage.
 
 The **Videos** tab blends Brave video results with **Sepia**, the search index
 for [PeerTube](https://joinpeertube.org/) (a decentralised, open video network).
-Results show a thumbnail, the duration and the host site.
+The two lists are interleaved, so PeerTube videos aren't pushed below everything
+Brave found. Results show a thumbnail, the duration and the host site.
 
 ## Maps
 
@@ -51,6 +52,12 @@ name or address and Seurch:
   (OpenStreetMap's search), and
 - shows the location on an **embedded OpenStreetMap map**, with an **Open in
   Maps** link and directions.
+
+The tab always shows a map. Switch to it without a query, or search for
+something that can't be placed, and you get a world view with the message in the
+sidebar rather than an empty panel, so you can pan and zoom your way there
+instead. **Directions** need a destination, so that button appears once a place
+is found.
 
 When a normal **web** search looks like an address or a place, a small map
 quick-answer appears alongside the results, and a place's
@@ -64,8 +71,20 @@ Pick a target language (and optionally a source language, or let it auto-detect)
 paste your text, and read the translation. The available languages depend on the
 LibreTranslate instance the operator has connected.
 
+## When a tab comes up empty
+
+Every tab distinguishes three cases, so an empty panel tells you which one you
+are in:
+
+- **Nothing searched yet.** Switching tabs carries no query, so the tab invites
+  you to type one.
+- **No provider for it.** The instance has no key for that kind of search, or
+  you have switched every provider for it off, and the panel says so.
+- **Nothing matched.** The search ran and came back empty, so it suggests
+  checking the spelling or trying different keywords.
+
 > [!NOTE]
-> If a tab is missing, either the instance operator hasn't configured that
-> provider, or you have switched every provider for that search type off in
+> If a tab is missing altogether, either the instance operator hasn't configured
+> that provider, or you have switched every provider for that search type off in
 > [Settings → Engines]({{< relref "settings" >}}). On a
 > [self-hosted]({{< relref "/self-hosting" >}}) instance you control both.

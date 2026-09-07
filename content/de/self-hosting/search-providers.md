@@ -50,19 +50,24 @@ Der Web-Tab kann bis zu drei [Wissenskarten]({{< relref "/user-guide/knowledge-c
 |-------|----------|----------|----------|
 | Wikipedia | *(keiner)* | Wikipedia / Wikidata | Kein Schlüssel erforderlich |
 | Film / TV | `THETVDB_API_KEY` (+ `THETVDB_PIN`) | [TheTVDB](https://www.thetvdb.com/dashboard/account/apikey) | Kommerzielle Lizenz oder ein nutzerfinanzierter Schlüssel plus Abonnenten-PIN |
-| Orte | `TRIPADVISOR_API_KEY` | [TripAdvisor Content API](https://www.tripadvisor.com/developers) | Kostenlos |
+| Orte | `TRIPADVISOR_API_KEY` | [TripAdvisor Terra Partner API](https://docs.terra.tripadvisor.com) | Partnerschlüssel, per `X-API-Key` gesendet |
 | Q&A | `STACKEXCHANGE_API_KEY` | [Stack Exchange](https://stackapps.com/apps/oauth/register) | Optional, erhöht das gemeinsame anonyme Kontingent |
 
-Die kostenpflichtigen Karten-APIs werden nur aufgerufen, wenn eine Anfrage tatsächlich wie ein Film oder ein Ort aussieht, und jeder Abruf wird eine Stunde gecacht. Das Aufrufvolumen bleibt damit niedrig – deutlich innerhalb des kostenlosen Kontingents von TripAdvisor und bescheiden gemessen an einer TheTVDB-Lizenz.
+Die kostenpflichtigen Karten-APIs werden nur aufgerufen, wenn eine Anfrage tatsächlich wie ein Film oder ein Ort aussieht, und jeder Abruf wird eine Stunde gecacht. Das Aufrufvolumen bleibt damit niedrig und bescheiden gemessen an einer TheTVDB-Lizenz oder einem TripAdvisor-Tarif.
+
+> [!NOTE]
+> Die Orte-Karte läuft über TripAdvisors **Terra Partner API**, die die eingestellte Content API ersetzt hat — Schlüssel für die alte liefern jetzt `403`. Sie wird aus den Katalog-Endpunkten aufgebaut, die ohne Partner-Zulassungsliste antworten. Die Karte zeigt daher Name, Gebiet, Adresse, Bewertung, Anzahl der Rezensionen und eine Beschreibung, aber kein Foto, keine Küche, keine Preisklasse und kein Ranking; diese erfordern eine Lizenz je Standort.
 
 ## Anbieter-Statusseite
 
-Eine eingebaute **`/status`**-Seite zeigt, ob jeder konfigurierte vorgelagerte Anbieter erreichbar ist. Sie verbraucht dabei nie kostenpflichtiges Kontingent:
+Eine eingebaute **`/status`**-Seite zeigt, ob jeder konfigurierte vorgelagerte Anbieter erreichbar ist, verlinkt aus der Fußzeile der Website und aus **Einstellungen → Anbieterstatus**. Sie verbraucht dabei nie kostenpflichtiges Kontingent:
 
 - Anbieter mit einem **kostenlosen Gesundheits-Endpunkt** (Nominatim, LibreTranslate, Open-Meteo, Frankfurter) werden planmäßig abgefragt.
 - Der Status jedes anderen Anbieters wird davon abgeleitet, ob **echte Suchen** kürzlich erfolgreich waren.
 
 Halten Sie den Status aktuell, indem Sie `check_provider_health` regelmäßig ausführen; siehe [Wartung]({{< relref "maintenance" >}}).
+
+Setzen Sie `STATUS_PAGE_ENABLED=false`, um diese Information für sich zu behalten: Die Seite liefert 404, und ihre Links verschwinden. Die Gesundheit wird weiterhin aufgezeichnet, und `/status/health` antwortet weiterhin, sodass ein externer Überwachungsdienst weiterarbeitet, siehe [Überwachung]({{< relref "monitoring" >}}).
 
 ## Netzwerk-Zulassungsliste
 
@@ -70,5 +75,7 @@ Wenn der ausgehende Datenverkehr Ihres Servers eingeschränkt ist, benötigen di
 
 - `api.frankfurter.dev` (Wechselkurse)
 - `geocoding-api.open-meteo.com` und `api.open-meteo.com` (Wetter)
+
+Die Wissenskarten erreichen `api4.thetvdb.com`, `artworks.thetvdb.com`, `terra.tripadvisor.com` und `www.wikidata.org`.
 
 Alles andere wird über Standard-HTTPS zum API-Host jedes Anbieters erreicht. Die lokalen Sofortantworten (Mathematik, Einheiten, Hashes, …) benötigen überhaupt kein Netzwerk.

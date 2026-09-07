@@ -23,6 +23,7 @@ Eine Instanz ist eine einzelne [Django](https://www.djangoproject.com/)-Anwendun
 | [Benutzer & Zugang]({{< relref "users" >}}) | Konten erstellen, E-Mail, Passwort zurücksetzen |
 | [API-Schlüssel]({{< relref "api-keys" >}}) | API-Schlüssel für Benutzer ausstellen und widerrufen |
 | [Wartung]({{< relref "maintenance" >}}) | Geplante Aufgaben, Bangs, Cache, Anbieterstatus |
+| [Überwachung]({{< relref "monitoring" >}}) | Gesundheits-Endpunkte für einen externen Monitor, und die Statusseite |
 | [Produktionshinweise]({{< relref "production" >}}) | Statische Dateien, Gesundheitsprüfungen, Fußzeile, E-Mail |
 
 > [!NOTE]

@@ -1,6 +1,6 @@
 ---
 title: Production notes
-weight: 10
+weight: 11
 ---
 
 # Production notes
@@ -34,6 +34,10 @@ balancer there.
 ```
 GET /up   →  200 OK
 ```
+
+`/up` covers the application only. To alert on a failing **upstream provider**,
+point an external uptime monitor at `/status/health` as well, see
+[Monitoring]({{< relref "monitoring" >}}).
 
 ## Database
 

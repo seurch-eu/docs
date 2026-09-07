@@ -62,6 +62,13 @@ GET /api/v1/status/
 
 A provider with no API key configured is omitted (hidden, not shown as down).
 
+> [!NOTE]
+> An operator can choose not to publish provider status
+> (`STATUS_PAGE_ENABLED=false`). This endpoint then returns **404** and is left
+> out of the [API root](#api-root) index, along with the `/status` page it
+> mirrors. Uptime monitoring doesn't go through the API, it has its own keyless
+> endpoints, see [Monitoring]({{< relref "/self-hosting/monitoring" >}}).
+
 ## Key info
 
 Details of the key making the request, handy to verify a key works. *(Does not
@@ -109,3 +116,6 @@ GET /api/v1/
   "key": "https://search.example.com/api/v1/key/"
 }
 ```
+
+`status` is absent when the instance doesn't publish provider status, so treat
+the index as the list of endpoints that actually exist rather than a fixed set.

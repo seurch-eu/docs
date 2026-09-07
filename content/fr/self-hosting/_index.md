@@ -23,6 +23,7 @@ Une instance est une application [Django](https://www.djangoproject.com/) unique
 | [Utilisateurs et accès]({{< relref "users" >}}) | Création de comptes, e-mail, réinitialisation du mot de passe |
 | [Clés API]({{< relref "api-keys" >}}) | Émission et révocation des clés API pour les utilisateurs |
 | [Maintenance]({{< relref "maintenance" >}}) | Tâches planifiées, bangs, cache, statut des fournisseurs |
+| [Supervision]({{< relref "monitoring" >}}) | Points de terminaison de santé pour un moniteur externe, et la page de statut |
 | [Notes de production]({{< relref "production" >}}) | Fichiers statiques, vérifications de santé, pied de page, e-mail |
 
 > [!NOTE]

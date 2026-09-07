@@ -95,12 +95,17 @@ Die Namensnennung wird auf der Karte angezeigt, wie es die Bedingungen von TheTV
 
 Aktiviert die Restaurant / Hotel / Attraktionskarte.
 
-1. Registrieren Sie sich für die [TripAdvisor Content API](https://www.tripadvisor.com/developers).
-2. Erstellen Sie im Entwicklerportal einen **API-Schlüssel** (das kostenlose Kontingent enthält ein monatliches Anrufkontingent).
-3. Kopieren Sie ihn in `TRIPADVISOR_API_KEY`.
+1. Registrieren Sie sich für die [TripAdvisor Terra Partner API](https://docs.terra.tripadvisor.com).
+2. Erstellen Sie im Entwicklerportal einen **API-Schlüssel** für den Tarif Ihres Kontos.
+3. Kopieren Sie ihn in `TRIPADVISOR_API_KEY`. Seurch sendet ihn als `X-API-Key`-Header.
+
+> [!WARNING]
+> **Die alte Content API ist eingestellt.** Für `api.content.tripadvisor.com` ausgestellte Schlüssel liefern jetzt `403`. Wenn Ihre Orte-Karte nicht mehr erscheint, ist das der Grund: Holen Sie sich einen Terra-Schlüssel und ersetzen Sie den Wert.
+
+Die Karte wird aus Terras **Katalog**-Endpunkten aufgebaut, die ohne Partner-Zulassungsliste und ohne Geofencing antworten. Diese Projektion ist reduziert: Die Karte zeigt daher den Namen des Betriebs, sein Gebiet, die Adresse, die Bewertung, die Anzahl der Rezensionen, eine Beschreibung und einen Link — und **kein** Foto, keine Küche, keine Preisklasse und kein Ranking, die nur für Standorte ausgeliefert werden, für die ein Partner einzeln lizenziert ist.
 
 > [!NOTE]
-> Die TripAdvisor Content API verlangt die Anzeige von TripAdvisor-Attributionen, wo ihre Daten erscheinen, was Seurchs Karte bereits tut. Sie können den Schlüssel in deren Portal auch auf die IP Ihres Servers beschränken.
+> TripAdvisors Bedingungen verlangen die Anzeige von TripAdvisor-Attributionen, wo ihre Daten erscheinen, was Seurchs Karte bereits tut, und dass Seiten mit ihren Inhalten aus Suchmaschinen-Indizes herausgehalten werden, was Seurch tut, indem es jede Ergebnisseite mit dieser Karte als `noindex` markiert. Sie können den Schlüssel in deren Portal auch auf die IP Ihres Servers beschränken.
 
 ## Stack Exchange (Q&A-Karte) — `STACKEXCHANGE_API_KEY`
 

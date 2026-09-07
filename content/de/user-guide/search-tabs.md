@@ -24,7 +24,7 @@ Der **Nachrichten**-Tab gibt aktuelle Artikel aus dem Brave-Nachrichtenindex zur
 
 ## Videos
 
-Der **Videos**-Tab kombiniert Brave-Videoergebnisse mit **Sepia**, dem Suchindex für [PeerTube](https://joinpeertube.org/) (ein dezentrales, offenes Videonetzwerk). Ergebnisse zeigen ein Vorschaubild, die Dauer und die Hosting-Website.
+Der **Videos**-Tab kombiniert Brave-Videoergebnisse mit **Sepia**, dem Suchindex für [PeerTube](https://joinpeertube.org/) (ein dezentrales, offenes Videonetzwerk). Die beiden Listen werden verschränkt, sodass PeerTube-Videos nicht unter alles rutschen, was Brave gefunden hat. Ergebnisse zeigen ein Vorschaubild, die Dauer und die Hosting-Website.
 
 ## Karten
 
@@ -33,11 +33,21 @@ Der **Karten**-Tab benötigt keine Einrichtung und kein Konto bei einem Anbieter
 - **Geokodiert** ihn mit [Nominatim](https://nominatim.openstreetmap.org/) (OpenStreetMaps Suche) und
 - zeigt den Standort auf einer **eingebetteten OpenStreetMap-Karte** mit einem Link **In Maps öffnen** und Wegbeschreibungen.
 
+Der Tab zeigt immer eine Karte. Wechseln Sie ohne Anfrage dorthin, oder suchen Sie nach etwas, das sich nicht verorten lässt, erhalten Sie eine Weltansicht mit der Meldung in der Seitenleiste statt eines leeren Panels, sodass Sie sich stattdessen dorthin schwenken und zoomen können. **Wegbeschreibungen** brauchen ein Ziel, diese Schaltfläche erscheint also erst, wenn ein Ort gefunden wurde.
+
 Wenn eine normale **Web**-Suche wie eine Adresse oder ein Ort aussieht, erscheint eine kleine Karten-Schnellantwort neben den Ergebnissen, und die [Wissenskarte]({{< relref "knowledge-cards" >}}) eines Ortes verlinkt direkt zur Karte.
 
 ## Übersetzen
 
 Der **Übersetzen**-Tab übersetzt Text zwischen Sprachen, powered by [LibreTranslate](https://libretranslate.com/) (Open-Source-Maschinelle Übersetzung). Wählen Sie eine Zielsprache (und optional eine Quellsprache oder lassen Sie sie automatisch erkennen), fügen Sie Ihren Text ein und lesen Sie die Übersetzung. Die verfügbaren Sprachen hängen von der LibreTranslate-Instanz ab, die der Betreiber angebunden hat.
 
+## Wenn ein Tab leer bleibt
+
+Jeder Tab unterscheidet drei Fälle, sodass ein leeres Panel Ihnen sagt, in welchem Sie sich befinden:
+
+- **Noch nichts gesucht.** Ein Tab-Wechsel trägt keine Anfrage mit, der Tab lädt Sie also ein, eine einzugeben.
+- **Kein Anbieter dafür.** Die Instanz hat keinen Schlüssel für diese Suchart, oder Sie haben alle ihre Anbieter deaktiviert, und das Panel sagt es.
+- **Nichts gefunden.** Die Suche lief und kam leer zurück, sie schlägt also vor, die Schreibweise zu prüfen oder andere Stichwörter zu versuchen.
+
 > [!NOTE]
-> Wenn ein Tab fehlt, hat entweder der Instanz-Betreiber diesen Anbieter nicht konfiguriert, oder Sie haben unter [Einstellungen → Suchmaschinen]({{< relref "settings" >}}) alle Anbieter dieser Suchart deaktiviert. Bei einer [selbst gehosteten]({{< relref "/self-hosting" >}}) Instanz kontrollieren Sie beides.
+> Wenn ein Tab ganz fehlt, hat entweder der Instanz-Betreiber diesen Anbieter nicht konfiguriert, oder Sie haben unter [Einstellungen → Suchmaschinen]({{< relref "settings" >}}) alle Anbieter dieser Suchart deaktiviert. Bei einer [selbst gehosteten]({{< relref "/self-hosting" >}}) Instanz kontrollieren Sie beides.

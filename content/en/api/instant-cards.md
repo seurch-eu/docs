@@ -71,6 +71,12 @@ place query fills `tripadvisor` and `map`, and so on). Card availability also
 depends on which [providers]({{< relref "/self-hosting/search-providers#knowledge-card-providers" >}})
 the instance has configured.
 
+The `tripadvisor` card carries `name`, `geo`, `address`, `latitude`,
+`longitude`, `rating`, `rating_bubbles`, `num_reviews`, `description` and `url`.
+It no longer carries `photo`, `location_type`, `cuisine`, `subcategory`,
+`price_level` or `ranking`: those came from TripAdvisor's retired Content API,
+and its replacement only serves them to individually licensed partners.
+
 > [!NOTE]
 > A single `cards/` request runs a web search plus a Wikipedia lookup behind the
 > scenes (to detect the subject), so it counts as one search toward your usage.

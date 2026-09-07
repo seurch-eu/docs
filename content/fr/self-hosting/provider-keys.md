@@ -95,12 +95,17 @@ L'attribution est affichée sur la fiche, comme l'exigent les conditions de TheT
 
 Active la fiche restaurant / hôtel / attraction.
 
-1. Inscrivez-vous à l'[API Content TripAdvisor](https://www.tripadvisor.com/developers).
-2. Dans le portail développeur, **créez une clé API** (le niveau gratuit inclut une allocation mensuelle d'appels).
-3. Copiez-la dans `TRIPADVISOR_API_KEY`.
+1. Inscrivez-vous à la [TripAdvisor Terra Partner API](https://docs.terra.tripadvisor.com).
+2. Dans le portail développeur, **créez une clé API** pour le forfait de votre compte.
+3. Copiez-la dans `TRIPADVISOR_API_KEY`. Seurch l'envoie dans l'en-tête `X-API-Key`.
+
+> [!WARNING]
+> **L'ancienne API Content est retirée du service.** Les clés émises pour `api.content.tripadvisor.com` renvoient désormais `403`. Si votre fiche lieux a cessé d'apparaître, c'est la raison : obtenez une clé Terra et remplacez la valeur.
+
+La fiche est construite à partir des points de terminaison **catalogue** de Terra, qui répondent sans liste d'autorisation partenaire ni restriction géographique. Cette projection est réduite : la fiche affiche donc le nom de l'établissement, sa zone, son adresse, sa note, son nombre d'avis, une description et un lien, et **pas** de photo, de cuisine, de niveau de prix ni de classement, qui ne sont servis que pour les établissements sous licence individuelle d'un partenaire.
 
 > [!NOTE]
-> L'API Content TripAdvisor nécessite d'afficher les attributions TripAdvisor là où ses données apparaissent, ce que la fiche de Seurch fait déjà. Vous pouvez également restreindre la clé à l'IP de votre serveur dans leur portail.
+> Les conditions de TripAdvisor exigent d'afficher les attributions TripAdvisor là où ses données apparaissent, ce que la fiche de Seurch fait déjà, et que les pages portant son contenu soient tenues hors des index des moteurs de recherche, ce que Seurch fait en marquant `noindex` toute page de résultats affichant la fiche. Vous pouvez également restreindre la clé à l'IP de votre serveur dans leur portail.
 
 ## Stack Exchange (fiche Q&A) — `STACKEXCHANGE_API_KEY`
 

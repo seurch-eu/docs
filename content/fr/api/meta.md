@@ -58,6 +58,9 @@ GET /api/v1/status/
 
 Un fournisseur sans clé API configurée est omis (masqué, pas affiché comme hors service).
 
+> [!NOTE]
+> Un opérateur peut choisir de ne pas publier le statut des fournisseurs (`STATUS_PAGE_ENABLED=false`). Ce point de terminaison renvoie alors **404** et est absent de l'index [racine de l'API](#racine-api), tout comme la page `/status` qu'il reflète. La supervision ne passe pas par l'API, elle dispose de ses propres points de terminaison sans clé, voir [Supervision]({{< relref "/self-hosting/monitoring" >}}).
+
 ## Informations sur la clé
 
 Détails de la clé effectuant la requête, pratique pour vérifier qu'une clé fonctionne. *(Ne compte pas dans l'usage.)*
@@ -103,3 +106,5 @@ GET /api/v1/
   "key": "https://search.example.com/api/v1/key/"
 }
 ```
+
+`status` est absent lorsque l'instance ne publie pas le statut des fournisseurs ; traitez donc l'index comme la liste des points de terminaison qui existent réellement, et non comme un ensemble figé.

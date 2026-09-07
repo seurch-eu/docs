@@ -59,17 +59,25 @@ The web tab can show up to three side [knowledge cards]({{< relref "/user-guide/
 |------|----------|----------|-----|
 | Wikipedia | *(none)* | Wikipedia / Wikidata | No key required |
 | Film / TV | `THETVDB_API_KEY` (+ `THETVDB_PIN`) | [TheTVDB](https://www.thetvdb.com/dashboard/account/apikey) | Commercial licence, or a user-supported key plus the subscriber PIN |
-| Places | `TRIPADVISOR_API_KEY` | [TripAdvisor Content API](https://www.tripadvisor.com/developers) | Free |
+| Places | `TRIPADVISOR_API_KEY` | [TripAdvisor Terra Partner API](https://docs.terra.tripadvisor.com) | Partner key, sent as `X-API-Key` |
 | Q&A | `STACKEXCHANGE_API_KEY` | [Stack Exchange](https://stackapps.com/apps/oauth/register) | Optional, raises the shared anonymous quota |
 
 The paid card APIs are only called when a query actually looks like a film or a
-place, and each lookup is cached for an hour, so call volume stays low, well
-inside TripAdvisor's free tier and modest against a TheTVDB licence.
+place, and each lookup is cached for an hour, so call volume stays low and
+modest against a TheTVDB licence or a TripAdvisor plan.
+
+> [!NOTE]
+> The places card runs on TripAdvisor's **Terra Partner API**, which replaced
+> the retired Content API — keys for the old one now return `403`. It is built
+> from the catalog endpoints, which answer without a partner allowlist, so the
+> card shows a name, area, address, rating, review count and description, but no
+> photo, cuisine, price level or ranking; those need a per-location licence.
 
 ## Provider status page
 
-A built-in **`/status`** page shows whether each configured provider is up. It
-never spends paid quota to find out:
+A built-in **`/status`** page shows whether each configured provider is up,
+linked from the site footer and from **Settings → Provider status**. It never
+spends paid quota to find out:
 
 - Providers with a **free health endpoint** (Nominatim, LibreTranslate,
   Open-Meteo, Frankfurter) are probed on a schedule.
@@ -79,6 +87,11 @@ never spends paid quota to find out:
 Keep the status fresh by running `check_provider_health` periodically, see
 [Maintenance]({{< relref "maintenance" >}}).
 
+Set `STATUS_PAGE_ENABLED=false` to keep that information to yourself: the page
+404s and its links disappear. Health is still recorded, and `/status/health`
+still answers, so an external uptime monitor keeps working, see
+[Monitoring]({{< relref "monitoring" >}}).
+
 ## Network allowlist
 
 If your server's outbound traffic is restricted, the two **instant-answer**
@@ -86,6 +99,9 @@ network calls need these hosts allowed:
 
 - `api.frankfurter.dev` (currency rates)
 - `geocoding-api.open-meteo.com` and `api.open-meteo.com` (weather)
+
+The knowledge cards reach `api4.thetvdb.com`, `artworks.thetvdb.com`,
+`terra.tripadvisor.com` and `www.wikidata.org`.
 
 Everything else is reached over standard HTTPS to each provider's API host. The
 local instant answers (maths, units, hashes, …) need no network at all.

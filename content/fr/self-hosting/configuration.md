@@ -16,6 +16,7 @@ Seurch est entièrement configuré via des **variables d'environnement** (en pro
 | `ALLOWED_HOSTS` | Noms d'hôtes séparés par des virgules que l'application servira | ex. `search.example.com`. |
 | `DATABASE_URL` | URL de connexion PostgreSQL | ex. `postgres://utilisateur:mdp@hôte:5432/seurch`. |
 | `LOG_LEVEL` | Verbosité des logs | `DEBUG` / `INFO` / `WARNING` / `ERROR` (par défaut `INFO`). |
+| `LOG_SEARCH_QUERIES` | Journaliser le texte brut des requêtes | Suit `DEBUG`, donc **désactivé** en production. Les requêtes sont des données personnelles et les logs de conteneurs sont conservés ; désactivé, chaque ligne de log de fournisseur ne porte que la longueur de la requête. |
 
 ## Fournisseurs de recherche
 
@@ -54,6 +55,25 @@ Les noms qui ne sont pas des clés de fournisseurs sont ignorés : `PAID_PROVIDE
 | `LIBRETRANSLATE_ORIGIN_COUNTRY` | Code pays à deux lettres pour le drapeau affiché à côté de « Traduction » dans Paramètres (par défaut `fr`). |
 
 Voir [Traduction]({{< relref "translation" >}}).
+
+## Statut des fournisseurs et supervision
+
+Si cette instance publie la santé des fournisseurs, et ce qu'un service de supervision externe peut interroger. Détails complets dans [Supervision]({{< relref "monitoring" >}}).
+
+| Variable | Rôle | Par défaut |
+|----------|------|------------|
+| `STATUS_PAGE_ENABLED` | Publier la page `/status`, et le point de terminaison `status/` de l'API qui sert les mêmes données. Désactivez-le pour garder pour vous quels fournisseurs vous utilisez et quand ils échouent. | `true` |
+| `STATUS_MONITOR_ENABLED` | Servir `/status/health` et `/status/health/<fournisseur>`, les points de terminaison 200-ou-500 qu'interroge un moniteur. | `true` |
+| `STATUS_MONITOR_TOKEN` | Secret partagé exigé par ces points de terminaison (`?token=`, `X-Monitor-Token`, ou `Authorization: Bearer`). | *(vide, ouvert)* |
+| `STATUS_MONITOR_PROVIDERS` | Fournisseurs surveillés par l'agrégat `/status/health` : identifiants de fournisseurs et/ou clés de groupe `engine`, `media`, `cards`, `instant`, `maps`, `translate`. | *(vide, tous les fournisseurs configurés)* |
+
+Les deux sont indépendants : la supervision continue de fonctionner page désactivée, et c'est tout l'intérêt, une instance qui ne publie pas la page doit quand même pouvoir être supervisée.
+
+```
+STATUS_PAGE_ENABLED=false
+STATUS_MONITOR_PROVIDERS=engine
+STATUS_MONITOR_TOKEN=une-longue-chaine-aleatoire
+```
 
 ## Limites de débit de l'API publique
 

@@ -27,6 +27,8 @@ Ein Cron-Beispiel:
 
 Die `make`-Äquivalente aus dem Quellcode sind `make refresh-currency` und die obigen `manage.py`-Befehle.
 
+`check_provider_health` hält den aufgezeichneten Status aktuell; genau das liest ein externer Überwachungsdienst zurück, der [`/status/health`]({{< relref "monitoring" >}}) abfragt. Führen Sie es also planmäßig aus, wenn Sie auf die Anbieter-Gesundheit alarmieren.
+
 ## Einmalige / gelegentliche Aufgaben
 
 ### Bang-Definitionen

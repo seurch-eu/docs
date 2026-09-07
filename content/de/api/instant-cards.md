@@ -59,5 +59,7 @@ Gibt das Wissenspanel für eine Anfrage zurück, abgeleitet aus demselben Web + 
 
 Jede Karte ist `null`, wenn sie nicht auf die Anfrage zutrifft (nur die relevanten Karten werden befüllt, dieselbe Logik wie die Website: Eine Filmabfrage füllt `thetvdb`, eine Ortsabfrage füllt `tripadvisor` und `map`, und so weiter). Die Kartenverfügbarkeit hängt auch davon ab, welche [Anbieter]({{< relref "/self-hosting/search-providers#knowledge-card-providers" >}}) die Instanz konfiguriert hat.
 
+Die `tripadvisor`-Karte trägt `name`, `geo`, `address`, `latitude`, `longitude`, `rating`, `rating_bubbles`, `num_reviews`, `description` und `url`. Sie trägt nicht mehr `photo`, `location_type`, `cuisine`, `subcategory`, `price_level` oder `ranking`: Diese stammten aus TripAdvisors eingestellter Content API, und ihr Nachfolger liefert sie nur an einzeln lizenzierte Partner.
+
 > [!NOTE]
 > Eine einzelne `cards/`-Anfrage führt im Hintergrund eine Web-Suche plus eine Wikipedia-Suche aus (um das Thema zu erkennen), daher zählt sie als eine Suche zu Ihrer Nutzung.

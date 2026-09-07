@@ -28,6 +28,7 @@ container plus a database.
 | [Users & access]({{< relref "users" >}}) | Creating accounts, email, password reset |
 | [API keys]({{< relref "api-keys" >}}) | Issuing and revoking API keys for users |
 | [Maintenance]({{< relref "maintenance" >}}) | Scheduled tasks, bangs, cache, provider status |
+| [Monitoring]({{< relref "monitoring" >}}) | Health endpoints for an uptime monitor, and the status page |
 | [Production notes]({{< relref "production" >}}) | Static files, health checks, footer, email |
 
 > [!NOTE]

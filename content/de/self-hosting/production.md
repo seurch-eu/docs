@@ -1,6 +1,6 @@
 ---
 title: Produktionshinweise
-weight: 10
+weight: 11
 ---
 
 # Produktionshinweise
@@ -29,6 +29,8 @@ Die App antwortet auf eine Gesundheitsprüfung unter **`/up`** (gibt Erfolg zur�
 ```
 GET /up   →  200 OK
 ```
+
+`/up` deckt nur die Anwendung ab. Um auf einen ausgefallenen **vorgelagerten Anbieter** zu alarmieren, richten Sie zusätzlich einen externen Überwachungsdienst auf `/status/health` aus, siehe [Überwachung]({{< relref "monitoring" >}}).
 
 ## Datenbank
 

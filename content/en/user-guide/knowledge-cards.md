@@ -15,7 +15,7 @@ don't need to click through at all.
 |------|--------|-------|
 | **Wikipedia** | Wikipedia | A summary, image and link for the subject. This is the anchor card, it also helps detect what the other cards should show. |
 | **Film / TV** | [TheTVDB](https://thetvdb.com/) | Details for a movie or TV show: poster, rating, year, overview. |
-| **Places** | [TripAdvisor](https://www.tripadvisor.com/) | A restaurant, hotel or attraction: rating, address (which links to the [map]({{< relref "search-tabs" >}})) and a link. |
+| **Places** | [TripAdvisor](https://www.tripadvisor.com/) | A restaurant, hotel or attraction: its area, rating and review count, a short description, and the address (which links to the [map]({{< relref "search-tabs" >}})). |
 | **Q&A** | [Stack Exchange](https://stackexchange.com/) | The top question and answer for a technical query. |
 
 ## How they're chosen
@@ -32,8 +32,11 @@ This keeps the panel relevant and avoids unnecessary lookups.
 
 ## Lazy loading
 
-By default the cards **load just after** the main results, with a quick
-background fetch, so a slow card never holds up your answer. You can change this
-under **Settings → Engines** (turn lazy-loading off to load them with the page),
-and you can switch any individual card source on or off under **Settings →
-Engines → Data sources**.
+The cards **load just after** the main results, with a quick background fetch,
+so a slow card never holds up your answer. There is nothing to configure: when
+your browser runs JavaScript the cards arrive a moment after the results, and
+when it doesn't they are rendered with the page instead.
+
+You can switch any individual card source on or off under **Settings → Engines**,
+where they sit among the Web search type's **data sources**, see
+[Settings]({{< relref "settings#engines" >}}).

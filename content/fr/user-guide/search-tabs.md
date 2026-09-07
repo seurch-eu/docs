@@ -24,7 +24,7 @@ L'onglet **Actualités** renvoie des articles récents de l'index Brave, complé
 
 ## Vidéos
 
-L'onglet **Vidéos** mélange les résultats vidéo Brave avec **Sepia**, l'index de recherche pour [PeerTube](https://joinpeertube.org/) (un réseau vidéo décentralisé et ouvert). Les résultats affichent une miniature, la durée et le site hôte.
+L'onglet **Vidéos** mélange les résultats vidéo Brave avec **Sepia**, l'index de recherche pour [PeerTube](https://joinpeertube.org/) (un réseau vidéo décentralisé et ouvert). Les deux listes sont entrelacées, les vidéos PeerTube ne sont donc pas reléguées sous tout ce que Brave a trouvé. Les résultats affichent une miniature, la durée et le site hôte.
 
 ## Cartes
 
@@ -33,11 +33,21 @@ L'onglet **Cartes** ne nécessite aucune configuration ni compte auprès d'un fo
 - **Géocode** avec [Nominatim](https://nominatim.openstreetmap.org/) (la recherche d'OpenStreetMap), et
 - affiche l'emplacement sur une **carte OpenStreetMap intégrée**, avec un lien **Ouvrir dans Maps** et des itinéraires.
 
+L'onglet affiche toujours une carte. Basculez dessus sans requête, ou cherchez quelque chose d'introuvable, et vous obtenez une vue mondiale avec le message dans la barre latérale plutôt qu'un panneau vide, de sorte que vous pouvez naviguer et zoomer jusqu'à votre destination. Les **itinéraires** nécessitent une destination, ce bouton n'apparaît donc qu'une fois un lieu trouvé.
+
 Lorsqu'une recherche **web** normale ressemble à une adresse ou un lieu, une mini-carte de réponse rapide apparaît à côté des résultats, et la [fiche de connaissance]({{< relref "knowledge-cards" >}}) d'un lieu pointe directement vers la carte.
 
 ## Traduction
 
 L'onglet **Traduction** traduit du texte entre langues, alimenté par [LibreTranslate](https://libretranslate.com/) (traduction automatique open source). Choisissez une langue cible (et éventuellement une langue source, ou laissez-la se détecter automatiquement), collez votre texte et lisez la traduction. Les langues disponibles dépendent de l'instance LibreTranslate à laquelle l'opérateur est connecté.
 
+## Quand un onglet est vide
+
+Chaque onglet distingue trois cas, de sorte qu'un panneau vide vous dit dans lequel vous vous trouvez :
+
+- **Rien n'a encore été cherché.** Changer d'onglet ne transporte pas de requête, l'onglet vous invite donc à en taper une.
+- **Aucun fournisseur pour cela.** L'instance n'a pas de clé pour ce type de recherche, ou vous avez désactivé tous ses fournisseurs, et le panneau le dit.
+- **Rien ne correspond.** La recherche s'est exécutée et n'a rien renvoyé, elle suggère donc de vérifier l'orthographe ou d'essayer d'autres mots-clés.
+
 > [!NOTE]
-> Si un onglet est manquant, soit l'opérateur de l'instance n'a pas configuré ce fournisseur, soit vous avez désactivé tous les fournisseurs de ce type de recherche dans [Paramètres → Moteurs]({{< relref "settings" >}}). Sur une instance [auto-hébergée]({{< relref "/self-hosting" >}}), vous contrôlez les deux.
+> Si un onglet est entièrement absent, soit l'opérateur de l'instance n'a pas configuré ce fournisseur, soit vous avez désactivé tous les fournisseurs de ce type de recherche dans [Paramètres → Moteurs]({{< relref "settings" >}}). Sur une instance [auto-hébergée]({{< relref "/self-hosting" >}}), vous contrôlez les deux.

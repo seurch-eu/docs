@@ -58,6 +58,8 @@ enableGitInfo = true
   # External links rendered as a "Links" section at the foot of the sidebar
   # (see layouts/_partials/docs/inject/menu-after.html).
   site = "https://seurch.eu/"
-  status = "https://seurch.eu/status"
+  # No `status` link: the hosted service runs with STATUS_PAGE_ENABLED=false, so
+  # /status is not published there (self-hosters can still enable their own, see
+  # the Monitoring page).
   engine_repo = "https://github.com/search-project/search"
   docs_repo = "https://github.com/search-project/docs"

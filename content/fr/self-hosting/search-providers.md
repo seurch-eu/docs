@@ -50,19 +50,24 @@ L'onglet web peut afficher jusqu'à trois [fiches de connaissance]({{< relref "/
 |-------|----------|-------------|-----|
 | Wikipédia | *(aucune)* | Wikipedia / Wikidata | Aucune clé requise |
 | Film / Série | `THETVDB_API_KEY` (+ `THETVDB_PIN`) | [TheTVDB](https://www.thetvdb.com/dashboard/account/apikey) | Licence commerciale, ou clé financée par les utilisateurs plus le code PIN d'abonné |
-| Lieux | `TRIPADVISOR_API_KEY` | [TripAdvisor Content API](https://www.tripadvisor.com/developers) | Gratuite |
+| Lieux | `TRIPADVISOR_API_KEY` | [TripAdvisor Terra Partner API](https://docs.terra.tripadvisor.com) | Clé partenaire, envoyée via `X-API-Key` |
 | Q&A | `STACKEXCHANGE_API_KEY` | [Stack Exchange](https://stackapps.com/apps/oauth/register) | Optionnelle, augmente le quota partagé anonyme |
 
-Les API de fiches payantes ne sont appelées que lorsqu'une requête ressemble réellement à un film ou un lieu, et chaque consultation est mise en cache pendant une heure : le volume d'appels reste donc faible, largement dans le niveau gratuit de TripAdvisor et modeste au regard d'une licence TheTVDB.
+Les API de fiches payantes ne sont appelées que lorsqu'une requête ressemble réellement à un film ou un lieu, et chaque consultation est mise en cache pendant une heure : le volume d'appels reste donc faible et modeste au regard d'une licence TheTVDB ou d'un forfait TripAdvisor.
+
+> [!NOTE]
+> La fiche des lieux s'appuie sur la **Terra Partner API** de TripAdvisor, qui a remplacé la Content API retirée du service — les clés de cette dernière renvoient désormais `403`. Elle est construite à partir des points de terminaison catalogue, qui répondent sans liste d'autorisation partenaire, la fiche affiche donc un nom, une zone, une adresse, une note, un nombre d'avis et une description, mais ni photo, ni cuisine, ni niveau de prix, ni classement : ceux-ci nécessitent une licence par établissement.
 
 ## Page de statut des fournisseurs
 
-Une page **`/status`** intégrée indique si chaque fournisseur configuré est opérationnel. Elle ne dépense jamais de quota payant pour le savoir :
+Une page **`/status`** intégrée indique si chaque fournisseur configuré est opérationnel, liée depuis le pied de page du site et depuis **Paramètres → Statut des fournisseurs**. Elle ne dépense jamais de quota payant pour le savoir :
 
 - Les fournisseurs avec un **point de terminaison de santé gratuit** (Nominatim, LibreTranslate, Open-Meteo, Frankfurter) sont sondés régulièrement.
 - Le statut de tous les autres fournisseurs est déduit du fait que des **recherches réelles** ont récemment réussi.
 
 Maintenez le statut à jour en exécutant `check_provider_health` périodiquement, voir [Maintenance]({{< relref "maintenance" >}}).
+
+Définissez `STATUS_PAGE_ENABLED=false` pour garder cette information pour vous : la page renvoie 404 et ses liens disparaissent. La santé continue d'être enregistrée, et `/status/health` répond toujours, un service de supervision externe continue donc de fonctionner, voir [Supervision]({{< relref "monitoring" >}}).
 
 ## Liste blanche réseau
 
@@ -70,5 +75,7 @@ Si le trafic sortant de votre serveur est restreint, les deux appels réseau de 
 
 - `api.frankfurter.dev` (taux de change)
 - `geocoding-api.open-meteo.com` et `api.open-meteo.com` (météo)
+
+Les fiches de connaissance joignent `api4.thetvdb.com`, `artworks.thetvdb.com`, `terra.tripadvisor.com` et `www.wikidata.org`.
 
 Tout le reste est atteint via HTTPS standard vers l'hôte API de chaque fournisseur. Les réponses instantanées locales (calculs, unités, hachages, …) ne nécessitent aucun réseau.
