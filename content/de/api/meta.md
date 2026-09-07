@@ -58,6 +58,9 @@ GET /api/v1/status/
 
 Ein Anbieter ohne konfigurierten API-Schlüssel wird ausgelassen (ausgeblendet, nicht als ausgefallen angezeigt).
 
+> [!NOTE]
+> Ein Betreiber kann sich entscheiden, den Anbieterstatus nicht zu veröffentlichen (`STATUS_PAGE_ENABLED=false`). Dieser Endpunkt liefert dann **404** und fehlt im Index der [API-Wurzel](#api-wurzel), ebenso wie die `/status`-Seite, die er spiegelt. Die Überwachung läuft nicht über die API, sie hat eigene schlüssellose Endpunkte, siehe [Überwachung]({{< relref "/self-hosting/monitoring" >}}).
+
 ## Schlüssel-Info
 
 Details des Schlüssels, der die Anfrage stellt, nützlich um zu überprüfen, ob ein Schlüssel funktioniert. *(Zählt nicht zur Nutzung.)*
@@ -103,3 +106,5 @@ GET /api/v1/
   "key": "https://search.example.com/api/v1/key/"
 }
 ```
+
+`status` fehlt, wenn die Instanz den Anbieterstatus nicht veröffentlicht. Behandeln Sie den Index daher als die Liste der tatsächlich vorhandenen Endpunkte und nicht als feste Menge.

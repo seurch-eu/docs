@@ -124,15 +124,28 @@ Attribution is shown on the card, as TheTVDB's terms require.
 Enables the restaurant / hotel / attraction card.
 
 1. Sign up for the
-   [TripAdvisor Content API](https://www.tripadvisor.com/developers).
-2. In the developer portal, **create an API key** (the free tier includes a
-   monthly call allowance).
-3. Copy it into `TRIPADVISOR_API_KEY`.
+   [TripAdvisor Terra Partner API](https://docs.terra.tripadvisor.com).
+2. In the developer portal, **create an API key** for your account's plan.
+3. Copy it into `TRIPADVISOR_API_KEY`. Seurch sends it as the `X-API-Key`
+   header.
+
+> [!WARNING]
+> **The legacy Content API is retired.** Keys issued for
+> `api.content.tripadvisor.com` now return `403`. If your places card stopped
+> appearing, this is why, get a Terra key and replace the value.
+
+The card is built from Terra's **catalog** endpoints, which answer without a
+partner allowlist or geofencing. That projection is a reduced one, so the card
+shows the venue name, its area, address, rating, review count, description and a
+link, and **not** a photo, cuisine, price level or ranking, which are only
+served for locations a partner is individually licensed for.
 
 > [!NOTE]
-> The TripAdvisor Content API requires showing TripAdvisor attribution where its
-> data appears, which Seurch's card already does. You can also restrict the key to
-> your server's IP in their portal.
+> TripAdvisor's terms require showing TripAdvisor attribution where its data
+> appears, which Seurch's card already does, and that pages carrying its content
+> be kept out of search-engine indexes, which Seurch does by marking any results
+> page showing the card `noindex`. You can also restrict the key to your
+> server's IP in their portal.
 
 ## Stack Exchange (Q&A card) — `STACKEXCHANGE_API_KEY`
 

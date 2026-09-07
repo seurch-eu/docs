@@ -32,6 +32,11 @@ A cron example:
 The `make` equivalents from source are `make refresh-currency` and the
 underlying `manage.py` commands above.
 
+`check_provider_health` keeps the recorded status current; it is what an
+external uptime monitor polling
+[`/status/health`]({{< relref "monitoring" >}}) reads back, so run it on a
+schedule if you alert on provider health.
+
 ## One-off / occasional tasks
 
 ### Bang definitions

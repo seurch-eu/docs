@@ -13,7 +13,7 @@ Wenn Ihre **Web**-Suche (erste Seite) ein bekanntes Thema betrifft, zeigt Seurch
 |-------|--------|-------|
 | **Wikipedia** | Wikipedia | Eine Zusammenfassung, ein Bild und einen Link zum Thema. Dies ist die Ankerkarte; sie hilft auch zu erkennen, was die anderen Karten zeigen sollen. |
 | **Film / TV** | [TheTVDB](https://thetvdb.com/) | Details zu einem Film oder einer TV-Sendung: Poster, Bewertung, Jahr, Übersicht. |
-| **Orte** | [TripAdvisor](https://www.tripadvisor.com/) | Ein Restaurant, Hotel oder eine Attraktion: Bewertung, Adresse (die zur [Karte]({{< relref "search-tabs" >}}) verlinkt) und ein Link. |
+| **Orte** | [TripAdvisor](https://www.tripadvisor.com/) | Ein Restaurant, Hotel oder eine Attraktion: sein Gebiet, die Bewertung und die Anzahl der Rezensionen, eine kurze Beschreibung und die Adresse (die zur [Karte]({{< relref "search-tabs" >}}) verlinkt). |
 | **Q&A** | [Stack Exchange](https://stackexchange.com/) | Die beste Frage und Antwort für eine technische Anfrage. |
 
 ## Wie sie ausgewählt werden
@@ -27,4 +27,6 @@ Dies hält das Panel relevant und vermeidet unnötige Abfragen.
 
 ## Lazy Loading
 
-Standardmäßig **laden die Karten kurz nach** den Hauptergebnissen via einen schnellen Hintergrundabruf, sodass eine langsame Karte Ihre Antwort nie verzögert. Sie können dies unter **Einstellungen → Suchmaschinen** ändern (Lazy Loading deaktivieren, um sie mit der Seite zu laden), und Sie können jede einzelne Kartenquelle unter **Einstellungen → Suchmaschinen → Datenquellen** ein- oder ausschalten.
+Die Karten **laden kurz nach** den Hauptergebnissen via einen schnellen Hintergrundabruf, sodass eine langsame Karte Ihre Antwort nie verzögert. Es gibt nichts zu konfigurieren: Führt Ihr Browser JavaScript aus, treffen die Karten einen Moment nach den Ergebnissen ein, andernfalls werden sie mit der Seite gerendert.
+
+Sie können jede einzelne Kartenquelle unter **Einstellungen → Suchmaschinen** ein- oder ausschalten, wo sie bei den **Datenquellen** des Suchtyps Web stehen, siehe [Einstellungen]({{< relref "settings" >}}).

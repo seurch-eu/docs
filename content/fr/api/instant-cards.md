@@ -59,5 +59,7 @@ Renvoie le panneau de connaissance pour une requête, dérivé du même contexte
 
 Chaque fiche est `null` lorsqu'elle ne s'applique pas à la requête (seules les fiches pertinentes sont renseignées, la même logique que le site web : une requête sur un film remplit `thetvdb`, une requête sur un lieu remplit `tripadvisor` et `map`, etc.). La disponibilité des fiches dépend aussi des [fournisseurs]({{< relref "/self-hosting/search-providers#knowledge-card-providers" >}}) configurés sur l'instance.
 
+La fiche `tripadvisor` porte `name`, `geo`, `address`, `latitude`, `longitude`, `rating`, `rating_bubbles`, `num_reviews`, `description` et `url`. Elle ne porte plus `photo`, `location_type`, `cuisine`, `subcategory`, `price_level` ni `ranking` : ceux-ci provenaient de l'API Content retirée du service de TripAdvisor, et son remplacement ne les sert qu'aux partenaires sous licence individuelle.
+
 > [!NOTE]
 > Une seule requête `cards/` effectue une recherche web plus une consultation Wikipedia en arrière-plan (pour détecter le sujet), donc elle compte comme une recherche dans votre usage.

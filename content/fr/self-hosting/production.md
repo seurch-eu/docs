@@ -1,6 +1,6 @@
 ---
 title: Notes de production
-weight: 10
+weight: 11
 ---
 
 # Notes de production
@@ -29,6 +29,8 @@ L'application répond à une vérification de santé sur **`/up`** (renvoie un s
 ```
 GET /up   →  200 OK
 ```
+
+`/up` ne couvre que l'application. Pour être alerté d'un **fournisseur amont** en panne, pointez également un service de supervision externe vers `/status/health`, voir [Supervision]({{< relref "monitoring" >}}).
 
 ## Base de données
 

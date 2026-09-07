@@ -16,6 +16,7 @@ Seurch wird vollständig über **Umgebungsvariablen** (in der Produktion) oder e
 | `ALLOWED_HOSTS` | Kommagetrennte Hostnamen, die die App bedient | z.B. `search.example.com`. |
 | `DATABASE_URL` | PostgreSQL-Verbindungs-URL | z.B. `postgres://user:pass@host:5432/seurch`. |
 | `LOG_LEVEL` | Protokollierungsausführlichkeit | `DEBUG` / `INFO` / `WARNING` / `ERROR` (Standard `INFO`). |
+| `LOG_SEARCH_QUERIES` | Den rohen Anfragetext protokollieren | Folgt `DEBUG`, in der Produktion also **aus**. Anfragen sind personenbezogene Daten und Container-Logs werden aufbewahrt; ausgeschaltet trägt jede Anbieter-Logzeile nur die Länge der Anfrage. |
 
 ## Suchanbieter
 
@@ -54,6 +55,25 @@ Namen, die keine Anbieterschlüssel sind, werden ignoriert, `PAID_PROVIDERS=none
 | `LIBRETRANSLATE_ORIGIN_COUNTRY` | Zweistelliger Ländercode für die neben „Übersetzen" angezeigte Flagge in den Einstellungen (Standard `fr`). |
 
 Siehe [Übersetzung]({{< relref "translation" >}}).
+
+## Anbieterstatus und Überwachung
+
+Ob diese Instanz die Anbieter-Gesundheit veröffentlicht, und was ein externer Überwachungsdienst abfragen kann. Vollständige Details unter [Überwachung]({{< relref "monitoring" >}}).
+
+| Variable | Zweck | Standard |
+|----------|-------|----------|
+| `STATUS_PAGE_ENABLED` | Die `/status`-Seite veröffentlichen, und den `status/`-Endpunkt der API, der dieselben Daten liefert. Abschalten, um für sich zu behalten, welche Anbieter Sie nutzen und wann sie ausfallen. | `true` |
+| `STATUS_MONITOR_ENABLED` | `/status/health` und `/status/health/<anbieter>` ausliefern, die 200-oder-500-Endpunkte, die ein Monitor abfragt. | `true` |
+| `STATUS_MONITOR_TOKEN` | Gemeinsames Geheimnis, das diese Endpunkte verlangen (`?token=`, `X-Monitor-Token`, oder `Authorization: Bearer`). | *(leer, offen)* |
+| `STATUS_MONITOR_PROVIDERS` | Welche Anbieter die `/status/health`-Sammelprüfung überwacht: Anbieter-Kennungen und/oder die Gruppenschlüssel `engine`, `media`, `cards`, `instant`, `maps`, `translate`. | *(leer, jeder konfigurierte Anbieter)* |
+
+Beide sind unabhängig voneinander: Die Überwachung funktioniert bei abgeschalteter Seite weiter, und genau das ist der Sinn — eine Instanz, die die Seite nicht veröffentlicht, muss sich trotzdem überwachen lassen.
+
+```
+STATUS_PAGE_ENABLED=false
+STATUS_MONITOR_PROVIDERS=engine
+STATUS_MONITOR_TOKEN=eine-lange-zufaellige-zeichenkette
+```
 
 ## Öffentliche API-Ratenlimits
 

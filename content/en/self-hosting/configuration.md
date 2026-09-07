@@ -18,6 +18,7 @@ documenting every variable; this page is the reference.
 | `ALLOWED_HOSTS` | Comma-separated hostnames the app will serve | e.g. `search.example.com`. |
 | `DATABASE_URL` | PostgreSQL connection URL | e.g. `postgres://user:pass@host:5432/seurch`. |
 | `LOG_LEVEL` | Logging verbosity | `DEBUG` / `INFO` / `WARNING` / `ERROR` (default `INFO`). |
+| `LOG_SEARCH_QUERIES` | Log the raw query text | Defaults to `DEBUG`, so **off** in production. Queries are personal data and container logs are retained; with it off, every provider log line carries only the query's length. |
 
 ## Search providers
 
@@ -63,6 +64,28 @@ nothing. The badge is a label only, it never changes what a user may enable.
 | `LIBRETRANSLATE_ORIGIN_COUNTRY` | Two-letter country code for the flag shown next to "Translate" in Settings (default `fr`). |
 
 See [Translation]({{< relref "translation" >}}).
+
+## Provider status and monitoring
+
+Whether this instance publishes provider health, and what an external uptime
+monitor can poll. Full details on [Monitoring]({{< relref "monitoring" >}}).
+
+| Variable | Purpose | Default |
+|----------|---------|---------|
+| `STATUS_PAGE_ENABLED` | Publish the `/status` page, and the API's `status/` endpoint that serves the same data. Turn it off to keep which providers you use, and when they fail, to yourself. | `true` |
+| `STATUS_MONITOR_ENABLED` | Serve `/status/health` and `/status/health/<provider>`, the 200-or-500 endpoints an uptime monitor polls. | `true` |
+| `STATUS_MONITOR_TOKEN` | Shared secret required by those endpoints (`?token=`, `X-Monitor-Token`, or `Authorization: Bearer`). | *(empty, open)* |
+| `STATUS_MONITOR_PROVIDERS` | Which providers the `/status/health` roll-up watches: provider slugs and/or the group keys `engine`, `media`, `cards`, `instant`, `maps`, `translate`. | *(empty, every configured provider)* |
+
+The two are independent: monitoring keeps working with the page turned off,
+which is the point, an instance that doesn't publish the page still needs to be
+monitorable.
+
+```
+STATUS_PAGE_ENABLED=false
+STATUS_MONITOR_PROVIDERS=engine
+STATUS_MONITOR_TOKEN=a-long-random-string
+```
 
 ## Public API rate limits
 

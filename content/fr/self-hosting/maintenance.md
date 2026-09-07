@@ -27,6 +27,8 @@ Un exemple de cron :
 
 Les équivalents `make` depuis les sources sont `make refresh-currency` et les commandes `manage.py` ci-dessus.
 
+`check_provider_health` maintient le statut enregistré à jour ; c'est ce que relit un service de supervision externe interrogeant [`/status/health`]({{< relref "monitoring" >}}), exécutez-le donc régulièrement si vous alertez sur la santé des fournisseurs.
+
 ## Tâches ponctuelles / occasionnelles
 
 ### Définitions de bangs
