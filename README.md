@@ -62,12 +62,11 @@ hugo --gc --minify   # output written to ./public
 
 ## Deployment
 
-The site is static, so it can be served anywhere. Two paths are provided:
+The site is static, so it can be served anywhere.
 
 ### Kamal (production)
 
-The docs are deployed the same way as the main Seurch app, with
-[Kamal](https://kamal-deploy.org): a multi-stage `Dockerfile` builds the site
+The docs are deployed with [Kamal](https://kamal-deploy.org): a multi-stage `Dockerfile` builds the site
 with Hugo and serves the result with nginx, and kamal-proxy terminates TLS
 (Let's Encrypt) in front of it.
 
@@ -81,20 +80,7 @@ kamal deploy    # subsequent deploys
 - `.kamal/secrets` — fetches the registry password from Bitwarden Secrets
   Manager (no secret values are stored in the repo).
 
-Before the first deploy, replace the `REPLACE_*` placeholders in
-`config/deploy.yml` and point the `host` domain's DNS at the VPS. To autodeploy
-from CI, run `kamal deploy` from a workflow with `BWS_ACCESS_TOKEN` and an SSH
-key, exactly as the main app does.
-
 `.kamal/secrets` shells out to the [Bitwarden Secrets Manager
 CLI](https://bitwarden.com/help/secrets-manager-cli/) (`bws`), so it must be
 installed wherever `kamal deploy`/`kamal setup` runs — including a developer's
 laptop, not just CI (see `.github/workflows/deploy.yml` for the CI install
-step). Without it, Kamal fails with "Bitwarden Secrets Manager CLI is not
-installed".
-
-### GitHub Pages (zero-infra alternative)
-
-`.github/workflows/pages.yml` builds the site and publishes it to GitHub Pages
-on every push to the default branch. Enable Pages (Settings → Pages → "GitHub
-Actions") to use it; no server required.
