@@ -41,9 +41,9 @@ enableGitInfo = true
   # Browser tab icon: the Seurch mark (static/favicon.svg).
   BookFavicon = "favicon.svg"
   # Footer "Edit this page" link → the source file on GitHub.
-  BookEditLink = "https://github.com/search-project/docs/edit/main/{{ .Path }}"
+  BookEditLink = "https://github.com/seurch-eu/docs/edit/main/{{ .Path }}"
   # Footer "last modified" date → the commit on GitHub (needs enableGitInfo).
-  BookLastChangeLink = "https://github.com/search-project/docs/commit/{{ .GitInfo.Hash }}"
+  BookLastChangeLink = "https://github.com/seurch-eu/docs/commit/{{ .GitInfo.Hash }}"
 
 [markup]
   [markup.goldmark.renderer]
@@ -61,5 +61,5 @@ enableGitInfo = true
   # No `status` link: the hosted service runs with STATUS_PAGE_ENABLED=false, so
   # /status is not published there (self-hosters can still enable their own, see
   # the Monitoring page).
-  engine_repo = "https://github.com/search-project/search"
-  docs_repo = "https://github.com/search-project/docs"
+  engine_repo = "https://github.com/seurch-eu/seurch"
+  docs_repo = "https://github.com/seurch-eu/docs"
