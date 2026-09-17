@@ -59,28 +59,3 @@ hugo --gc --minify   # output written to ./public
   build.
 - Callouts use GitHub-style Markdown alerts (`> [!NOTE]`, `> [!WARNING]`), which
   the theme styles automatically.
-
-## Deployment
-
-The site is static, so it can be served anywhere.
-
-### Kamal (production)
-
-The docs are deployed with [Kamal](https://kamal-deploy.org): a multi-stage `Dockerfile` builds the site
-with Hugo and serves the result with nginx, and kamal-proxy terminates TLS
-(Let's Encrypt) in front of it.
-
-```bash
-kamal setup     # first deploy (provisions the proxy + boots the container)
-kamal deploy    # subsequent deploys
-```
-
-- `config/deploy.yml` — servers, registry, proxy host and health check.
-- `deploy/nginx.conf` — the static-file server (health endpoint at `/up`).
-- `.kamal/secrets` — fetches the registry password from Bitwarden Secrets
-  Manager (no secret values are stored in the repo).
-
-`.kamal/secrets` shells out to the [Bitwarden Secrets Manager
-CLI](https://bitwarden.com/help/secrets-manager-cli/) (`bws`), so it must be
-installed wherever `kamal deploy`/`kamal setup` runs — including a developer's
-laptop, not just CI (see `.github/workflows/deploy.yml` for the CI install
