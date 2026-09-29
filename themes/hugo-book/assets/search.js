@@ -1,4 +1,7 @@
-import Fuse from '{{ "fuse.min.mjs" | relURL }}'
+// Fuse ships as an ES module but is served as .js, not .mjs: stock nginx (and
+// other servers) send .mjs as application/octet-stream, which browsers refuse
+// to run as a module script, silently breaking search.
+import Fuse from '{{ "fuse.min.js" | relURL }}'
 
 {{ $searchDataFile := printf "%s.search-data.json" .Language.Name }}
 {{ $searchData := resources.Get "search-data.json" | resources.ExecuteAsTemplate $searchDataFile . | resources.Minify | resources.Fingerprint }}
